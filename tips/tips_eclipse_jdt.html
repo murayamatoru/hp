@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="keywords" CONTENT="Eclipse,JDT,Parser,パーサー,JavaCore.getOptions(),JavaCore.COMPILER_SOURCE,JavaCore.VERSION">
+<META NAME="description" CONTENT="Eclipse JDT 3.3で列挙型をvisitできなかった時の技術メモです。">
+<title>Eclipse JDT 3.3で列挙型をvisitできなかった時のメモ</title>
+<link rel="stylesheet" href="tips.css" type="text/css">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 15.0.12.0 for Windows">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!-- HEADER -->
+<div id="hd" style="text-align : right;" align="right"><a href="../index.html">ネクストデザイン</a> 2017.1.30</div>
+
+<!-- WebAnalysis -->
+<script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;"></noscript>
+<!-- End WebAnalysis -->
+
+<div style="margin:20px 10px 10px 20px">
+
+
+<h1>Eclipse JDT 3.3で列挙型をvisitできなかった時のメモ</h1>
+2011.9<br>
+<br>
+この内容は、ＪＤＴをEclipseプラグインからではなく、スタンドアロンで使用した時に、<br>
+すぐに解決できなかった状況と、その時の解決方法です。<br>
+<br>
+■すぐに解決できなかった状況<br>
+ASTVisitor#visit() でアノテーション、列挙型をvisitできない、という状況。<br>
+public boolean visit(AnnotationTypeDeclaration node)<br>
+public boolean visit(EnumDeclaration node)<br>
+<br>
+■解決方法<br>
+Map options = JavaCore.getOptions();<br>
+options.put(JavaCore.COMPILER_COMPLIANCE, JavaCore.VERSION_1_6);<br>
+options.put(JavaCore.COMPILER_CODEGEN_TARGET_PLATFORM, JavaCore.VERSION_1_6);<br>
+options.put(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_6);<br>
+myParser.setCompilerOptions(options);<br>
+<br>
+上記コードでJavaCore.VERSION_1_6を明示的に指定することで解決しました。<br>
+また、この指定は、myParserにsetSource(char[] source)するたびに行う必要があるようです。<br>
+<br>
+追記<br>
+ネクストデザインの無料ソフトですが・・・こちらのツールがお役に立つかも知れません.。<a href="../index.html" target="_new">こちら</a><br>
+<br>
+以上
+</div>
+
+
+
+<div id="ft">NextDesign 2017.1.30</div>
+</body>
+</html>

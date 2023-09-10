@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta name="description" content="Composer Downloader TransportException,Content-Length mismatch,Failed to decode response zlib_decode():data errorの対応例です。">
+<title>Composerを使ったLaravelプロジェクト新規作成時のエラー対処例</title>
+<link rel="stylesheet" href="tips.css" type="text/css">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body><!-- HEADER -->
+<div id="hd" style="text-align : right;" align="right"><a href="../index.html">ネクストデザインホーム</a> 2016.12.31</div>
+<!-- WebAnalysis -->
+<script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;"></noscript>
+<!-- End WebAnalysis -->
+
+<p><br>
+</p>
+<div style="margin:20px 10px 10px 20px">
+  <h1>Composerを使ったLaravelプロジェクト新規作成時のエラー対処例</h1>
+
+<h2>エラー内容</h2>
+ケース１：<br>
+[Composer\Downloader\TransportException]<br>
+Content-Length mismatch<br>
+で中断される。<br>
+ケース２：<br>
+最後の <br>
+Application key [base64:gwk1DzXPwEWH7m4jswZpODUZ5BgjYlqt4tnEgUI87xo=]set successfully. <br>
+まで表示されるが、途中次のエラーが出ている。<br>
+Failed to decode response: zlib_decode():data error<br>
+<br>
+
+<h2>環境</h2>
+Windows7 Professional 64bit<br>
+PHP 7.1.0RC6 (cli) (built: Nov  9 2016 13:33:34) ( ZTS MSVC14 (Visual C++ 2015) x64 )<br>
+Composer version 1.3.0 2016-12-24 00:47:03<br>
+<br>
+
+<h2>新規作成コマンド</h2>
+composer create-project laravel/laravel --prefer-dist myapp<br>
+<br>
+
+<h2>コマンド実行後の期待値</h2>
+下図はコマンド実行前の状態です。<br>
+下図のlaravelフォルダの直下に、myappフォルダとその配下にLaravelプロジェクトが作成されることです。<br>
+
+<p style="max-width: 116px; min-width: 100px;"><img style="width: 100%;" src="Laravel_create_project1.PNG" alt=""></p>
+
+
+なお、 <br>
+・フォルダは任意の場所を指定できます。（例のlaravelは、フレームワーク名のLaravelとは無関係です）<br>
+・コマンド実行時のカレントディレクトリは、この例ではnginx-1.10.2\html\laravelにします。<br>
+・myappフォルダが存在するとエラーになります。<br>
+<br>
+
+<h2>対処方法</h2>
+(1) 後述の編集を加えたcomposer.jsonを仮置きします。<br>
+(2) 新規作成コマンドを実行します。<br>
+(3) エラーなしでコマンドが完了します。<br>
+(4) 仮置きしたcomposer.jsonを削除します。<br>
+(5) myappフォルダを削除して、再度作成コマンドを実行します。<br>
+(6) エラーなしでコマンドが完了します。<br>
+<br>
+上の(3)の結果と(6)の結果は同じはずですが、念のため私は、仮置きのcomposer.jsonを削除後に再度コマンド実行しました。<br>
+この後は、エラーは出ないようになりました。<br>
+この対処方法が妥当なのかどうか分かりませんし、エラーがなくなる理由も説明できませんが、一応事例として掲載しました。<br>
+参考：http://stackoverflow.com/questions/23881891/laravel-4-1-installation-with-composer-in-xampp<br>
+<br>
+
+<h2>仮置きするcomposer.jsonの編集内容</h2>
+(1) composer.jsonを用意します。エラーのケース２の場合は、composer.jsonは作成されていますので、それを使用しました。<br>
+(2) 編集します。composer.jsonの最後に次を追加します。<br>
+<pre style="overflow:auto;">
+<code>
+&quot;repositories&quot;: [
+     {
+          &quot;type&quot;: &quot;composer&quot;,
+           &quot;url&quot;: &quot;https://packagist.org&quot;
+     },
+     { &quot;packagist&quot;: false }
+ ]
+</code>
+</pre>
+
+（例）追加した結果（環境依存の値もあると思われますので、自身の環境のcomposer.json）を元にしてください）
+
+<pre style="overflow:auto;">
+<code>
+{
+    &quot;name&quot;: &quot;laravel/laravel&quot;,
+    &quot;description&quot;: &quot;The Laravel Framework.&quot;,
+    &quot;keywords&quot;: [&quot;framework&quot;, &quot;laravel&quot;],
+    &quot;license&quot;: &quot;MIT&quot;,
+    &quot;type&quot;: &quot;project&quot;,
+    &quot;require&quot;: {
+        &quot;php&quot;: &quot;&gt;=5.6.4&quot;,
+        &quot;laravel/framework&quot;: &quot;5.3.*&quot;
+    },
+    &quot;require-dev&quot;: {
+        &quot;fzaninotto/faker&quot;: &quot;~1.4&quot;,
+        &quot;mockery/mockery&quot;: &quot;0.9.*&quot;,
+        &quot;phpunit/phpunit&quot;: &quot;~5.0&quot;,
+        &quot;symfony/css-selector&quot;: &quot;3.1.*&quot;,
+        &quot;symfony/dom-crawler&quot;: &quot;3.1.*&quot;
+    },
+    &quot;autoload&quot;: {
+        &quot;classmap&quot;: [
+            &quot;database&quot;
+        ],
+        &quot;psr-4&quot;: {
+            &quot;App\\&quot;: &quot;app/&quot;
+        }
+    },
+    &quot;autoload-dev&quot;: {
+        &quot;classmap&quot;: [
+            &quot;tests/TestCase.php&quot;
+        ]
+    },
+    &quot;scripts&quot;: {
+        &quot;post-root-package-install&quot;: [
+            &quot;php -r \&quot;file_exists('.env') || copy('.env.example', '.env');\&quot;&quot;
+        ],
+        &quot;post-create-project-cmd&quot;: [
+            &quot;php artisan key:generate&quot;
+        ],
+        &quot;post-install-cmd&quot;: [
+            &quot;Illuminate\\Foundation\\ComposerScripts::postInstall&quot;,
+            &quot;php artisan optimize&quot;
+        ],
+        &quot;post-update-cmd&quot;: [
+            &quot;Illuminate\\Foundation\\ComposerScripts::postUpdate&quot;,
+            &quot;php artisan optimize&quot;
+        ]
+    },
+    &quot;config&quot;: {
+        &quot;preferred-install&quot;: &quot;dist&quot;
+    },
+        &quot;repositories&quot;: [
+             {
+                  &quot;type&quot;: &quot;composer&quot;,
+                   &quot;url&quot;: &quot;https://packagist.org&quot;
+             },
+             { &quot;packagist&quot;: false }
+         ]
+
+}
+</code>
+</pre>
+以上 <br>
+</div>
+
+<br>
+
+<div id="ft">NextDesign 2016.12.31</div>
+</body>
+</html>

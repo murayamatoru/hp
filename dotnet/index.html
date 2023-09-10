@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Xamarin C# を使った業務用 iPad アプリ開発時のメモ - ネクストデザイン</title>
+<meta content="はじめての Xamarin と Mac で業務用 iPad アプリを作成したときのメモです。どなたかのヒントになればと思い公開します。Visual Studio 2019 for Macと自動プロビジョニングを使ってアドホック配布で展開しました。" name="description">
+
+<!-- VIEW PORT 2018.3.6 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="dotnet.css" rel="stylesheet">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+<meta name="thumbnail" content="http://www.fk-nextdesign.sakura.ne.jp/ddd/img/DDBuilder_Image.PNG">
+</head>
+<body style="margin: 0px; padding: 0px;"><!-- WebAnalysis --><script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;" alt="WebAnalysis"></noscript>
+<!-- End WebAnalysis -->
+<div class="hd">
+  <table style=" margin: 0 auto; width: 100%; height: 100%">
+    <tbody>
+      <tr>
+        <td><a href="../index.html" target="_new"><span style="font-size:80%; color:white;">&nbsp;&nbsp;ネクストデザイン</span></a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="bd">
+  <h1>Xamarin C# を使った業務用 iPad アプリ開発時のメモ</h1>
+  <p>タイトルの通り、iPadアプリを業務で作成したときの振り返りのメモです。個人の備忘録的な内容ですが、どなたかのヒントになればと思い公開しました。</p>
+  <h2>開始時の状況</h2>
+  <p>「Xamarin での開発に Mac は必要か？」&nbsp;今回はこのような知識レベルでスタートしました。(Mac は必要です) </p>
+<p>一部の作業を外部に依頼しましたが、基本1名の開発体制です。
+  </p>
+
+  <h2>アプリの概要</h2>
+  <p>この iPad アプリは、ある生産作業の安全状況をチェックし、その結果を記録するためのアプリです。検査員が屋外で使用します。</p>
+  <p>小規模ですが、RDBアクセス、Excel入出力、カメラ撮像、写真画像保存、手書きメモ入出力、グラフ描画などの機能があります。 業務用のため、アプリの配布に
+  AppStore は使えません。 社内配布 (エンタープライズ配布) を使うほどの規模も予算もありませんので、今回は、アドホック配布で展開しました。</p>
+  <h2>開発環境</h2>
+  <p style="max-width: 714px; min-width: 100px;"><img style="width: 100%;" src="img/dev_environment.PNG" alt="開発環境"></p>
+  <p>[構成１]</p>
+  <p>シミュレータでテストします。実機での確認はできません。そのため、カメラ撮像などの実機でしか動作しない機能はテストできません。
+  </p>
+<br>
+  <p>[構成２]</p>
+  <p>1台の Mac を複数の Windows から共有したい場合は、このような構成になりそうです。
+  </p>
+<br>
+  <p>[構成３]</p>
+  <p>Mac や iPad を共有する必要がなければ、この構成が最も簡単です。今回は、Xamarin や Mac の知識がなかったため、構成１ →
+  構成２ → 構成３と変遷しました。</p>
+  <p>Mac ははじめてでしたが、Xcode と Visual Studio 2019 for Mac を起動できればなんとかなりそうです。 あとはほぼ、Visual
+  Studio 2019 for Mac での作業になりますので、Visual Studio に慣れていれば、大きな問題はありませんでした。 Windows
+  版の Visual Studio と同様に作業できます。 Xcode は起動する程度ですが、最初だけはプロジェクトを作成して、何か設定が必要だったかもしれません。
+  ただし、それは、最初に無償ライセンスを使って試していたからかもしれません。 </p>
+  <h2>アプリの配布</h2>
+  <p>アプリを実機に配布する方法は何通りかあります。自らの状況に最も適した方法を見つけることは容易ではありませんでした。とくに、 納期に追われていると、答えだけを求めてネットを迷走し、その結果、良くない情報につかまったりもしました。
+  無料という言葉にも振り回されました。</p>
+  <p>今回、筆者なりの結論としては、</p>
+  <p>・Visual Studio 2019 自動プロビジョニングを使う。</p>
+  <p>・Apple Developer Program (有料) を取得する。</p>
+  <p>が良いと思います。 無料でも出来そうですが、 そのために、追加の設定が必要だったり、配布台数の制限があったっりします。 業務で使うのであれば、最初から有料ライセンスをお勧めします。</p>
+  <p>筆者は、証明書やプロビジョニングプロファイルなどには関心も知識も時間もありませんでしたので 、とにかく、確実に配布できる、必要最小限の手順を探しました。</p>
+  <h2>Visual Studio2019 for Mac ソリューションの構成</h2>
+  <p>ソリューションを新規作成すると、次の3つのプロジェクトが生成されます。</p>
+  <p>・共有プロジェクト</p>
+  <p>・iOS用プロジェクト</p>
+  <p>・Android用プロジェクト</p>
+  <p>基本的には、共有プロジェクトに実装しますが、幾つかの機能については iOS用プロジェクトに実装する必要があります。例えば、ファイル入出力、プレビュー機能、手書き入出力機能は
+  iOSプロジェクト側に実装し、共有プロジェクトから参照できるようにします。Android用プロジェクトは、今回は使用しないので削除しました。</p>
+  <p>今回使用した主なライブラリは以下の通りです。</p>
+  <p>DocumentFormat.OpenXml</p>
+  <p>SQLite</p>
+  <p>SkiaSharp</p>
+  <p>Xamarin.Plugin.Media</p>
+  <p>Xamarin.Forms</p>
+  <p>iOS</p>
+  <p>SkiaSharp</p>
+<br>
+<hr>
+
+</div>
+<br>
+<footer>
+<div style="text-align: center"><span style="color:#666666 ;">Copyright 2001-2023, All Rights Reserved</span> </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>POJOを使ったイテレーション - ネクストデザイン</title>
+<meta content="イテレーションを軽量化し軽快に回すために極力 POJO の状態で実践する。" name="description">
+
+<!-- VIEW PORT 2018.3.6 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="next2.css" rel="stylesheet">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+<meta name="thumbnail" content="http://www.fk-nextdesign.sakura.ne.jp/ddd/img/DDBuilder_Image.PNG" />
+</head>
+
+<body style="margin: 0px; padding: 0px;"><!-- WebAnalysis --><script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;" alt="WebAnalysis"></noscript>
+<!-- End WebAnalysis -->
+<div class="hd">
+<table style=" margin: 0 auto; width: 100%; height: 100%">
+<tr>
+<td>
+<a href="../index.html" target="_new"><span style="font-size:80%; color:white;">&nbsp;&nbsp;ネクストデザイン ホーム</span></a>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="bd">
+<!-- header bar kokomade -->
+<a id="page_top"></a>
+<header>
+<h1 style="margin-top : 1.0em; margin-bottom : 10px;">POJOを使ったイテレーション</h1>
+</header>
+
+<a id="index_top"></a>
+<nav>
+[本文] <a href="index.html" target="_new">ドメイン駆動設計ドメインモデルの役割と例</a>
+<br>
+[説明] <a href="index.html#section83" target="_new">b. POJO (Plain Old Java Object</a> 
+</nav>
+<br>
+<p>POJO コード例</p>
+
+
+<section>
+<a id="ddb1"></a>
+
+<pre style="overflow:auto;">
+<code>
+import java.util.Optional;
+/**
+ * org.springframework.data.repository.CrudRepository と同等のインタフェース
+ * Springに依存しないPOJOで定義する
+ * @author murayama
+ * @param &lt;T&gt; エンティティ型
+ * @param &lt;ID&gt; JPA識別子型
+ */
+public interface ICrudRepository&lt;T, ID&gt; {
+
+	public &lt;S extends T&gt; S save(S entity);
+
+	public &lt;S extends T&gt; Iterable&lt;S&gt; saveAll(Iterable&lt;S&gt; entities);
+
+	public Optional&lt;T&gt; findById(ID id);
+
+	public boolean existsById(ID id);
+
+	public Iterable&lt;T&gt; findAll();
+
+	public Iterable&lt;T&gt; findAllById(Iterable&lt;ID&gt; ids);
+
+	public long count();
+
+	public void deleteById(ID id);
+
+	public void delete(T entity);
+
+	public void deleteAllById(Iterable&lt;? extends ID&gt; ids);
+
+	public void deleteAll(Iterable&lt;? extends T&gt; entities);
+
+	public void deleteAll();
+
+}
+</code>
+</pre>
+
+<pre style="overflow:auto;">
+<code>
+import java.lang.reflect.Method;
+import java.util.Collection;
+import domain.BaseEntity;
+
+public abstract class BaseRepository {
+
+	private static final Long MIN_SEQ = 1L;
+	private static Long seq4Id = MIN_SEQ;
+
+	private static synchronized Long newId() {
+		return seq4Id++;
+	}
+
+	/**
+	 * 引数のエンティティおよび参照先エンティティのIdが未設定の場合、Idを設定する
+	 * @param entity
+	 */
+	protected void fillIds(BaseEntity entity) {
+		if (entity == null) {
+			throw new RuntimeException(&quot;BaseRepository#fillIds entity is null例外&quot;);
+		}
+		if (checkIfNew(entity)) {
+			entity.setId(newId()); // Id設定
+		}
+		for (Method m : entity.getClass().getDeclaredMethods()) {
+			Object returnVal = null;
+			if (checkIfGetter(m)) {
+				returnVal = getReturnVal(entity, m);
+				if (returnVal instanceof BaseEntity) {
+					BaseEntity returnedEntity = (BaseEntity) returnVal;
+					if (checkIfNew(returnedEntity)) {
+						returnedEntity.setId(newId()); // Id設定
+					}
+				} else if (returnVal instanceof Collection) {
+					for (Object child : (Collection&lt;Object&gt;) returnVal) {
+						if (child instanceof BaseEntity) { //CollectionのCollectionは無視
+							this.fillIds((BaseEntity) child);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/** インスタンスメソッドを起動して戻り値を応答する */
+	private static Object getReturnVal(BaseEntity entity, Method m) {
+		try {
+			return m.invoke(entity);
+		} catch (Exception ex) {
+			throw new RuntimeException(&quot;BaseRepository#getReturnVal Method#invoke例外: &quot; + m.getName());
+		}
+	}
+
+	/** getterメソッドか否か */
+	private static boolean checkIfGetter(Method method) {
+		return method != null &amp;&amp; (!method.getReturnType().getName().equals(&quot;void&quot;))
+				&amp;&amp; method.getName().startsWith(&quot;get&quot;) &amp;&amp; method.getParameterCount() &lt; 1;
+	}
+
+	/** Id未決のエンティティか否か */
+	private static boolean checkIfNew(BaseEntity entity) {
+		return entity != null &amp;&amp; entity.getId() &lt; MIN_SEQ;
+	}
+}
+</code>
+</pre>
+
+<pre style="overflow:auto;">
+<code>
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import domain.Employee;
+/**
+ * 社員リポジトリ（シングルトン）
+ * @author murayama
+ *
+ */
+public class EmployeeRepository extends BaseRepository implements ICrudRepository&lt;Employee, Long&gt;{
+
+	/** シングルトンインスタンス */
+	private static EmployeeRepository instance = null;
+	
+	/** 社員リスト */
+	private List&lt;Employee&gt; employeeList;
+	
+	/** シングルトン応答 */
+	public static synchronized EmployeeRepository getInstance() {
+		if (instance == null) {
+			instance = new EmployeeRepository();
+		}
+		return instance;
+	}
+	
+	/** コンストラクタ */
+	private EmployeeRepository() {
+		employeeList = new ArrayList&lt;&gt;();
+	}
+	
+	//ICrudRepositoryインタフェースの実装
+	
+	@Override
+	@SuppressWarnings("unchecked")
+	public Employee save(Employee entity) {
+		if (entity != null) {
+			fillIds(entity);
+			this.employeeList.add(entity);
+		}
+		return entity;
+	}
+
+	@Override
+	public &lt;S extends Employee&gt; Iterable&lt;S&gt; saveAll(Iterable&lt;S&gt; entities) {
+		throw new RuntimeException("未実装:saveAll");
+	}
+
+	@Override
+	public Optional&lt;Employee&gt; findById(Long id) {
+		List&lt;Employee&gt; list = this.employeeList.stream().filter(e -&gt; e.getId() == id).collect(Collectors.toList());
+		if (list.size() == 1) {
+			return Optional.of(list.get(0));
+		}
+		return Optional.empty();
+	}
+
+	@Override
+	public boolean existsById(Long id) {
+		throw new RuntimeException("未実装:existsById");
+	}
+
+	@Override
+	public Iterable&lt;Employee&gt; findAll() {
+		throw new RuntimeException("未実装:findAll");
+	}
+
+	@Override
+	public Iterable&lt;Employee&gt; findAllById(Iterable&lt;Long&gt; ids) {
+		throw new RuntimeException("未実装:findAllById");
+	}
+
+	@Override
+	public long count() {
+		throw new RuntimeException("未実装:count");
+	}
+
+	@Override
+	public void deleteById(Long id) {
+		throw new RuntimeException("未実装:deleteById");
+	}
+
+	@Override
+	public void delete(Employee entity) {
+		throw new RuntimeException("未実装:delete");
+	}
+
+	@Override
+	public void deleteAllById(Iterable&lt;? extends Long&gt; ids) {
+		throw new RuntimeException("未実装:deleteAllById");
+	}
+
+	@Override
+	public void deleteAll(Iterable&lt;? extends Employee&gt; entities) {
+		throw new RuntimeException("未実装:deleteAll");
+	}
+
+	@Override
+	public void deleteAll() {
+		throw new RuntimeException("未実装:deleteAll");
+	}
+
+	//追加メソッドを実装
+	
+	/** 名前で検索する */
+	public List&lt;Employee&gt; findByName(String name) {
+		List&lt;Employee&gt; resultList = new ArrayList&lt;&gt;();
+		this.employeeList.stream()
+		.filter(e -&gt; name.equals(e.getName()))
+		.forEach(e -&gt; resultList.add(e));
+		return resultList;
+	}
+}
+
+</code>
+</pre>
+
+<pre style="overflow:auto;">
+<code>
+import java.io.Serializable;
+	/**
+	 * ドメインオブジェクトの基底クラス
+	 * @author murayama
+	 *
+	 */
+	public abstract class BaseEntity implements Serializable {
+		private static final long serialVersionUID = 1L;
+
+		/** JPA識別子 */
+		protected Long id;
+		
+		/** コンストラクタ */
+		public BaseEntity() {
+			this.id = 0L;
+		}
+
+		public Long getId() {
+			return id;
+		}
+
+		public void setId(Long id) {
+			this.id = id;
+		}
+	}
+}
+</code>
+</pre>
+
+<pre style="overflow:auto;">
+<code>
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * 社員
+ * @author murayama
+ *
+ */
+public class Employee extends BaseEntity{
+	private static final long serialVersionUID = 1L;
+	
+	private String name = &quot;&quot;;
+	
+	private List&lt;Device&gt; deviceList;
+	
+	public Employee() {
+		this.name = &quot;&quot;;
+		this.deviceList = new ArrayList&lt;&gt;();
+	}
+	
+	public void addDevice(Device d) {
+		if (d != null &amp;&amp; ! this.deviceList.contains(d)) {
+			this.deviceList.add(d);
+			d.setEmployee(this);
+		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+
+	public List&lt;Device&gt; getDeviceList() {
+		return deviceList;
+	}
+
+	public void setDeviceList(List&lt;Device&gt; deviceList) {
+		this.deviceList = deviceList;
+	}
+}
+</code>
+</pre>
+
+<pre style="overflow:auto;">
+<code>
+public class Device extends BaseEntity {
+	private static final long serialVersionUID = 1L;
+	
+	private Employee employee;
+	
+	public Device() {
+	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+}
+</code>
+</pre>
+
+<pre style="overflow:auto;">
+<code>
+/**
+ * Javaアプリケーション起動クラス
+ */
+public class Starter {
+
+	public static void main(String[] args) {
+		(new Starter()).doTest();
+	}
+
+	private EmployeeRepository employeeRepository = EmployeeRepository.getInstance();
+
+	private void doTest() {
+		Employee employee = new Employee();
+		employee.setId();
+		employee.setName("ネクスト");
+		employeeRepository.save(employee);
+		return; //ブレークして employee の内容を確認する
+	}
+
+}
+</code>
+</pre>
+
+
+
+
+</section>
+[<a href="#index_top">先頭に戻る</a>]
+<hr>
+
+</div>
+<footer>
+<div class="bd">
+</div>
+<br>
+<div style="text-align: center"><span style="color:#666666 ;">Copyright 2001-2023, All Rights Reserved</span>
+</div>
+</footer>
+<br></body>
+</html>

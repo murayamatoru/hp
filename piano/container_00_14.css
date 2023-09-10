@@ -1,0 +1,392 @@
+@charset"utf-8";
+
+body{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font: 14px/1.6 "ヒラギノ角ゴ Pro W3" , "ＭＳ Ｐゴシック" , "Hiragino Kaku Gothic Pro" , "MS PGothic" , sans-serif;
+    -webkit-text-size-adjust: none;
+}
+#hpb-container
+{
+}
+
+/* スキップリンクの非表示 */
+#hpb-skip{
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+body.hpb-layoutset-02 #hpb-skip{
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+/* ヘッダー */
+
+#hpb-header{
+    margin-top: -1px; /*width: 100%;*/
+}
+
+#hpb-headerMain{
+    background-image : url(bg_header-txt_00_14.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    /* background-color: #91e368; */
+    background-color: #F5A9A9;
+}
+#hpb-headerMain h1{
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 8px;
+    padding-right: 5px;
+    padding-bottom: 8px;
+    padding-left: 5px;
+}
+
+#hpb-headerLogo{
+    background-image : url(bg_header_00_14.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding-left: 8px;
+    padding-top: 12px;
+    padding-bottom: 7px;
+}
+
+#hpb-headerExtra1{
+    display: none;
+}
+
+#hpb-headerExtra2{
+    display: none;
+}
+
+/* インナー */
+#hpb-inner{
+    padding: 0;
+}
+
+/* タイトル */
+.hpb-layoutset-01 #hpb-title
+{
+}
+
+.hpb-layoutset-02 #hpb-title h2{
+    border-top-color: #D3F3A1;
+    border-top-width: 2px;
+    border-top-style: solid;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F0FFD9), to(#FFFFFF));
+    margin-top: 0px;
+    margin-bottom: 15px;
+    color: #009900;
+}
+
+
+/* ナビゲーション */
+
+#hpb-nav{
+    /* background-image : url(bg_nav-top_00_14.png); */
+    background-repeat: repeat-x;
+    background-position: center top;
+}
+
+.hpb-layoutset-02 #hpb-nav{
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #dfdfdf;
+}
+
+#hpb-nav ul{
+    margin: 0;
+    list-style: none;
+    /* background-image : url(bg_nav-bottom_00_14.png); */
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    text-align: center;
+    padding-top: 0px;
+    padding-right: 0;
+    /* padding-bottom: 16px; */
+    padding-bottom: 0px;
+    padding-left: 0;
+}
+
+#hpb-nav ul li{
+    display: inline;
+    margin: 0 -1px;
+}
+#hpb-nav ul li a{
+    width: 102px;
+    height: 51px;
+    display: inline-block;
+    margin-bottom: 5px;
+    /* background-image : url(icon_nav_00_14.png); */
+    /* background-position: center top; */
+    /* background-repeat: no-repeat; */
+/* background-color: #FE642E; */
+    overflow: hidden;
+    text-decoration: none;
+    vertical-align: top;
+border-radius: 5px;
+}
+
+#hpb-nav ul li a .ja{
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    padding-top: 18px;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #3C9538;
+}
+
+
+.hpb-layoutset-01 h3.hpb-c-index, h3.hpb-c-index{
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: none;
+    border: none;
+}
+
+
+/* メインコンテンツ */
+.hpb-layoutset-02 #hpb-main{
+    padding: 0;
+}
+
+img, img a{
+    border: none !important;
+}
+
+#hpb-main a{
+    color: #009900;
+}
+
+/* PC版からの変換対応 */
+#hpb-main #pagetop, #footerExtra1 #pagetop{
+    display: none;
+}
+
+/* フッター */
+
+#hpb-footerMain{
+    background-image : url(bg_footer_00_14.png);
+    background-repeat: repeat-x;
+    background-position: center top;
+    /* background-color: #53B04D; */
+    background-color: #F5A9A9;
+}
+
+#hpb-footerMain p{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#hpb-footerExtra1{
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #CCCCCC;
+}
+#hpb-footerExtra1 ul{
+    margin-bottom: 0;
+    margin-top: 0;
+    list-style: none;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+#hpb-footerExtra1 ul li{
+    line-height: 2.2;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    border-top-width: 1px;
+    border-top-style: dotted;
+    border-top-color: #CCCCCC;
+}
+#hpb-footerExtra1 ul li:first-child{
+    border-top: none;
+}
+#hpb-footerExtra1 ul li a{
+    background-image : url(arrow_00_14.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 16px;
+    display: block;
+    color: #333333;
+}
+
+/* サイドバー領域 */
+
+#hpb-aside{
+    margin: 10px 0px 10px 0px;
+}
+#hpb-aside p{
+    word-break: break-all;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-bottom: 12px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#hpb-aside h3{
+    border-color: #CCC;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-radius: 5px;
+    font-weight: bold;
+    padding-left: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 7px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 1px #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#DFDFDF));
+    font-size: 15px;
+}
+#hpb-aside h3.hpb-c-index, #hpb-aside h3 .en{
+    display: none;
+}
+
+#hpb-aside h4{
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-size: 14px;
+    color: #009900;
+    font-weight: normal;
+}
+
+#banner ul{
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+}
+
+#banner ul li{
+    line-height: 1.1;
+    border-width: 1px;
+    border-color: #ccc;
+    border-style: solid;
+    padding: 0 5px;
+    margin: 0 7px 5px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#ddf8b2));
+}
+
+#banner ul li a{
+    background-color: transparent;
+    background-image : url(arrow2_00_14.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 10px 10px 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+#hpb-aside h4{
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-size: 14px;
+    color: #009900;
+    font-weight: normal;
+}
+
+
+/* form */
+
+#hpb-main .hpb-section .section textarea, #hpb-main .hpb-section .section input.l, #hpb-main .hpb-section .section input.m, #hpb-main .hpb-section .section input.s, #hpb-main .hpb-section .section input{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FaFaFa), to(#FFFFFF));
+    -webkit-border-radius: 5px;
+    padding: 5px;
+}
+#hpb-main .hpb-section .submit .button{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EFEFEF));
+    color: #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #FFF;
+    -webkit-border-radius: 15px;
+    -webkit-box-shadow: 0px 2px 2px #dcdcdc;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#hpb-main .hpb-section .none_submit .button{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CCCCCC;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EFEFEF));
+    color: #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #FFF;
+    -webkit-border-radius: 15px;
+    -webkit-box-shadow: 0px 2px 2px #dcdcdc;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+}

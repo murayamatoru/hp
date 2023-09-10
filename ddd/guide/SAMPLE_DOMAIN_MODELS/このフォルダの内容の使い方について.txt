@@ -1,0 +1,37 @@
+
+DDBuilder用ドメインモデルの例です。
+※属性型、関連パターンの参考用で、ドメインモデルとしてはリッチではありません。
+
+■このフォルダの内容
+2つのドメインモデルセットがあります。
+① BackupTemplateUserModel
+② BackupUserModel
+[注意]①②ともにパッケージはjp.co.nextdesignになっています。
+
+■使い方１
+ドメインモデルを作成するときの参考ソースコードになります。
+使用できる属性型、JPAアノテーションの付け方が参考になります。
+
+■使い方２
+①または②をWebアプリケーションに追加して使用できます。
+手順は以下の(1)→(2)→(3)→(4)→(5)です（①を例にします）
+(1) DDBuilderを起動し以下のように設定し「作成／更新」ボタンを押下します。
+    出力先=C:\test
+    GroupId=jp.co.nextdesign
+    ArtifactId=sample
+(2) 出力先にサンプルのJavaソースファイルを置きます（手動）
+    c:\test\sample\src\main\java\jp\co\nextdesign\domain <--- ①のdomainの内容
+    c:\test\sample\src\main\java\jp\co\nextdesign\service <--- ①のserviceの内容
+(3) DDBuilderを起動し「作成／更新」ボタンを押下します。
+(4) Eclipseから「既存のプロジェクト」としてC:\testをインポートします。
+(5) Eclipseで「サーバでデバッグ」開始し動作確認できます。
+[注意]出力先、GroupId、ArtifactIdは任意ですが、併せて①②のパッケージ名も修正が必要です。
+
+以上
+
+
+
+
+
+
+

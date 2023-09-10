@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title>Javaソースを抽象構文木解析しメトリクスを抽出しドキュメントを自動生成 | 無料</title>
+<meta content="Javaソースからメトリクスを抽出しドキュメントを生成する無料ツールです。クラス定義,メソッド定義,参照・被参照情報,クラス数,ステップ数,メソッド数,属性数,ネストレベルなどをレポートします。AST抽象構文木ベースのためコードスタイルの違いに強いです。" name="description">
+
+<!-- VIEW PORT 2018.3.6 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="uml_java_tools.css" rel="stylesheet" type="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+</head>
+<body style="margin: 0px; padding: 0px;">
+<!-- TOP DIV -->
+<div>
+
+<!-- WebAnalysis -->
+<script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;"></noscript>
+<!-- End WebAnalysis -->
+
+<!-- header bar kokokara -->
+<div align="right">
+<p style="max-width: 735px; min-width: 100px;"><img style="width: 100%;" src="../images/nextdesign_header.PNG" alt=""></p>
+</div>
+<table cellspacing="0" width="100%">
+<tr>
+<td height="20" valign="middle" background="../images/bg_tit2.gif">
+<div align="left" class="f08">&nbsp;&nbsp;&nbsp;&nbsp;
+<a class="menu" href="../index.html">ホーム</a>&nbsp;&nbsp;
+<a class="menu" href="../ndmail/toiawasePage.html" target="_new">お問合せ</a>
+</div>
+</td>
+</tr></table>
+<!-- header bar kokomade -->
+
+<!-- DIV1 kokokara -->
+<div class="bd">
+
+<div class ="bd">
+      <a name="#top" id="#top"></a><br>
+
+
+<p>Javaソースからメトリクスを抽出しドキュメントを生成するツール</p>
+      <h1>Ｊクラスレポート</h1>
+      <p><a href="useconsentPage4JClassReport.php" target="_new">ダウンロードページへ</a></p>
+      <br>
+      <p>● <font style="color : red;">無料ソフト</font></p>
+      <p>● Javaソースからドキュメント（Excel形式）を自動生成します。</p>
+<p>● クラス数, メソッド数, 属性数, ステップ数, ネストレベル等を抽出します。</p>
+<p>● Java抽象構文木をもとに計測しますので、コードスタイルの違いにも強いです。</p>
+<p>● 古いJavaソースもお試しください。</p>
+<p>● 本ツールはJavaスタンドアロンプログラムです。(インストール不要)</p>
+      <p>「<a href="jclassreport_code_style.html" target="_new">行数について</a>」</p>
+<br>
+<p>
+● カスタマイズ (有料)</p><p>
+ローカルなコーディングルールや、特別な指標を追加することもできます。</p><p>
+お問合せ下さい。<a href="../ndmail/toiawasePage.html" target="_new">お問合せ</a>
+</p>
+      <br>
+
+
+      <h2>Jクラスレポートとは</h2>
+      <p>Javaソースコードからドキュメント, 設計書, 仕様書を自動生成するツールです。（Excel形式）</p>
+<p>いつでもJavaソースと整合したドキュメントが得られます。</p>
+<p> 最新のドキュメントが短時間で得られます。</p>
+<p>Jクラスレポートは、Eclipse等のIDEプラグインではなく、Javaで作成したスタンドアロンプログラムです。</p>
+<p>インストール操作は不要です。</p>
+      <br>
+      <h2>用途</h2>
+      <p>これらのドキュメントは納品や保守といったタイミングで役立ちます。</p>
+<p>また、ソフトウェア・メトリクス（クラス数,メソッド数,ステップ数,ネストレベル,制御文数,依存関係など）の抽出用、管理用として日々の<p>開発業務中でも有用です。
+</p>
+
+<p>アジャイルなどイテレーティブな開発においても、最新のドキュメントをいつでも繰り返し作成できるという事は重要です。</p>
+
+<p>ソースコードとかい離していないドキュメントを人手で作るということは困難で、手間もかかり、信頼性も一定しません。</p>
+<p>また、そのような作業は開発者の思考を止めてしまうかもしれません。</p>
+
+<p>本ツールで生成できる範囲は限られていますが、ドキュメントに関わる工数を削減し、一定の精度を維持できます。</p>
+
+<p>Ｊクラスレポートは、指定されたソースディレクトリ以下の全ディレクトリと全Javaファイルを読込み、次の２種類のドキュメント（Excelファイル）を作成します。
+</p>
+
+<p>・ プロジェクト・ドキュメント　（プロジェクト設計書、プロジェクト仕様書相当）</p>
+<p>・ クラス・ドキュメント　（クラス設計書、クラス仕様書相当）</p>
+<p>※ドキュメントの品質・精度は、Javaソースコード中のJavadocコメントに依存します。</p>
+      <h2>動作条件</h2>
+      <p>Java Version 6 以上</p>
+<p>Excel2010以降がない環境でもサマリ－表は表示できます。</p>
+      <h2>確認済みの動作環境</h2>
+      <p>実行環境： Windows7 Professional, Windows8.1Pro</p>
+<p>出力結果の確認環境： Excel 2010</p>
+      <h2>対象ソースコードについて</h2>
+      <p>Java Version 6</p>
+<p>Java Version 7</p>
+<p>Java Version 8　（確認中）</p>
+      <h2>プロジェクト・ドキュメント</h2>
+      <p>Ｊクラスレポートでは指定されたソースディレクトリ以下を１つのプロジェクトとして扱います。</p>
+<p>プロジェクト・ドキュメントはプロジェクト設計書・プロジェクト仕様書に相当します。</p>
+<p>プロジェクト全体を現わす情報を含んでいます。</p>
+<p>「指標」と「一覧」で構成されます。</p>
+<p>（指標・ソフトウェアメトリクス）</p>
+<p>・ パッケージ一覧</p>
+<p>・ サブパッケージ数</p>
+<p>・ クラスう数</p>
+<p>・ ステップ数</p>
+<p>・ 実ステップ数</p>
+<p>・ Javadocコメント行数</p>
+<p>・ ブロックコメント行数、ラインコメント行数</p>
+<p>・ 属性数/クラス</p>
+<p>・ メソッド数/クラス</p>
+<p>・ コンストラクタ数/クラス</p>
+<p>・ 内部クラス数/クラス</p>
+<p>・ 無名クラス数/クラス</p>
+<p>・ 列挙型数/クラス</p>
+<p>・ 初期化子数/クラス</p>
+<p>・ 最大ステップ数/メソッド　（設定値を超えた場合は警告（セルが黄色）表示されます）</p>
+<p>・ 最深ネストレベル/メソッド　（設定値を超えた場合は警告（セルが黄色）表示されます）</p>
+<p>・ 最大制御文数/メソッド</p>
+<p>（一覧）</p>
+<p>クラス名,インタフェース名,列挙型名,アノテーション名,属性名,メソッド名</p>
+<p>要素名の定義場所（クラス・ドキュメントへのハイパーリンク付き）</p>
+      <h2>クラス・ドキュメント</h2>
+      <p>クラス設計書・クラス仕様書に相当します。</p>
+<p>クラス毎のドキュメントで、「定義情報」と「参照・被参照」で構成されます。</p>
+<p>（定義情報シート）</p>
+<p>・ クラス・インタフェース・アノテーション・列挙型宣言（Javadoc＋宣言文）</p>
+<p>・ 属性（Javadoc＋宣言文）</p>
+<p>・ コンストラクタ（Javadoc＋宣言文）</p>
+<p>・ メソッド（Javadoc＋宣言文）</p>
+<p>・ 内部クラス宣言（Javadoc＋宣言文）</p>
+<p>・ クラス内定義の列挙型宣言（Javadoc＋宣言文）</p>
+<p> （参照・被参照シート）</p>
+<p>・ 方向（参照または被参照）</p>
+<p>・ 参照先・参照元（クラス・ドキュメントへのハイパーリンク付き）</p>
+<p>・ 使用箇所</p>
+<p>スーパークラス</p>
+<p>インタフェース</p>
+<p>属性型</p>
+<p>メソッド戻り値型、引数型</p>
+<p>インスタンス生成（new式）</p>
+      <h2>用途</h2>
+      <p>・ 納品用仕様書・納品用ドキュメント（プロジェクト設計書、クラス設計書）</p>
+<p>・ 保守用（忠実な情報、影響範囲）</p>
+<p>・ バージョンアップ時の影響調査</p>
+<p>・ 品質管理</p>
+<p>・ 進捗管理</p>
+<p>など</p>
+
+
+<p>インストールとアンインストール</p>
+<p>インストール、アンインストールは簡単です。</p>
+<p>インストールは解凍するだけ、アンインストールはそれを削除するだけです。</p>
+<p>ダウンロードしたZIPファイルを解凍し、「はじめにお読みください.txt」をお読みください。</p>
+
+
+<p>ユーザガイド</p>
+<p>インストール方法、操作方法などはユーザガイドをご覧ください。</p>
+<p>ユーザガイドPDF版 （280KB）</p>
+
+<p>ダウンロードページへ</p>
+
+<p>特注機能・特注フォーマットなど</p>
+<p>こちらからお問合せください。</p>
+
+<br>
+
+<p>【参考】<a href="../ddd/index.html" target="_new">ドメイン駆動設計ドメインモデルの役割と例</a></p>
+<br>
+
+      <h2>更新履歴</h2>
+      <p>[2015.11.15] JClassReport8.2文書改訂：有効ステップ数の定義を変更</p>
+<p>[2015.11.3] JClassReport8.2公開)（行数に関する不具合修正）</p>
+<p>[2015.1.25] JClassReport8.1公開</p>
+<p>[2012.4.11]</p>
+<p>JClassReport7（無料版）公開</p>
+<p>[2011.10.21]</p>
+<p>プロジェクト・ドキュメントに「依存」シートを追加しました。</p> 
+<br>
+
+<p><a href="##top">このページの先頭に戻る</a></p>
+      <br>
+      <h2>画面例</h2>
+      「サマリー表」<br>
+            <a href="jclassreport_summary_full.html" target="_new"><img src="JClassReport_Summary_min.png" width="250" height="195" border="0"></a><br>
+            <a href="jclassreport_summary_full.html">拡大表示</a><br>
+            <br>
+            「表紙」<br>
+            <a href="jclassreport_projectreport_top_full.html" target="_new"><img src="ProjectReportTop_min.jpg" width="250" height="158" border="0" 
+alt="プロジェクト・ドキュメント"></a><br>
+            <a href="jclassreport_projectreport_top_full.html" target="_new">拡大表示</a><br>
+            <br>
+            「指標」<br>
+            <a href="jclassreport_projectreport_metrics_full.html" target="_new"><img src="ProjectReportMetrics_min.jpg" width="250" height="134" border="0" 
+alt="Java | クラス数,属性数,メソッド数,ステップ数,ネストレベル,制御文数,内部クラス数"></a><BR>
+            <a href="jclassreport_projectreport_metrics_full.html" target="_new">拡大表示</a><br>
+            <br>
+            「要素名一覧」<br>
+            <a href="jclassreport_projectreport_index_full.html" target="_new"><img src="ProjectReportIndex_min.jpg" width="250" height="150" border="0" 
+alt="クラス名,インタフェース名,列挙型名,属性名,メソッド名,アノテーション名"></a><br>
+            <a href="jclassreport_projectreport_index_full.html" target="_new">拡大表示</a><br>
+            <br>
+            「依存」<br>
+            <a href="jclassreport_projectreport_dependency_full.html" target="_new"><img src="PackageReportDependency_min.jpg" width="250" height="151" border="0"></a><br>
+            <a href="jclassreport_projectreport_dependency_full.html" target="_new">拡大表示</a><br>
+      <br>
+            「表紙」<br>
+            <a href="jclassreport_classreport_top_full.html" target="_new"><img src="ClassReportTop_min.jpg" width="250" height="221" border="0" 
+alt="クラス・ドキュメント"></a><br>
+            <a href="jclassreport_classreport_top_full.html" target="_new">拡大表示</a><br>
+            <br>
+            「クラス定義情報」<br>
+            <a href="jclassreport_classreport_detail_full.html" target="_new"><img src="ClassReportDetail_min.jpg" width="250" height="216" border="0" 
+alt="クラス定義,クラス概要"></a><br>
+            <a href="jclassreport_classreport_detail_full.html" target="_new">拡大表示</a><br>
+            <br>
+            「参照・被参照関連」<br>
+            <a href="jclassreport_classreport_reference_full.html" target="_new"><img src="ClassReportReference_min.jpg" width="250" height="216" border="0" 
+alt="クラス間の相互参照・被参照"></a><a href="jclassreport_classreport_reference_full.html" target="_new"><br>
+            拡大表示</a><br>
+            <br>
+            操作画面<br>
+            <a href="jclassreport_mainmenu_full.html" target="_new"><img src="JClassReport_MainMenu_min.png" width="250" height="104" border="0" 
+alt="操作は簡単 | ドキュメント／設計書／仕様書の自動生成"></a><br>
+            <a href="jclassreport_mainmenu_full.html" target="_new">拡大表示</a><br>
+            <br>
+            設定画面<br>
+            <a href="jclassreport_property_setting_full.html" target="_new"><img src="JClassReport_PropertySetting_min.png" width="250" height="208" border="0" 
+alt="警告で怪しい所を検出（大きなメソッド,深いネスト）"></a><br>
+            <a href="jclassreport_property_setting_full.html" target="_new">拡大表示</a><br>
+
+<br>
+<p><a href="##top">このページの先頭に戻る</a></p>
+
+</div>
+
+</div>
+<!-- DIV1 kokomade  -->
+
+
+
+
+<!-- <footer> -->
+<hr width="100%" size="1">
+<div align="center" class="f09">Copyright 2001-2023, All Rights Reserved</div>
+<br>
+<!-- </footer> -->
+</div>
+<!-- TOP DIV -->
+</body>
+</html>

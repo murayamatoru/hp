@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset=UTF-8">
+
+<title>Wicket7 | DataView with PagingNavigator | Multiple Rows | Sortable Column</title>
+
+<meta name="description" content="Wicket7 | Multiple Rows DataView with PagingNavigator.">
+<meta name="keywords" content="Wicket,DataView,PagingNavigator,Multiple,Rows,Sortable,Column">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 15.0.12.0 for Windows">
+<link rel="stylesheet" href="tips.css" type="text/css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<!-- HEADER -->
+<div id="hd" style="text-align : right;" align="right"><a href="../index.html">Next Design ltd.</a> 2017.4.4</div>
+
+<!-- WebAnalysis -->
+<script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;"></noscript>
+<!-- End WebAnalysis -->
+
+<div style="margin:20px 10px 10px 20px">
+
+
+<h1>Wicket7 | DataView with PagingNavigator | Multiple Rows | Sortable Column</h1>
+
+
+<h2>VIEW</h2>
+
+
+<p style="max-width: 362px; min-width: 100px;"><img style="width: 100%;" src="SortableDataViewMultipleRows.PNG" alt=""></p>
+
+
+<h2>HTML</h2>
+<pre style="overflow:auto;">
+<code>
+&lt;span wicket:id=&quot;navigator&quot;&gt;[dataview navigator]&lt;/span&gt;
+&lt;table class=&quot;grid&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;SELECT&lt;/th&gt;
+                    &lt;th&gt;ID&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;th wicket:id=&quot;orderByName&quot;&gt;title&lt;/th&gt;
+                    &lt;th wicket:id=&quot;orderByPublishedAt&quot;&gt;publication date&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr wicket:id=&quot;sorting&quot;&gt;
+        &lt;td&gt;
+            &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;a href=&quot;#&quot; wicket:id=&quot;select&quot;&gt;select&lt;/a&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;span wicket:id=&quot;id&quot;&gt;[id]&lt;/span&gt; &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;&lt;span wicket:id=&quot;name&quot;&gt;[name]&lt;/span&gt;&lt;/td&gt;
+                        &lt;td&gt;&lt;span wicket:id=&quot;publishedAt&quot;&gt;[publishedAt]&lt;/span&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+            &lt;/table&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code>
+</pre>
+
+<h2>Java</h2>
+<pre style="overflow:auto;">
+<code>
+        MySortableDataProvider dp = new MySortableDataProvider();
+        final DataView<Book> dataView = new DataView<Book>("sorting", dp)
+        {
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            protected void populateItem(final Item<Book> item)
+            {
+                final Book book = item.getModelObject();
+
+                item.add(new Link<Void>("select"){
+                    private static final long serialVersionUID = 1L;
+                    @Override
+                    public void onClick(){
+                        if (book != null){
+                            BookSortingPage.this.selected = book;
+                        }
+                    }
+                });
+                item.add(new Label("id", String.valueOf(book.getId())));
+                item.add(new Label("name", book.getName()));
+                item.add(new Label("publishedAt", book.getPublishedAt()));
+
+                //Change color at even row and odd row
+                item.add(AttributeModifier.replace("class", new AbstractReadOnlyModel<String>()
+                {
+                    private static final long serialVersionUID = 1L;
+
+                    @Override
+                    public String getObject()
+                    {
+                        return (item.getIndex() % 2 == 1) ? "even" : "odd";
+                    }
+                }));
+            }
+        };
+
+        dataView.setItemsPerPage(5L);
+
+        //Sortable Column
+        add(new OrderByBorder<String>("orderByName", "name", dp)
+        {
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            protected void onSortChanged()
+            {
+                dataView.setCurrentPage(0);
+            }
+        });
+
+        //Sortable Column
+        add(new OrderByBorder<String>("orderByPublishedAt", "publishedAt", dp)
+        {
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            protected void onSortChanged()
+            {
+                dataView.setCurrentPage(0);
+            }
+        });
+
+        add(dataView);
+        add(new PagingNavigator("navigator", dataView));
+    }
+</code>
+</pre>
+
+
+
+
+<br>
+</div>
+
+<div id="ft">NextDesign 2017.4.4</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset=UTF-8">
+
+<title>Play framework 2.0 Java - JPA MySQL 設定例</title>
+
+<meta name="description" content="Play framework 2.0 Java - JPA MySQL 設定例">
+<meta name="keywords" content="Play,framework,2.0,JPA,MySQL">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 15.0.12.0 for Windows">
+<link rel="stylesheet" href="tips.css" type="text/css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<!-- HEADER -->
+<div id="hd" style="text-align : right;" align="right"><a href="../index.html">Next Design ltd.</a> 2017.4.4</div>
+
+<!-- WebAnalysis -->
+<script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;"></noscript>
+<!-- End WebAnalysis -->
+
+<div style="margin:20px 10px 10px 20px">
+
+
+            <h1>Play framework 2.0 Java</h1>
+            <h2>JPA MySQLの設定例</h2>
+            2012.4.15<br>
+            <br>
+            <pre style="overflow:auto;">
+■conf/application.conf
+<code>
+# Database configuration
+# ~~~~~ 
+# You can declare as many datasources as you want.
+# By convention, the default datasource is named `default`
+#
+db.default.driver=com.mysql.jdbc.Driver
+db.default.url=&quot;jdbc:mysql://localhost/test&quot;
+db.default.user=***
+db.default.password=******
+#
+# You can expose this datasource via JNDI if needed (Useful for JPA)
+# db.default.jndiName=DefaultDS
+db.default.jndiName=DefaultDS
+jpa.default=defaultPersistenceUnit
+</code>
+</pre>
+
+
+<pre style="overflow:auto;">
+■conf/META-INF/persistence.xml
+<code>
+&lt;persistence xmlns=&quot;http://java.sun.com/xml/ns/persistence&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/ persistence 
+http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd&quot; version=&quot;2.0&quot;&gt;
+&lt;persistence-unit name=&quot;defaultPersistenceUnit&quot; transaction-type=&quot;RESOURCE_LOCAL&quot;&gt;
+&lt;provider&gt;org.hibernate.ejb.HibernatePersistence&lt;/provider&gt;
+&lt;non-jta-data-source&gt;DefaultDS&lt;/non-jta-data-source&gt; 
+&lt;properties&gt; 
+&lt;property name=&quot;hibernate.dialect&quot; value=&quot;org.hibernate.dialect.MySQLDialect&quot;/&gt;
+&lt;property name=&quot;hibernate.hbm2ddl.auto&quot; value=&quot;update&quot;/&gt; 
+&lt;/properties&gt; 
+&lt;/persistence-unit&gt; 
+&lt;/persistence&gt; 
+</code>
+</pre>
+
+
+<pre style="overflow:auto;">
+■project/Build.scala
+<code>
+import sbt._
+import Keys._
+import PlayProject._
+object ApplicationBuild extends Build {
+    val appName         = "appjava"
+    val appVersion      = "1.0-SNAPSHOT"
+    val appDependencies = Seq(
+      // Add your project dependencies here,
+        "mysql" % "mysql-connector-java" % "5.1.19",
+        "org.hibernate" % "hibernate-entitymanager" % "4.1.2.Final"
+    )
+    val main = PlayProject(appName, appVersion, appDependencies, mainLang = JAVA).settings(
+      // Add your own project settings here      
+    )
+}
+</code>
+</pre>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

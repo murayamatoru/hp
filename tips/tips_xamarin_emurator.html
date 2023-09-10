@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset=UTF-8">
+
+<title>XamarinのAndroidエミュレータが起動しない。Fatal signal 6 (SIGABRT)</title>
+
+<meta content="Visual Studio 2017 Xamarin.Formsプロジェクトのデバッグ時に、Androidエミュレータが起動しなかった時のメモです。正確な技術資料などに基づいたものではありません。いろいろと試した結果、とりあえず解消したので、その時の操作内容を残したものです。" name="description">
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+<link rel="stylesheet" href="tips.css" type="text/css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<!-- HEADER -->
+<div id="hd" style="text-align : right;"><a href="../index.html">ネクストデザイン</a> 2017.4.4</div>
+
+<!-- WebAnalysis -->
+<script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;"></noscript>
+<!-- End WebAnalysis -->
+
+<div style="margin:20px 10px 10px 20px">
+<h1>Xamarin.Formsプロジェクトのデバッグ時にAndroidエミュレータが起動しない。</h1>
+
+<p>
+Visual Studio 2017 Xamarin.Formsプロジェクトのデバッグ時に、Androidエミュレータが起動しなかった時のメモです。<br>
+正確な技術資料などに基づいたものではありません。<br>
+いろいろと試して、とりあえず解消できた時のメモです。
+</p>
+
+<h2>1.「ランタイム チェックの完了を待機しています」のまま停止</h2>
+<p>
+当方で、Xamarin.Formsプロジェクトを新規作成し、そのままデバッグ → デバッグ実行としたのですが、エミュレータが起動しませんでした。<br>
+そこで、ネットの情報などをもとに、次の操作を行いました。<br>
+ツール → Android → Androidデバイスマネージャ<br>
+Androidデバイスマネージャのダイアログが表示されたら、開始をクリックしました。<br>
+ただし、当方の場合は、これでもトラブルは解消しませんでした。
+</p>
+<p style="max-width: 607px; min-width: 80px;"><img style="width: 100%;" src="xamarin_images/img1.PNG" alt="Androidデバイスマネージャ"></p>
+
+<p>
+上の操作の後も、デバッグ実行すると、出力ウィンドウのログの最後に次のようなメッセージが出るかもしれません。<br>
+残念ながら、どの操作でこのログが出力されたのかを失念してしまいました。<br>
+GL errors! frameworks/base/libs/hwui/renderthread/OpenGLPipeline.cpp:105<br>
+12-10 05:27:47.091 E/OpenGLRenderer(11298): GL error:  Out of memory!<br>
+12-10 05:27:47.092 F/OpenGLRenderer(11298): GL errors! frameworks/base/libs/hwui/renderthread/OpenGLPipeline.cpp:105<br>
+12-10 05:27:47.092 F/libc    (11298): Fatal signal 6 (SIGABRT), code -6 in tid 11332 (RenderThread), pid 11298 (ompanyname.App1)
+</p>
+
+<h2>2. OpenGLエラー</h2>
+<p>1. で開始をクリックした時か、デバッグ → デバッグ実行をした時に、次のダイアログが表示されるかもしれません。<br>
+表示されたら、チェックボックスをオンにして、Don't send.ボタンをクリックします。
+</p>
+<p style="max-width: 522px; min-width: 80px;"><img style="width: 100%;" src="xamarin_images/img2.PNG" alt="OpenGLエラー"></p>
+
+<p>上のダイアログのメッセージです。</p>
+<p>
+「Suggestion(s) based on crash info:<br>
+It appears that your computer's OpenGL graphics driver crashed. This was probably caused by a bug in the driver or by a bug in your app's OpenGL code.<br>
+You should check your manufacturer's website for an updated graphics driver.<br>
+You can also tell the Emulator to use software rendering for this device. This could avoid driver problems and make it easier to debug the OpenGL code in your app.」
+</p>
+
+<p>メッセージの日本語訳です。</p>
+<p>
+「クラッシュ情報に基づいた提案：<br>
+お使いのコンピューターのOpenGLグラフィックスドライバーがクラッシュしたようです。 これはおそらく、ドライバーのバグまたはアプリのOpenGLコードのバグが原因でした。<br>
+更新されたグラフィックドライバーについては、製造元のWebサイトを確認してください。<br>
+また、このデバイスにソフトウェアレンダリングを使用するようにエミュレーターに指示することもできます。 これにより、ドライバーの問題を回避し、アプリのOpenGLコードをデバッグしやすくなります。」
+</p>
+<p>当方の場合は、これでトラブルを解消できました。</p>
+
+<h2>3. 良いと思う使い方</h2>
+<p>
+エミュレータの起動は時間がかかります。<br>
+以下は、当方の使い方です。<br>
+少しでも速く起動できて、そしてトラブルが少ない使い方だと思っています。<br>
+（下のAndroidデバイスマネージャ画面には「Tablet10.1」という名前のデバイスが追加されていますが、特に意味はありません。）<br>
+  Visual Studioを起動したら、デバッグを始める前に、一度、Androidデバイスマネージャで使用するデバイスを開始しておきます。<br>
+  そうすると、「<span class="marker_pink">このアプリがデバイスに変更を加えることを許可しますか？</span>」という画面が表示されるかもしれません。<br>
+表示されたら「はい」で許可します。<br>
+  いきなり、デバッグ → デバッグ実行とする場合よりも、トラブルが少ないように感じます。<br>
+  開始したエミュレータは、終了させる必要はありませんので、次のデバッグ実行時には、エミュレータの起動時間を短く出来ます。<br>
+</p>
+<p style="max-width: 829px; min-width: 80px;"><img style="width: 100%;" src="xamarin_images/img3.PNG" alt="Androidデバイスマネージャ"></p>
+
+<p>
+エミュレータが起動しないというトラブルとは関係ありませんが、使用するAPIは、必要なものだけにしておいた方が速く起動するように感じます。
+</p>
+<p style="max-width: 830px; min-width: 80px;"><img style="width: 100%;" src="xamarin_images/img4.PNG" alt="Androidデバイスマネージャ"></p>
+
+</div>
+
+<div id="ft">NextDesign 2019.12.11</div>
+</body>
+</html>

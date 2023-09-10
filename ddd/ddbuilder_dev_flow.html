@@ -1,0 +1,530 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta content="DDBuildeを使った開発の流れを説明します。" name="description">
+
+<title>DDBuildeを使った開発の流れ</title>
+
+<link href="next2.css" rel="stylesheet">
+<!-- VIEW PORT 2018.3.6 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+</head>
+
+<body style="margin: 0px; padding: 0px;"><!-- WebAnalysis --><script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;" alt="WebAnalysis"></noscript>
+<!-- End WebAnalysis -->
+<header><!-- header bar kokokara -->
+<div class="hd">
+  <table style=" margin: 0 auto; width: 100%; height: 100%">
+    <tr>
+      <td><a href="../index.html" target="_new"><span style="font-size:80%; color:white;">&nbsp;&nbsp;ネクストデザイン</span></a>
+      </td>
+    </tr></table>
+</div>
+<!-- header bar kokomade -->
+<div>
+  <table style=" margin: 0 auto; width: 100%;">
+    <tr><td style="text-align: right;"><span class="small_text">更新:<time datetime="2019-05-24">2019-05-24</time></span>&nbsp;
+</td></tr></table>
+</div>
+<div class="bd">
+  <p><a id="page_top"></a></p>
+  <h1>DDBuildeを使った開発の流れ</h1>
+</div>
+</header>
+
+<div class="bd">
+  <a id="label1"></a>
+  <section>
+  <h2>開発の流れ</h2>
+  <p>DDBuilderを使った実践の流れを示します。</p>
+  <p>この例のドメインは、簡単な在庫管理業務とします。</p>
+  <p>倉庫、製品、在庫、在庫管理サービスといったドメインモデルを作成する流れを示します。</p>
+  <p>この節は、次の10ステップで順に説明します。</p>
+  <ul>
+    <li>[1/10] DDBuilder の起動</li>
+    <li>[2/10] 基本情報の設定</li>
+    <li>[3/10] 初回の生成</li>
+    <li>[4/10] 初回のWebアプリケーションの実行確認</li>
+    <li>[5/10] ドメインモデルを追加</li>
+    <li>[6/10] Webアプリケーションに反映</li>
+    <li>[7/10] Eclipse プロジェクトをリフレッシュ</li>
+    <li>[8/10] 再度 Webアプリケーションを動かしてテスト</li>
+    <li>[9/10] ドメインモデルをさらに追加</li>
+    <li>[10/10] ドメインモデルの実装コード例（例：StockService, Warehouse, Stock）</li>
+  </ul>
+  <h4>[1/10] DDBuilder の起動</h4>
+  <p>(1) 事前準備として、DDBuilder 圧縮ファイル (jp-co-nextdesign-ddbuilder.zip) をダウンロードします。<a href="useconsentPage4DDBuilder.php?softwareName=DDBuilder" target="_new"> [ダウンロードページへ]</a></p>
+  <p>(2) DDBuilder 圧縮ファイルを適当な場所に解凍します。</p>
+  <p>(3) 解凍後フォルダ (jp-co-nextdesign-ddbuilder) の直下の startDdbuilder.bat を起動します。</p>
+  <p>(4) 起動すると下図の画面が表示されます。</p>
+  <p>※ なお、DDBuilder は Java で作成されたスタンドアロンアプリケーションです。Eclipseのプラグインではありません。Eclipseとは関係なく独立して動作します。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image001.jpg" alt="DDBuilderを最初に起動したときの画面"></p>
+  <h4>[2/10] 基本情報の設定</h4>
+  <p>起動したら、Webアプリケーションの作成場所やアプリケーション名などの基本情報を入力します。</p>
+  <p>ここで設定した基本情報は、生成される Java Web アプリケーションの画面ラベル等にも反映されます。</p>
+  <p>より詳細な設定は、「他の設定」ボタンを押してから設定してください。</p>
+  <p>下図は入力例です。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image002.jpg" alt="生成するWebアプリケーションの基本情報の入力例"></p>
+  <h4>[3/10] 初回の生成</h4>
+  <p>基本情報を入力し、作成／更新ボタンを押下するとWebアプリケーションの基本形が作成されます。</p>
+  <p>この時点ではドメインモデルはひとつも定義されていませんので、生成されたWebアプリケーションは最小限の画面 (トップ画面など) を含むだけです。</p>
+  <p>次に、生成されたWebアプリケーションを、Eclipseにインポートします。</p>
+  <p>インポートしたら、Eclipseから、ドメインモデルを Java で実装したり、Web アプリケーションとしてデバッグ実行して、ドメインモデルを検証します。</p>
+  <p>※Webアプリケーションは、インポート可能なEclipseプロジェクトとして生成されています。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image003_1.jpg" alt="Eclipse画面例"></p>
+  <p>※ 必須ではありませんが、上図のように表示したい場合は、</p><p>
+右上の四角印の辺りで「Java EE」を選択します。</p><p>
+もし、Java EE が無い場合は、メニューバー → ウィンドウ → ビューの表示 → プロジェクト・エクスプローラでビューを追加してください。</p><p>
+画面左のプロジェクト・エクスプローラの表示形式を上図と同じようにするためには、</p><p>
+上の丸印の所の「▽」をクリックして、次図のようにパッケージ・プレゼンテーションを「階層」にします。
+</p>
+  <p style="max-width: 309px; min-width: 80px;"><img style="width: 100%;" src="img2/image003_2.jpg" alt="Eclipse画面例"></p>
+  <p>※ Eclipse と DDBuilder は、ともに起動したままでも構いません。一度終了してから、必要なときに再起動しても構いません。</p>
+  <p>※ 再起動した場合も、前回入力されたDDBuilder画面の基本情報は維持されています。</p>
+  <h4>[4/10] 初回のWebアプリケーションの実行確認</h4>
+  <p>インポートが完了すると、上図のように「プロジェクトエクスプローラ」ビューに表示されます。</p>
+  <p>確認のために、Eclipseで Web アプリケーションを実行してみます。</p>
+  <p>この時点では、ドメインモデルは１つもありませんが、基本的な画面遷移の動作確認はできます。</p>
+  <p>下図はEclipse内で実行した時の例です。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image004.jpg" alt="デバッグ実行画面"></p>
+  <br>
+  <p>上図はEclipse内蔵のブラウザで表示された状態です。</p>
+  <p>Eclipse外のブラウザからもアクセスしてテストできます。</p>
+  <p>下図はChromeからアクセスした例です。例：http://localhost:8080/zaiko/</p>
+  <p style="max-width: 590px; min-width: 80px;"><img style="width: 100%;" src="img2/image005.jpg" alt="Chromeブラウザでアクセスした例"></p>
+  <br>
+  <p>ここまでで、Webアプリケーションの基本動作ができました。(ドメインモデルが無い空のアプリケーション)</p>
+  <p>この後は、ドメインの分析、ドメインモデルの抽出、設計、実装、検証する作業の繰り返しが始まります。</p>
+  <p>つまり、初回のイテレーションの開始です。</p>
+  <p>一気にドメイン全体をカバーしようとするのではなく、１週間程度で行える範囲や優先度の高いユースケースが通る範囲などをイテレーションのゴールとして設定します。(１週間が妥当かどうかは要検討です)</p>
+  <p>期間の目安や、ユースケースの優先度などはプロジェクトによって違ってくるでしょう。</p>
+  <p>反復型開発プロセスやアジャイルなどの手法解説を参考にしてください。</p>
+  <h4>[5/10] ドメインモデルを追加</h4>
+  <p>まず、もっとも簡単な例として、下図のProductオブジェクトを１つだけ作成してみます。</p>
+  <p>従って、イテレーションのゴールは、以下の製品Productクラスの初版を実装し、Webアプリケーションの形で振る舞いを検証することです。</p>
+  <br>
+  <p>サンプル クラス図</p>
+  <p style="max-width: 109px; min-width: 80px;"><img style="width: 100%;" src="img2/image006.png" alt="単純なドメインモデルのサンプル"></p>
+  <br>
+  <p>サンプル コード</p>
+  <pre style="overflow:auto;">
+<code>
+    /**
+     * 製品
+     */
+    @Entity &lt;------------- JPAアノテーション
+    public class Product extends DdBaseEntity { 　 &lt;------------- DDBuilderエンティティ基底クラス
+        private static final long serialVersionUID = 1L;
+
+        /**
+         * 製品名
+         */
+        private String name;
+
+        /**
+         * コンストラクタ
+         */
+        public Product(){
+            super();
+            this.name = &quot;&quot;;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+</code>
+</pre>
+  <p>実装作業は、下図のように、EclipseでProductクラスを実装します。</p>
+  <p>domainパッケージの直下にProduct.javaを追加します。サブパッケージを追加することもできます。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image007.jpg" alt="EclipseでProduct.javaを作成するときの例"></p>
+  <h4>[6/10] Webアプリケーションに反映</h4>
+  <p>これで、Productクラスは追加できました。</p>
+  <p>しかしまだ、Productクラスのインスタンスを登録したり、表示したりするためのビュー層 (ユーザインタフェース層) や永続化層 (インフラストラクチャ層) はありません。</p>
+  <p>これらは、DDBuilderが自動生成します。</p>
+  <p>そのために、DDBuilderでWebアプリケーションを更新します。</p>
+  <p>DDBuilderはProduct.javaファイルを読み込み、ビュー層のクラスなどを追加します。</p>
+  <p style="max-width: 638px; min-width: 80px;"><img style="width: 100%;" src="img2/image027.png" alt="DDBuilder 操作画面"></p>
+  <h4>[7/10] Eclipse プロジェクトをリフレッシュ</h4>
+  <p>作成／更新ボタンを押下し、完了ダイアログが表示されたら、Webアプリケーションの中に必要なjavaファイルが追加されています。</p>
+  <p>しかし、Eclipseは、追加されたファイルを検知していません。</p>
+  <p>そのために必ず、Eclipse側でプロジェクトをリフレッシュしてください。(忘れがちです)</p>
+  <h4>[8/10] 再度 Webアプリケーションを動かしてテスト</h4>
+  <p>リフレッシュしたら、再度Webアプリケーションを起動してテストします。</p>
+  <p>下図はChromeからアクセスした例です。</p>
+  <p>[ アプリケーショントップ画面 ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image008.jpg" alt="ブラウザからアクセスしたトップ画面の例"></p>
+  <br>
+  <p>ここで、ドメインクラス一覧ボタンをクリックすると次画面に遷移します。</p>
+  <p>[ ドメインクラス一覧画面 ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image009.jpg" alt="ドメインクラス一覧画面の例"></p>
+  <br>
+  <p>次に、製品Productリンクをクリックすると次画面に遷移します。</p>
+  <p>[ ドメインクラス別のインスタンス一覧・新規作成画面 ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image010.jpg" alt="インスタンス一覧画面の例"></p>
+  <br>
+  <p>次に、新規作成リンクをクリックすると次画面に遷移します。</p>
+  <p>[ ドメインクラス別の新規登録画面 ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image011.jpg" alt="インスタンスの編集画面の例"></p>
+  <br>
+  <p>次に、製品名を入力し保存ボタンを押下すると、Productインスタンスが永続化され、次画面に遷移します。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image012.jpg" alt="エンティティインスタンスの一覧画面の例"></p>
+  <br>
+  <p>1件登録され、一覧に追加されています。</p>
+  <p>次に、編集リンクをクリックすると次画面に遷移します。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image013.jpg" alt="エンティティの編集画面の例"></p>
+  <br>
+  <p>次に、製品名を変更すると次画面に遷移します。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image014.jpg" alt="ブラウザからアクセスしたエンティティ編集画面の例"></p>
+  <br>
+  <p>次に、保存すると次画面に遷移します。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image015.jpg" alt="ブラウザからアクセスしたエンティティ一覧画面例"></p>
+  <h4>[9/10] ドメインモデルをさらに追加</h4>
+  <p>ここまではProductクラスだけでしたが、下図のようにドメインモデルに1つのサービスと2つのエンティティを追加します。</p>
+  <p>値オブジェクト (バリューオブジェクト) はこの例では登場しません。</p>
+  <br>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image016.jpg" alt="ドメインモデルのクラス図サンプル"></p>
+  <br>
+  <p>Productを追加した時と同様の手順で、Webアプリケーションを更新し、テスト実行します。</p>
+  <p>[ アプリケーショントップ画面 ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image017.jpg" alt="動くソフトウェアのトップ画面"></p>
+  <br>
+  <p>ドメインクラス一覧ボタン → 製品Productリンクをクリックします。</p>
+  <p>なお、ここでは説明を省略しますが、以降の説明の中では、下図のようなテストデータが作成済みとします。</p>
+  <p>テストデータの作成については
+<a href="guide/DDBuilder_Guide_Ver2.pdf" target="_new">ユーザーガイド(PDF)</a>を参照してください。
+</p>
+  <p>ドメインクラス一覧ボタンを押下します。</p>
+  <p>[ ドメインクラス一覧画面 ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image018.jpg" alt="ドメインクラスの一覧画面"></p>
+  <br>
+  <p>製品 Productリンクをクリックします。</p>
+  <p>[ ドメインクラス別インスタンス一覧画面 ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image019.jpg" alt="インスタンスの一覧画面"></p>
+  <br>
+  <p>例として、2行目の編集リンクをクリックします。</p>
+  <p>[ ドメインクラス別編集画面 ] (製品(1)---(*)在庫)</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image020.jpg" alt="インスタンスの編集画面"></p>
+  <br>
+  <p>編集して保存するか、キャンセルで戻ります。</p>
+  <p>次に、サービスメソッドを実行してみます。</p>
+  <p>このサービスは、ある倉庫から別の倉庫に在庫を移動させる業務を実現します。</p>
+  <p>サービス一覧またはホーム → サービス一覧で下図の画面が表示されます。</p>
+  <p>[ サービスメソッド一覧画面 ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image021.jpg" alt="サービスメソッドの一覧画面"></p>
+  <br>
+  <p>実行リンクをクリックします。</p>
+  <p>下図の画面が表示されたら、このサービスメソッドに渡す引数を指定します。</p>
+  <p>from移動元倉庫：選択ボタンを押下します。</p>
+  <p>[ サービスメソッド実行画面 (引数設定画面) ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image022.jpg" alt="サービスメソッドの実行画面"></p>
+  <br>
+  <p>例として「福岡センター」を選択します。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image023.jpg" alt="サービスメソッドの引数設定画面(1)"></p>
+  <br>
+  <p>仮決定ボタンを押下します。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image024.jpg" alt="サービスメソッドの引数設定画面(2)"></p>
+  <br>
+  <p>同様に移動先の倉庫と移動する製品と数量を指定します。</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image025.jpg" alt="サービスメソッドの引数設定画面(3)"></p>
+  <br>
+  <p>サービス実行を押下すると、下図の完了画面が表示されます。</p>
+  <p>倉庫間移動メソッドの詳細は実装していませんので、戻り値としてtruetrueが表示されています。</p>
+  <p>[ サービスメソッド実行結果画面 ]</p>
+  <p style="max-width: 589px; min-width: 80px;"><img style="width: 100%;" src="img2/image026.jpg" alt="サービスメソッドの実行結果画面(4)"></p>
+  <h4>[10/10] ドメインモデルの実装コード例（例：StockService, Warehouse, Stock）</h4>
+  <p>サンプル コードには次の4つのクラスが含まれています。</p>
+  <p>(1) 製品 @Entity</p>
+  <p>public class Product extends DdBaseEntity</p>
+  <p>(2) 在庫 @Entity</p>
+  <p>public class Stock extends DdBaseEntity</p>
+  <p>(3) 倉庫 @Entity</p>
+  <p>public class Warehouse extends DdBaseEntity</p>
+  <p>(4) 在庫管理サービス</p>
+  <p>public class StockService extends DdBaseService</p>
+  <br>
+  <h4>サンプルコード</h4>
+
+<pre style="overflow:auto;">
+<code>
+package jp.co.nextdesign.domain;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Transient;
+import jp.co.nextdesign.domain.ddb.DdBaseEntity;
+/**
+ * 製品
+ */
+@Entity
+public class Product extends DdBaseEntity {
+    private static final long serialVersionUID = 1L;
+
+    /** 製品名 */
+    private String name;
+    
+    /** 在庫 */
+    @OneToMany(mappedBy=&quot;product&quot;, cascade=CascadeType.ALL, orphanRemoval=true)
+    private List&lt;Stock&gt; stockList = new ArrayList&lt;Stock&gt;();
+    
+    /** コンストラクタ */
+    public Product(){
+        super();
+        this.name = &quot;&quot;;
+    }
+
+    //OneToManyで双方向関連を維持するためのコードを
+    //含むgetStockList(),setStockList(List&lt;Stock&gt; stockList)の例
+    @Transient
+    private ArrayList&lt;Stock&gt; latestStockList = new ArrayList&lt;Stock&gt;();
+    public List&lt;Stock&gt; getStockList() {
+        return this.stockList;
+    }
+    public void setStockList(List&lt;Stock&gt; stockList) {
+        for(Stock newStock : stockList){
+            if (!latestStockList.contains(newStock)){
+                newStock.setProduct(this);
+            }
+        }
+        for(Stock oldStock : latestStockList){
+            if (!stockList.contains(oldStock)){
+                oldStock.setProduct(null);
+            }
+        }
+        this.stockList = stockList;
+        latestStockList = new ArrayList&lt;Stock&gt;(this.stockList);
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    /** DDB一覧表示用タイトル */
+    @Override
+    public String getDDBEntityTitle(){
+        return &quot;製品名：&quot; + this.getName();
+    }
+}
+</code>
+</pre>
+<pre style="overflow:auto;">
+<code>
+package jp.co.nextdesign.domain;
+import java.util.Calendar;
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import jp.co.nextdesign.domain.ddb.DdBaseEntity;
+/**
+ * 在庫
+ */
+@Entity
+public class Stock extends DdBaseEntity {
+    private static final long serialVersionUID = 1L;
+        
+    /** 数量 */
+    private Integer quantity;
+        
+    /** 製品 */
+    @ManyToOne
+    private Product product;
+        
+    /** 倉庫  */
+    @ManyToOne
+    private Warehouse warehouse;
+        
+    /** コンストラクタ */
+    public Stock(){
+        super();
+        this.quantity = 0;
+    }
+        
+    /**
+     * 次月の入庫予定日を応答する
+     * @return 次月の入庫予定日
+     */
+    public Date getNextMonthWarehousingDate(){
+        Date result = Calendar.getInstance().getTime();
+        //何らかの実装
+        return result;
+    }
+        
+    /** DDB一覧表示用タイトル */
+    @Override
+    public String getDDBEntityTitle(){
+        String result = &quot;製品名=&quot;;
+        result += this.getProduct() != null ? this.getProduct().getName() : &quot;&quot;;
+        result += &quot; 倉庫名=&quot;;
+        result += this.getWarehouse() != null ? this.getWarehouse().getName() : &quot;&quot;;
+        result += &quot; 数量=&quot; + this.getQuantity();
+        return result;
+    }
+    public Integer getQuantity() {
+        return quantity;
+    }
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+    public Product getProduct() {
+        return product;
+    }
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+    public Warehouse getWarehouse() {
+        return warehouse;
+    }
+    public void setWarehouse(Warehouse warehouse) {
+        this.warehouse = warehouse;
+    }       
+}
+</code>
+</pre>
+<pre style="overflow:auto;">
+<code>
+package jp.co.nextdesign.domain;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Transient;
+import jp.co.nextdesign.domain.ddb.DdBaseEntity;
+/**
+ * 倉庫
+ */
+@Entity
+public class Warehouse extends DdBaseEntity {
+    private static final long serialVersionUID = 1L;
+
+    /** 倉庫名 */
+    private String name;
+    
+    /** 在庫リスト */
+    @OneToMany(mappedBy=&quot;warehouse&quot;, cascade=CascadeType.ALL, orphanRemoval=true)
+    private List&lt;Stock&gt; stockList = new ArrayList&lt;Stock&gt;();
+
+    /** コンストラクタ */
+    public Warehouse(){
+        super();
+        this.name = &quot;&quot;;
+    }
+    
+    /** 製品在庫を追加する */
+    public boolean addStock(Product product, int quantity){
+        //処理（この例では省略）
+        return true;
+    }
+
+    /** 製品在庫を削減する */
+    public boolean removeStock(Product product, int quantity){
+        //処理（この例では省略）
+        return true;
+    }
+
+    //OneToManyで双方向関連を維持するためのコードを
+    //含むgetStockList(),setStockList(List&lt;Stock&gt; stockList)の例
+    @Transient
+    private ArrayList&lt;Stock&gt; latestStockList = new ArrayList&lt;Stock&gt;();
+    public List&lt;Stock&gt; getStockList() {
+        return this.stockList;
+    }
+    public void setStockList(List&lt;Stock&gt; stockList) {
+        for(Stock newStock : stockList){
+            if (!latestStockList.contains(newStock)){
+                newStock.setWarehouse(this);
+            }
+        }
+        for(Stock oldStock : latestStockList){
+            if (!stockList.contains(oldStock)){
+                oldStock.setWarehouse(null);
+            }
+        }
+        this.stockList = stockList;
+        latestStockList = new ArrayList&lt;Stock&gt;(this.stockList);
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    /** DDB一覧表示用タイトル */
+    @Override
+    public String getDDBEntityTitle(){
+        return &quot;倉庫名：&quot; + this.getName();
+    }
+}
+</code>
+</pre>
+<pre style="overflow:auto;">
+<code>
+package jp.co.nextdesign.service;
+import jp.co.nextdesign.domain.Product;
+import jp.co.nextdesign.domain.Warehouse;
+import jp.co.nextdesign.service.ddb.DdBaseService;
+/**
+ * 在庫管理サービス
+ */
+public class StockService extends DdBaseService {
+
+    /**
+     * 倉庫間移動
+     * @param from　移動元倉庫
+     * @param to　移動先倉庫
+     * @param product 移動する商品
+     * @param quantity 移動する数量
+     * @return
+     */
+    public Boolean transferStock(Warehouse from, Warehouse to, Product product, Integer quantity) {
+        boolean result = false;
+        try {
+            startService(); //サービス初期化処理
+            begin(); //トランザクション開始
+            
+            // 倉庫間移動処理
+            if (from.removeStock(product, quantity)){
+                if (to.addStock(product, quantity)){
+                    result = true;
+                }
+            }
+            if (result){
+                commit(); //トランザクションcommit
+            } else {
+                rollback(); //トランザクションrollback
+            }
+        } catch (Exception e) {
+            rollback();
+        } finally {
+            endService(); //サービス終了処理
+        }
+        return result;
+    }
+}
+</code>
+</pre>
+
+
+</section>
+
+</div>
+<footer>
+<div style="text-align: center"><span style="color:#666666 ;">Copyright 2001-2023, All Rights Reserved</span>
+</div>
+</footer>
+</body>
+</html>

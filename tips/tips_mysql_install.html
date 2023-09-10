@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="Wicket7 DataTable ソート列、アクション列を持つDataTableのサンプルです。">
+<title>Wicket DataTable ソート列 アクション列 サンプル</title>
+<link rel="stylesheet" href="tips.css" type="text/css">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta content="Wicket,DataTable,Sort,ソート、アクション" name="keywords">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!-- HEADER -->
+<div id="hd" style="text-align : right;" align="right"><a href="../index.html">ネクストデザイン</a> 2017.1.30</div>
+
+<!-- WebAnalysis -->
+<script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;"></noscript>
+<!-- End WebAnalysis -->
+
+<div style="margin:20px 10px 10px 20px">
+
+2012年3月31日<br>
+
+
+            ■現象<br>
+            <h1>MySQL5.5.22 のインストールが終了しない。</h1>
+            <h2>インストールできない。</h2>
+            <br>
+            ■環境<br>
+            MySQL 5.5.22 win32　（mysql-5.5.22-win32.msi）
+            Windows7 Professional SP1 32bit
+            <br>
+            ■現象の詳細<br>
+            セットアップウィザード（MySQL Server 5.5 Setup）は完了するが、<br>
+            次のインスタンス設定ウィザード（MySQL Server Instance Configuration Wizard）のExecuteボタンを押しても、<br>
+            「Write configration file」の後、「応答なし（タスクマネージャ）」の状態が続く。<br>
+            <br>
+            ●Prepare configration<br>
+            ●Write configration file<br>
+            ○Start server<br>
+            ○Apply security settings<br>
+            <br>
+            私は、この状態のままタスクマネージャで強制終了させた。<br>
+            <br>
+            ■原因<br>
+            C:\ProgramData\MySQLが残っていたのが原因と思われる。（注：C:\Program Filesではない）<br>
+            以前にMySQLをインストール／アンインストールしたことはないですか？<br>
+            もしあれば、C:\ProgramData\MySQL が残っていませんか？<br>
+            <br>
+            ■対応<br>
+            一度アンインストールし、C:\ProgramData\MySQLを削除後、再度インストールすると成功した。<br>
+            <br>
+            ■その他<br>
+            アンインストール操作は「mysql-5.5.22-win32.msi」を起動した後の「Remove」で行った。<br>
+            <br>
+            以上<br>
+            <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div id="ft">NextDesign 2017.1.30</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-Agent:*
+Allow:*
+
+Sitemap: http://fk-nextdesign.sakura.ne.jp/sitemap.xml

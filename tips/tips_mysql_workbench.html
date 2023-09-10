@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="Wicket7 DataTable ソート列、アクション列を持つDataTableのサンプルです。">
+<title>Wicket DataTable ソート列 アクション列 サンプル</title>
+<link rel="stylesheet" href="tips.css" type="text/css">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta content="Wicket,DataTable,Sort,ソート、アクション" name="keywords">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!-- HEADER -->
+<div id="hd" style="text-align : right;" align="right"><a href="../index.html">ネクストデザイン</a> 2017.1.30</div>
+
+<!-- WebAnalysis -->
+<script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;"></noscript>
+<!-- End WebAnalysis -->
+
+<div style="margin:20px 10px 10px 20px">
+
+
+2012年3月31日<br>
+
+            ■現象<br>
+            <h1>MySQL Workbenchが起動しない。</h1>
+            <h2>動作を停止しました。</h2>
+            <br>
+            ■環境<br>
+            MySQL 5.5.22 win32<br>
+            MySQL Workbench 5.2.38　（mysql-5.5.22-win32.msi）<br>
+            Windows7 Professional SP1 32bit<br>
+            <br>
+            ■現象の詳細<br>
+            スタートアップから起動しても以下のエラー画面が表示されて起動しない。<br>
+            <br>
+            <img src="mysql_workbench_app_crash.png" width="492" height="243" border="0"><br>
+            <br>
+            ■問題の詳細<br>
+            問題イベント名:	APPCRASH<br>
+            アプリケーション名:	MySQLWorkbench.exe<br>
+            アプリケーションのバージョン:	5.2.38.8753<br>
+            アプリケーションのタイムスタンプ:	4f43fc17<br>
+            障害モジュールの名前:	MSVCR100.dll<br>
+            障害モジュールのバージョン:	10.0.40219.325<br>
+            障害モジュールのタイムスタンプ:	4df2be1e<br>
+            例外コード:	c0000005<br>
+            例外オフセット:	0007d07e<br>
+            OS バージョン:	6.1.7601.2.1.0.256.48<br>
+            ロケール ID:	1041<br>
+            追加情報 1:	0a9e<br>
+            追加情報 2:	0a9e372d3b4ad19135b953a78882e789<br>
+            追加情報 3:	0a9e<br>
+            追加情報 4:	0a9e372d3b4ad19135b953a78882e789<br>
+            <br>
+            ■インストールしてから問題発生までの操作履歴<br>
+            MySQL Workbench 5.2.38（mysql-5.5.22-win32.msi）をインストールした。<br>
+            初回はスタートメニューから起動できた。<br>
+            その際には、localhostのMySQLサーバに接続し、デフォルトデータベースのtestを参照できた。<br>
+            しかし、試しに、ツールバーの「Reconnect to DBMS」を押したところ、<br>
+            操作が終了しなくなったため、タスクマネージャで強制終了した。<br>
+            その後は、スタートメニューから起動しなくなった。<br>
+            <br>
+            ■情報<br>
+            APPCRASHに関するバグレポートを参考に「vcredist_x86.exe」をインストールしてみたが現象は変わらず。<br>
+            <br>
+            ■参考<br>
+            http://stackoverflow.com/questions/7781061/mysql-workbench-crashed-and-wont-turn-on-again-specific-error-is-shown<br>
+            <br>
+            ■起動できた方法<br>
+            コマンドプロンプトを「管理者として実行」して<br>
+            C:\Program Files\MySQL\MySQL Workbench 5.2 CE&gt;MySQLWorkbench<br>
+            で起動するとMySQLWorkbenchが開始できた。<br>
+            <br>
+            スタートメニューからも同様に「管理者として実行」すると起動できた。<br>
+            <br>
+            ■その他<br>
+            「管理者として実行」・・・スタートメニューの該当項目（コマンドプロンプトなど）を右クリックするとメニューに出てくる。<br>
+            <br>
+            以上<br>
+            <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div id="ft">NextDesign 2017.1.30</div>
+</body>
+</html>

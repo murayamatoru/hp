@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 15.0.12.0 for Windows">
+<title>Jクラスレポートの行数について</title>
+<!-- VIEW PORT 2018.3.6 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<p><p><b>Jクラスレポートの行数について</b></p>
+ソースコードファイル内の単純な行数ではありません。<br>
+JクラスレポートではJavaコンパイラの抽象構文木構造をもとにしていますので<br>
+以下のコード例はすべて例３と同じ結果（行数）になります。<br>
+<br>
+なお、Jクラスレポートを実行することで、カウント対象のソースコードが例３のように整形・変更されるわけではありません。<br>
+カウント対象のソースコードは何も変わりません。<br>
+例３は、Jクラスレポートが実行時に抽出する抽象構文木構造をソースコード的に例示したものです。
+<pre style="white-space : pre-wrap;">
+<code>
+例１
+package sample;
+import java.util.Date;
+/**
+ * 従業員
+ * 
+ * @author nextdesign
+ * @version 1.0
+ */
+public class Employee {
+        /** 名 */
+        private String firstName;
+        /** 姓 */
+        private String lastName;
+        /** 入社日 */
+        private Date joinedDate;
+        /**
+         * 姓名を応答する
+         * @return 姓名
+         */
+        public String getFullName() {
+                String result = &quot;&quot;;
+                if (firstName != null &amp;&amp; lastName != null) {
+                        result = firstName + lastName;
+                } else { //注意 例３のように1行増えます。
+                        result = &quot;UNKNOWN&quot;;
+                }
+                return result;
+        }
+}
+
+例２
+package sample;
+import java.util.Date;
+/**
+ * 従業員
+ * 
+ * @author nextdesign
+ * @version 1.0
+ */
+public class Employee {
+        /** 名 */
+        private String firstName;
+        /** 姓 */
+        private String lastName;
+        /** 入社日 */
+        private Date joinedDate;
+        /**
+         * 姓名を応答する
+         * @return 姓名
+         */
+        public String getFullName() {
+                String result = &quot;&quot;;
+                //この行以降に注意　ファイル行数ではなく例３のように解釈されます。
+                if (firstName != null
+                                &amp;&amp; lastName != null) {
+                        result = firstName 
+                                        + lastName;
+                } else { result = &quot;UNKNOWN&quot;; }
+                return result;
+        }
+}
+
+例３
+package sample;
+import java.util.Date;
+/**
+ * 従業員
+ * 
+ * @author nextdesign
+ * @version 1.0
+ */
+public class Employee {
+        /** 名 */
+        private String firstName;
+        /** 姓 */
+        private String lastName;
+        /** 入社日 */
+        private Date joinedDate;
+        /**
+         * 姓名を応答する
+         * @return 姓名
+         */
+        public String getFullName() {
+                String result = &quot;&quot;;
+                if (firstName != null &amp;&amp; lastName != null) {
+                        result = firstName + lastName;
+                }
+                else {  //注意 elseブロックで改行されます。
+                        result = &quot;UNKNOWN&quot;;
+                }
+                return result;
+        }
+}
+
+その他
+例４
+        @Override
+        public boolean equals(Object other){
+は
+        @Override public boolean equals(Object other){
+のように、メソッド宣言内のモディファイアと評価され１行としてカウントされます。
+
+以上
+
+
+</code>
+</pre>
+</body>
+</html>

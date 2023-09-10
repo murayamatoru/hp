@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Jupyter Notebook に関する備忘録です。エラーメッセージ An error occurred while creating a new notebook.Permission denided. の対処方法です。" name="description">
+<meta content="Windows,Jupyter Notebook,Python" name="keywords">
+
+<title>Jupyter Notebook エラーメッセージ: An error occurred while creating a new notebook.</title>
+
+<link href="tips2.css" rel="stylesheet">
+<!-- VIEW PORT 2018.3.6 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+</head>
+
+<body style="margin: 0px; padding: 0px;">
+
+<!-- WebAnalysis -->
+<script src="/ControlPanel/static/js/wa.js" type="text/JavaScript"></script>
+<noscript><img src="/mode2_piwik/piwik.php?idsite=1" style="border:0;" alt="WebAnalysis"></noscript>
+<!-- End WebAnalysis -->
+
+<!-- header bar kokokara -->
+<header>
+<div id="hd">
+<table style=" margin: 0 auto; width: 100%; height: 100%">
+<tr>
+<td>
+    <a href="../index.html" target="_new"><span style="font-size:100%; color:white;">&nbsp;&nbsp;ネクストデザイン</span></a>
+</td>
+</tr>
+</table>
+</div>
+</header>
+<!-- header bar kokomade -->
+
+<div>
+<table style=" margin: 0 auto; width: 100%;">
+<tr><td style="text-align: right;">
+    <span class="small_text">更新:<time pubdate="pubdate" datetime="2018-12-02">2018-12-02</time></span>&nbsp;
+</td></tr>
+</table>
+</div>
+
+<div class="bd">
+    <h1>Jupyter Notebook で新規にPython3ノートブックファイルを追加できない場合の対処方法</h1>
+    <p>エラーメッセージ: An error occurred while creating a new notebook.</p>
+
+<h2>内容について</h2>
+<p>
+最善の対処方法ではないかもしれませんが、</p><p>
+Windows + Jupyter Notebook を使い始めていきなり躓きましたので、参考になればと思い公開しました。
+</p>
+
+
+<h2>環境</h2>
+<p>
+Microsoft Windows [Version 10.0.17134.407]</p><p>
+
+C:\&gt;python --version</p><p>
+Python 3.7.1</p><p>
+
+C:\&gt;ipython --version</p><p>
+7.2.0</p><p>
+
+C:\&gt;jupyter --version</p><p>
+4.4.0</p>
+
+<p>仮想環境は作成していません。</p>
+
+<h2>エラー内容</h2>
+
+<p>コマンドプロンプトで、次のように Jupyter Notebook を起動しても、新しいファイルを作成できない。</p>
+
+<p><span class="under">C:\&gt;jupyter notebook</span></p>
+<br>
+
+<p style="max-width: 704px; min-width: 100px;"><img style="width: 100%;" src="img/notebookerror1.PNG" alt="新しいファイルを作成する操作画面"></p>
+
+<p>New → Python3 とすると、下の画面が表示されて、新しいファイルを作成できない。</p>
+
+<p style="max-width: 712px; min-width: 100px;"><img style="width: 100%;" src="img/notebookerror2.PNG" alt="エラーメッセージのポップアップ画面"></p>
+
+<h2>原因と対処方法</h2>
+<p>C:直下で起動したことが原因です。C:\&gt;jupyter notebook</p><p>
+C:直下には、ファイルの作成権限が無いため作成できません。</p><p>
+対策としては、カレントディレクトリを別のディレクトリ (少なくともルートは不可) に移動してから Jupyter Notebook を起動します。</p><p>
+例えば、次のようにして起動します。</p><p>
+この場合、C:\work の直下にノートブックが作成されます。
+</p>
+
+<p><span class="under">C:\&gt;cd work</span></p>
+<p><span class="under">C:\work&gt;jupyter notebook</span></p>
+<br>
+<p>以上</p>
+
+</div>
+<br>
+
+<div class="bd">
+  <hr>
+</div>
+
+<footer>
+<div style="text-align: center">
+<span style="color:#666666 ;">Copyright 2001-2022, All Rights Reserved</span>
+</div>
+</footer>
+
+</body>
+</html>
