@@ -1,0 +1,8 @@
+DirectoryIndex index.html index.htm index.shtml index.php index.cgi
+Options -Indexes
+AuthUserFile /home/fk-nextdesign/www/.htpasswd
+AuthType Basic
+AuthName "Web access"
+Require valid-user
+Satisfy any
+Order deny,allow
