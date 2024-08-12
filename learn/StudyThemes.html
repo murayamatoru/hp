@@ -8,34 +8,28 @@
 <body style="margin:20px;">
 <p><a href="../index.html">NEXTDesign</a></p>
 
-<h1>プログラミング</h1>
+<h1>はじめてのプログラミング ～ Java入門</h1>
 <h2 style="background-color:blue;"><span style="color:white">&nbsp;学習テーマ</span></h2>
 
-<p>
-以下に挙げた学習テーマについて一通り習得できれば、実務のスタートラインに立てたと言えるでしょう。<br>
-ただし、それは容易ではありません。<br>
-実戦で利活用できてはじめて習得できたと言えます。<br>
-実務を通して少しづつスキルの幅を広げ深めていく意識が重要と思います。<br>
-なお、Javaの他に、データベースの知識や設計書の読み方、Gitの基礎知識、メッセージングチャットツール（Slackなど）を準備する必要があります。
+<p>このリストは自習する際の道しるべです。<br>
+実戦で使用し活用できてはじめて、習得できたと言えます。<br>
+実務を通して少しづつスキルの幅を広げ深めていく意識が大切です。
 </p>
 
 <ol>
-    <li>学習環境を準備します
-    <br>
-  プログラムを作成するためには統合開発環境（IDE）というソフトウェアを使用します。まず最初に自分のPCにIDEをインストールします。 
+  <li>学習環境を準備します
+  <br>プログラムを作成するためには統合開発環境（IDE）というソフトウェアを使用します。まず最初に自分のPCにIDEをインストールします。 
+  <br>本テキストでは Pleiades All in One Eclipse を使用しています。<a href="docs/IDE.pdf" target="_new">インストールとカスタマイズの例</a>
+
   <br>IDEの例
   <ul>
     <li>Eclipse
     <li>Spring Tools 4 for Eclipse
     <li>Spring Tools 4 for Visual Studio Code
     <li>IntelliJ IDEA
-    <li>Pleiades All in One Eclipse（日本語化済み）
+    <li>Pleiades All in One Eclipse（日本語化済み）など
     </ul>
-    などがあります。
     <br>
-  本テキストでは Pleiades All in One Eclipse　を使用しています。
-    <a href="docs/IDE.pdf" target="_new">インストールの例</a>
-
 
     <li>小さなプログラムを作成し動かしてみます
     <ul>
@@ -47,57 +41,43 @@
     <li>分岐、繰り返しを使ってみる
     <li>配列を使ってみる
     <li>実行とデバッグ実行
+    <li><a href="docs/WriteOnceRunAnywhere.pdf" target="_new">HelloWorldが動くまでの仕組み</a>
 </ul>
-
 
   <li>アルゴリズムとデータ構造
   <ul>
     <li><a href="docs/FlowChart.pdf" target="_new">フローチャートとは</a>
     <li>１列に並んだ1～10までの番号札を、小さい順に並べるプログラムを作成する 
+    <li><a href="docs/AlgorithmsAndDataStructures.pdf" target="_new2">アルゴリズムやデータ構造の例</a>
   </ul>
-
-  <li>基礎知識
-  <ul>
-    <li><a href="docs/WriteOnceRunAnywhere.pdf" target="_new">HelloWorldが動くまでの仕組み</a> 
-  </ul>
-
-
-
-
+<br>
 
 <li>Java
 <ul>
-    <li>Javaの特徴
+    <li><a href="docs/FeaturesOfOOPAndJava.pdf" target="">Javaの特徴</a>
     <li><a href="JDK.html" target="_new2">Javaのバージョン</a>
     <li>Javaプログラムの構造
-    <li>基本構造
+    <li><a href="codes/person.html" target="_new2">基本構造の例</a>
     <li>命名規則と予約語
     <li>変数とデータ型
     <li>リテラルと定数
     <li>式と演算子
     <li>制御文
-    <li>基本制御構造
-    <li>分岐
-    <li>繰り返し
-    <li>スコープ
-    <li>配列
-    <li>配列とは
-    <li>配列と繰り返し
-    <li>多次元配列
     <li>メソッド
     <li>メソッドとは
     <li>定義する
     <li>使用する（呼び出す）
-</ul>
-<li>基本的な記法
-<ul>
     <li>文とブロック
     <li>変数
     <li>型
     <li>リテラル
     <li>演算子
-    <li>制御構文
-    <li>クラスとメソッド
+    <li>制御文
+      <ul>
+      <li>分岐
+      <li>繰り返し
+      </ul>
+    <li>スコープ
     <li>クラス
     <li>メソッド
     <li>修飾子
@@ -106,6 +86,9 @@
     <li>this
     <li>コンストラクタ
     <li>Javadoc
+	<ul>
+	<li>アノテーション
+	</ul>
     <li>命名
     <li>型
     <li>プリミティブ型
@@ -123,18 +106,24 @@
     <li>同一性と等価性
     <li>列挙型
     <li>ジェネリクス（総称型）
-    <li>配列とコレクション
     <li>配列
+    <ul>
+      <li>配列とは
+      <li>配列と繰り返し
+      <li>多次元配列
+    </ul>
     <li>コレクション
     <li>List
     <li>Map
     <li>Set
     <li>ストリーム
-    <li>ラムダ式
-    <li>StreamAPI
-    <li>Streamの作成
-    <li>Streamの中間処理
-    <li>Streamの終端処理
+    <ul>
+      <li>ラムダ式
+      <li>StreamAPI
+      <li>Streamの作成
+      <li>Streamの中間処理
+      <li>Streamの終端処理
+    </ul>
     <li>例外
     <li>文字列操作
     <li>正規表現

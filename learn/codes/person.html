@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
+<title>サンプルコード Person</title>
+</head>
+<body style="margin:20px;">
+<a href="../index.html">NEXTDesign</a>
+
+<h2 style="background-color:blue;"><span style="color:white">&nbsp;サンプルコード Person</span></h2>
+
+<p>
+1つのJavaアプリケーションは通常、複数のクラスで構成されます。以下のサンプルコードは1つのクラス、Personクラスの例です。<br>
+はじめは複雑そうに見えるかもしれませんが、心配しないでださい。すぐに理解できるようになります。
+</p>
+
+<pre>
+<code>
+package com.example;
+
+import java.time.LocalDate;
+
+/***
+ * 人
+ * @author murayama
+ */
+public class Person {
+
+	private LocalDate birthday;
+	private String fullName = "";
+	
+	/**
+	 * コンストラクタ
+	 * @param fullName
+	 * @param birthday
+	 */
+	public Person(String fullName, LocalDate birthday) {
+		super();
+		this.fullName = fullName;
+		this.birthday = birthday;
+	}
+
+	public LocalDate getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(LocalDate birthday) {
+		this.birthday = birthday;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	
+}
+</code>
+</pre>
+
+</body>
+</html>
