@@ -5,32 +5,32 @@
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/</loc>
   <priority>1.0</priority>
-  <lastmod>2024-07-27T11:18:00+09:00</lastmod>
+  <lastmod>2024-08-26T14:16:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2024-07-27T11:18:00+09:00</lastmod>
+  <lastmod>2024-08-26T14:16:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/ndmail/toiawasePage.html</loc>
   <priority>0.8</priority>
-  <lastmod>2023-01-28T10:43:00+09:00</lastmod>
+  <lastmod>2024-08-05T14:58:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2024-07-27T11:33:00+09:00</lastmod>
+  <lastmod>2024-08-14T16:46:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/Roadmap.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2024-08-24T11:49:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/oot/OOT.htm</loc>
   <priority>0.8</priority>
-  <lastmod>2024-07-27T10:57:00+09:00</lastmod>
-</url>
-<url>
-  <loc>http://www.fk-nextdesign.sakura.ne.jp/oot/OOT.pdf</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-07-27T10:59:00+09:00</lastmod>
+  <lastmod>2024-08-05T14:46:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/ddd/index.html</loc>
@@ -128,19 +128,24 @@
   <lastmod>2023-09-02T15:52:00+09:00</lastmod>
 </url>
 <url>
-  <loc>http://www.fk-nextdesign.sakura.ne.jp//index.html</loc>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/oot/OOT.pdf</loc>
   <priority>0.7</priority>
-  <lastmod>2024-07-27T11:18:00+09:00</lastmod>
+  <lastmod>2024-08-10T11:52:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/docs/IDE.pdf</loc>
   <priority>0.7</priority>
-  <lastmod>2024-06-26T21:58:00+09:00</lastmod>
+  <lastmod>2024-08-12T15:38:00+09:00</lastmod>
 </url>
 <url>
-  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/docs/HelloWorld.pdf</loc>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/codes/HelloWorld.html</loc>
   <priority>0.7</priority>
-  <lastmod>2024-06-25T16:52:00+09:00</lastmod>
+  <lastmod>2024-08-12T21:40:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/docs/WriteOnceRunAnywhere.pdf</loc>
+  <priority>0.7</priority>
+  <lastmod>2024-08-13T14:20:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/docs/FlowChart.pdf</loc>
@@ -148,14 +153,29 @@
   <lastmod>2024-06-27T19:51:00+09:00</lastmod>
 </url>
 <url>
-  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/docs/WriteOnceRunAnywhere.pdf</loc>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/docs/AlgorithmsAndDataStructures.pdf</loc>
   <priority>0.7</priority>
-  <lastmod>2024-06-27T15:49:00+09:00</lastmod>
+  <lastmod>2024-08-11T14:08:00+09:00</lastmod>
 </url>
 <url>
-  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/points-2.html</loc>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/docs/FeaturesOfOOPAndJava.pdf</loc>
   <priority>0.7</priority>
-  <lastmod>2024-07-02T17:18:00+09:00</lastmod>
+  <lastmod>2024-08-11T15:06:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/JDK.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2024-08-10T16:15:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/codes/Person.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2024-08-12T21:44:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/docs/SampleOfSystemDesignDocument.pdf</loc>
+  <priority>0.7</priority>
+  <lastmod>2024-08-14T16:22:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/ddd/pojo_iteration.html</loc>
