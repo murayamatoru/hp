@@ -1,0 +1,16 @@
+
+Java Sprong 関係のファイル 2024.10.4
+========================
+
+１．HP 学習コース用 WORD & Visio
+C:\_home\HP\hp\java_spring
+
+２．その他メモ
+C:\_Java_Spring
+
+３．サンプルプロジェクト
+C:\_learn_repos
+
+
+
+
