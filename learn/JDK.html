@@ -3,18 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="GENERATOR" content="JustSystems Homepage Builder Version 21.0.5.0 for Windows">
-<title>学習テーマ</title>
+<title>Javaバージョン</title>
 </head>
 <body style="margin:20px;">
 <p><a href="../index.html">NEXTDesign</a></p>
+<h2 style="background-color:blue;"><span style="color:white">&nbsp;Java SE, EE, ME プラットフォーム</span></h2>
+<ul>
+  <li>Java SE (Standard Edition)<br>
+  役割: Javaの基本機能を提供します。<br>
+  Javaプログラミングのコア部分であり、標準的なクライアントアプリケーションやデスクトップアプリケーションの開発に使用されます。<br>
+  提供されるAPI例: java.lang, java.util, java.io, java.net など<br>
+  用途:<br>
+  基本的なJavaアプリケーションの開発。<br>
+  他のプラットフォーム（EE、ME）の基盤として機能。
 
-<h2 style="background-color:blue;"><span style="color:white">&nbsp;Java のバージョンについて</span></h2>
+<li>Java EE (Enterprise Edition)<br>
+  役割: エンタープライズアプリケーション（大規模な業務用システムやウェブアプリケーション）の開発向けに拡張されたプラットフォーム。
+サーバーサイド技術が充実しています。<br>
+  主な特徴:<br>
+  Servlet, JSP, EJB（Enterprise Java Beans）などの技術を含む。<br>
+  トランザクション管理やセキュリティ、分散システムのサポート。<br>
+  用途: 大規模なウェブアプリケーションや企業向けシステムの開発。
+
+<li>Java ME (Micro Edition)<br>
+  役割: 組み込み機器やモバイルデバイス向けに軽量化されたプラットフォーム。<br>
+  主な特徴:<br>
+  メモリやリソースが限られた環境向け。<br>
+  スマートデバイスやIoTデバイスで使用される。<br>
+  用途: 家電製品や携帯電話、組み込みシステムなど。<br></ul>
+<h2 style="background-color:blue;"><span style="color:white">&nbsp;SDK, JDK, JRE, JVM</span></h2>
+これらはJavaを実行・開発するためのツールやランタイム環境を指します。
+<ul>
+  <li>SDK (Software Development Kit)<br>
+  役割: 開発者がアプリケーションを作成するために必要なツールやライブラリのセット。<br>
+  Javaでは通常、JDKがSDKの役割を果たします。<br>
+  主な内容: コンパイラ、デバッガ、ライブラリ、API、ドキュメントなど。
+
+<li>JDK (Java Development Kit)<br>
+  役割: Javaアプリケーションを開発するために必要なツールキット。<br>
+  JREを含んでおり、開発者向けのコンパイラ（javac）やデバッグツールが追加されています。<br>
+  主な構成要素:<br>
+  コンパイラ: ソースコード（.javaファイル）をバイトコード（.classファイル）に変換。<br>
+  JRE: Javaアプリケーションを実行するためのランタイム環境。<br>
+  用途: Javaアプリケーションの開発。
+
+<li>JRE (Java Runtime Environment)<br>
+  役割: Javaアプリケーションを実行するための環境。<br>
+  JDKに含まれており、開発者ではなくエンドユーザー向け。<br>
+  主な構成要素:<br>
+  JVM: 実際にJavaプログラムを動かす。<br>
+  クラスライブラリ: Javaアプリケーションが使用するAPI。<br>
+  用途: Javaプログラムを動作させるための実行環境。
+
+<li>JVM (Java Virtual Machine)<br>
+  役割: Javaバイトコードを実行する仮想マシン。<br>
+  Javaの「Write Once, Run Anywhere（1度書けばどこでも動く）」を実現する中核的存在。<br>
+  主な機能:<br>
+  メモリ管理（ヒープ、スタックなど）。<br>
+  ガベージコレクション<br>
+  。
+プラットフォーム依存部分の抽象化。<br>
+  用途: プログラムを実行し、異なるOS間の互換性を提供。
+
+</ul>
+<h2 style="background-color:blue;"><span style="color:white">&nbsp;関連するキーワード</span></h2>
+<ul>
+  <li>Javaバイトコード<br>
+  ソースコード（.javaファイル）をコンパイルした後に生成される中間形式（.classファイル）。<br>
+  JVMがこのバイトコードを解釈して実行。
+
+<li>Garbage Collection (GC)<br>
+  JVMがメモリを自動的に管理する仕組み。不要なオブジェクトを回収してメモリを解放。
+
+<li>マルチプラットフォーム性	JavaアプリケーションがどのOSでも動作可能である理由は、JVMがOS依存の違いを吸収するため。
+
+<li>モジュールシステム (Java 9以降)<br>
+  Java 9で導入された「モジュール化機能」。java.baseモジュールを中心に他のモジュールが構成されている。
+
+<li>EclipseやIntelliJ IDEA
+Java開発に使われる統合開発環境（IDE）。これらを使用することで、Javaアプリケーションの開発が効率化。
+
+<li>MavenやGradle<br>
+  Javaプロジェクトのビルドツール。依存関係の管理やビルドプロセスの自動化に使用。
+
+</ul>
+
+<h2 style="background-color:blue;"><span style="color:white">&nbsp;JDK ディストリビューション</span></h2>
+JDKディストリビューションとは、各ベンダーがリリースしているJava開発キット（JDK）のパッケージを指します。<br>
+（ベンダーとは提供元のことです。例：Oracle）<br>﻿
+現在、JavaのJDKには複数のディストリビューションがあり、それぞれが異なるニーズに対応しています。<br>
+以下に主要なJDKディストリビューションを簡単に説明します。<br>
+主要なJDKディストリビューション
 
 <ul>
-<li>Java SE<br>Java Standard Editionの略で、Java言語の標準仕様およびそのAPIを指します。Java言語やそのコアライブラリ、仮想マシン（JVM）などの仕様を定義しています。
-<li>OpenJDK<br>Java SEのオープンソース実装であり、Javaの標準的な実装として広く利用されています。
-<li>Oracle JDK, Adoptium JDK, Temurin<br>これらはOpenJDKをベースにした特定のベンダーによるJDKのディストリビューション（実装）です。それぞれ追加のツールやサポートが含まれる場合があります。
-<li>Java 8, Java 17<br>JDKのバージョンを指し、Java言語やAPIの特定バージョンを意味します。
+
+<li>Oracle JDK<br>
+特徴:<br>
+Oracleが提供する公式JDK。
+商用利用には有料のライセンス契約が必要（Oracle Java SE Subscription）。<br>
+無償版はパッチ提供期間が短い（通常、6か月）。<br>
+適用例:エンタープライズ用途やOracle製品と連携する場合。
+
+<li>OpenJDK<br>
+特徴:<br>
+Oracleがリードするオープンソース版のJava。<br>
+Javaの公式リファレンス実装として位置づけられる。<br>
+商用利用も無料。<br>
+適用例:<br>
+コミュニティサポートが十分であり、多くのプロジェクトで採用。
+
+<li>Amazon Corretto<br>
+特徴:<br>
+Amazonが提供する無料のJDKディストリビューション。<br>
+長期サポート（LTS）版を提供。<br>
+高い安定性と信頼性を確保。<br>
+適用例:<br>
+AWSでの利用や長期的な運用を前提とするプロジェクト。
+
+<li>Adoptium (旧 AdoptOpenJDK)<br>
+特徴:<br>
+Eclipse Foundationが管理するオープンソースのJDKディストリビューション。<br>
+幅広いプラットフォームをサポート。<br>
+LTS版と最新機能を提供するリリース版がある。<br>
+適用例:<br>
+	開発と本番環境の両方での利用に適した信頼性の高い選択肢。
+
+
+<li>Azul Zulu<br>
+特徴:<br>
+Azul Systemsが提供する商用および無料のJDKディストリビューション。<br>
+多くのプラットフォームとOSをサポート。<br>
+LTS版に加え、サポート期間が長い。<br>
+適用例:<br>
+長期的な運用が求められる商用システム。
+
+
+<li>Liberica JDK<br>
+特徴:<br>
+BellSoftが提供するJDKディストリビューション。<br>
+完全なJava SE仕様準拠。<br>
+コンパクトプロファイルやARMプロセッサのサポートに優れる。<br>
+適用例:<br>
+リソース制約のあるデバイスやIoT用途。
+
+<li>GraalVM<br>
+特徴:<br>
+Oracleが提供する高性能なJDKディストリビューション。<br>
+通常のJava実行環境に加えて、Polyglot（複数言語）サポートやネイティブイメージ化が可能。<br>
+適用例:<br>
+高速化が求められるアプリケーションや多言語環境。
 </ul>
+<h2 style="background-color:blue;"><span style="color:white">&nbsp;選択時のポイント</span></h2>
+<ul>
+<li>サポート期間:<br>
+LTS（Long-Term Support）版が提供されているか。<br>
+プロジェクトのライフサイクルに合わせて選ぶ。<br>
+例: Amazon Corretto、Azul Zulu、Adoptium はLTS対応。
+
+<li>ライセンス:<br>
+商用利用が無料で許可されているか確認。<br>
+Oracle JDKは有料の可能性があるため注意。
+
+<li>パフォーマンスと信頼性:<br>
+プラットフォームの互換性や本番環境での実績が豊富か。
+
+
+<li>利用するクラウドサービス:<br>
+AWSではAmazon Corretto、AzureではAzul Zuluが推奨されるケースが多い。<br>
+<br>
+<li>補足: その他の関連ツール<br>
+JavaFX: デスクトップアプリケーション用のGUIツールキット。OpenJDKでは分離され、特定のディストリビューション（例: Liberica Full JDK）で利用可能。<br>
+JDKバージョン選択: Java 8やJava 11は現在でも多くのシステムで使用されていますが、新しい機能を利用する場合は最新のLTS版（例: Java 17, Java 21）を検討。<br>
+ディストリビューションごとの違いを理解することで、プロジェクトや用途に最適な選択が可能になります。必要に応じて、公式サイトのドキュメントも確認してみてください。
+
+</ul>
+
 </body>
 </html>
