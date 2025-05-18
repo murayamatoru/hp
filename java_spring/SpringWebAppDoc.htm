@@ -7,17 +7,104 @@
 <!--
  /* Font Definitions */
  @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"Tms Rmn";
+	panose-1:2 2 6 3 4 5 5 2 3 4;}
+@font-face
+	{font-family:Helv;
+	panose-1:2 11 6 4 2 2 2 3 2 4;}
+@font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;}
+@font-face
+	{font-family:System;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
 	{font-family:Wingdings;
 	panose-1:5 0 0 0 0 0 0 0 0 0;}
 @font-face
 	{font-family:"ＭＳ 明朝";
 	panose-1:2 2 6 9 4 2 5 8 3 4;}
 @font-face
-	{font-family:Century;
-	panose-1:2 4 6 4 5 5 5 2 3 4;}
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Dotum;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimHei;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:MingLiU;
+	panose-1:2 1 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:Mincho;
+	panose-1:2 2 6 9 4 3 5 8 3 5;}
+@font-face
+	{font-family:Gulim;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
 @font-face
 	{font-family:Century;
 	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Angsana New";
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Cordia New";
+	panose-1:2 11 3 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Mangal;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Latha;
+	panose-1:2 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sylfaen;
+	panose-1:1 10 5 2 5 3 6 3 3 3;}
+@font-face
+	{font-family:Vrinda;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Raavi;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Shruti;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sendnya;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Gautami;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tunga;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Estrangelo Edessa";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
 @font-face
 	{font-family:"ＭＳ Ｐゴシック";
 	panose-1:2 11 6 0 7 2 5 8 2 4;}
@@ -368,6 +455,14 @@ p.msochpdefault, li.msochpdefault, div.msochpdefault
 	margin-left:0mm;
 	font-size:12.0pt;
 	font-family:"Century","serif";}
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	color:teal;}
+span.msoDel
+	{mso-style-name:"";
+	text-decoration:line-through;
+	color:red;}
 .MsoChpDefault
 	{font-family:"Century","serif";}
  /* Page Definitions */
@@ -397,456 +492,486 @@ style='font-size:28.0pt'>アプリケーション入門</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509462">1<span lang=EN-US><span
-lang=EN-US>． Web</span></span><span lang=EN-US><span lang=EN-US>アプリケーションとは</span></span><span
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486548">1<span lang=EN-US><span lang=EN-US>． Web</span></span><span
+lang=EN-US><span lang=EN-US>アプリケーションとは</span></span><span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486549">2<span lang=EN-US><span lang=EN-US>．</span></span><span
+lang=EN-US><span lang=EN-US> </span></span><span lang=EN-US><span lang=EN-US>フレームワーク</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></span></span></p>
 
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509463">2<span lang=EN-US><span
-lang=EN-US>．</span></span><span lang=EN-US><span lang=EN-US> </span></span><span
-lang=EN-US><span lang=EN-US>フレームワーク</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>4</span></a></span></p>
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486550">2.1 <span lang=EN-US><span lang=EN-US>利点</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509464">2.1 <span
-lang=EN-US><span lang=EN-US>利点</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>4</span></a></span></p>
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486551">2.2 <span lang=EN-US><span lang=EN-US>フレームワークの選択</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509465">2.2 <span
-lang=EN-US><span lang=EN-US>フレームワークの選択</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
-
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509466">3<span lang=EN-US><span
-lang=EN-US>． Spring Boot</span></span><span style='color:windowtext;display:
-none;text-decoration:none'> </span><span
-style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509467">3.1 Spring framework<span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509468">3.2 Spring Boot<span
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486552">3<span lang=EN-US><span lang=EN-US>． Spring Boot</span></span><span
 style='color:windowtext;display:none;text-decoration:none'> </span><span
-style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509469">3.3 <span
-lang=EN-US><span lang=EN-US>プログラミング言語の選択「</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486553">3.1 Spring framework<span style='color:windowtext;
+display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509470">3.4 <span
-lang=EN-US><span lang=EN-US>開発環境</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486554">3.2 Spring Boot<span style='color:windowtext;display:
+none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509471">3.5 Spring
-Initializr<span style='color:windowtext;display:none;text-decoration:none'> </span><span
-style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509472">3.6 Spring Boot<span
-lang=EN-US><span lang=EN-US>のバージョンや依存性を更新する方法</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486555">3.3 <span lang=EN-US><span lang=EN-US>プログラミング言語の選択「</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></span></p>
 
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509473">3.6.1 <span
-lang=EN-US><span lang=EN-US>バージョンの変更手順</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509474">3.6.2 <span
-lang=EN-US><span lang=EN-US>バージョンアップ時の注意点</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509475">3.6.3 <span
-lang=EN-US><span lang=EN-US>別の方法：</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509476">3.6.4 <span
-lang=EN-US><span lang=EN-US>依存性を追加する方法</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></p>
-
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509477">4<span lang=EN-US><span
-lang=EN-US>．</span></span><span lang=EN-US><span lang=EN-US> </span></span><span
-lang=EN-US><span lang=EN-US>簡単なWeb</span></span><span lang=EN-US><span
-lang=EN-US>アプリ<span lang=EN-US>ケーション</span></span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486556">3.4 <span lang=EN-US><span lang=EN-US>開発環境</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>10</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509478">4.1 <span
-lang=EN-US><span lang=EN-US>（手順１）初期プロジェクトを作成します</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486557">3.5 Spring Initializr<span style='color:windowtext;
+display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486558">3.6 Spring Boot<span lang=EN-US><span lang=EN-US>のバージョンや依存性を更新する方法</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>10</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></span></p>
 
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509479">4.1.2 <span
-lang=EN-US><span lang=EN-US>推奨される命名ルール Group, Artifact, Name</span></span><span
-style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>12</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509480">4.1.3 <span
-lang=EN-US><span lang=EN-US>命名案</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>13</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509481">4.1.4 <span
-lang=EN-US><span lang=EN-US>命名案（推奨）</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>14</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509482">4.2 <span
-lang=EN-US><span lang=EN-US>（手順２）初期プロジェクトをダウンロードします</span></span><span
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486559">3.6.1 <span lang=EN-US><span lang=EN-US>バージョンの変更手順</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>14</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509483">4.3 <span
-lang=EN-US><span lang=EN-US>（手順３）初期プロジェクトをEclipse</span></span><span
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486560">3.6.2 <span lang=EN-US><span lang=EN-US>バージョンアップ時の注意点</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486561">3.6.3 <span lang=EN-US><span lang=EN-US>別の方法：</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486562">3.6.4 <span lang=EN-US><span lang=EN-US>依存性を追加する方法</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486563">4<span lang=EN-US><span lang=EN-US>．</span></span><span
+lang=EN-US><span lang=EN-US> </span></span><span lang=EN-US><span lang=EN-US>簡単なWeb</span></span><span
+lang=EN-US><span lang=EN-US>アプリケーション</span></span><span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486564">4.1 <span lang=EN-US><span lang=EN-US>（手順１）初期プロジェクトを作成します</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486565">4.1.2 <span lang=EN-US><span lang=EN-US>推奨される命名ルール Group,
+Artifact, Name</span></span><span style='color:windowtext;display:none;
+text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486566">4.1.3 <span lang=EN-US><span lang=EN-US>命名案</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486567">4.1.4 <span lang=EN-US><span lang=EN-US>命名案（推奨）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486568">4.2 <span lang=EN-US><span lang=EN-US>（手順２）初期プロジェクトをダウンロードします</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>14</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486569">4.3 <span lang=EN-US><span lang=EN-US>（手順３）初期プロジェクトをEclipse</span></span><span
 lang=EN-US><span lang=EN-US>にインポートします</span></span><span style='color:windowtext;
 display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>15</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>15</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509484">4.4 <span
-lang=EN-US><span lang=EN-US>（手順４）初期プロジェクトをカスタマイスします</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486570">4.4 <span lang=EN-US><span lang=EN-US>（手順４）初期プロジェクトをカスタマイスします</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>17</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></span></span></p>
 
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509485">4.4.1 <span
-lang=EN-US><span lang=EN-US>カスタマイズの場所</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>18</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509486">4.4.2 <span
-lang=EN-US><span lang=EN-US>カスタマイズの内容</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>18</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509487">4.5 Web<span
-lang=EN-US><span lang=EN-US>アプリケー<span lang=EN-US>ションを起動します</span></span></span><span
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486571">4.4.1 <span lang=EN-US><span lang=EN-US>カスタマイズの場所</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>20</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>18</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509488">4.6 <span
-lang=EN-US><span lang=EN-US>結果を確認します</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>21</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509489">4.7 Web<span
-lang=EN-US><span lang=EN-US>アプリケーションを停止</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>21</span></a></span></p>
-
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509490">5<span lang=EN-US><span
-lang=EN-US>． Web</span></span><span lang=EN-US><span lang=EN-US>アプリケーションの設計と構造</span></span><span
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486572">4.4.2 <span lang=EN-US><span lang=EN-US>カスタマイズの内容</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>22</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>18</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509491">5.1 <span
-lang=EN-US><span lang=EN-US>アプリケーションアーキテクチャ</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486573">4.5 Web<span lang=EN-US><span lang=EN-US>アプリケーションを起動します</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>22</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>20</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509492">5.2 MVC<span
-lang=EN-US><span lang=EN-US>（Model View Controller</span></span><span
-lang=EN-US><span lang=EN-US>）</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>23</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509493">5.3 <span
-lang=EN-US><span lang=EN-US>レイヤードアーキテクチャ</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>23</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509494">5.4 <span
-lang=EN-US><span lang=EN-US>クリーンアーキテクチャ</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></p>
-
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509495">6<span lang=EN-US><span
-lang=EN-US>． Java</span></span><span lang=EN-US><span lang=EN-US>パッケージ構成の例</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486574">4.6 <span lang=EN-US><span lang=EN-US>結果を確認します</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>21</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509496">6.1 <span
-lang=EN-US><span lang=EN-US>層型アーキテクチャ</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509497">6.2 <span
-lang=EN-US><span lang=EN-US>レイヤードアーキテク<span lang=EN-US>チャ的な例</span></span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486575">4.7 Web<span lang=EN-US><span lang=EN-US>アプリケーションを停止</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>25</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>21</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509498">6.3 <span
-lang=EN-US><span lang=EN-US>クリーンアーキテクチャ的な例</span></span><span style='color:
-windowtext;display:none;text-decoration:none'>.. </span><span style='color:windowtext;display:none;text-decoration:none'>25</span></a></span></p>
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486576">5<span lang=EN-US><span lang=EN-US>． Web</span></span><span
+lang=EN-US><span lang=EN-US>アプリケーションの設計と構造</span></span><span style='color:
+windowtext;display:none;text-decoration:none'>.. </span><span style='color:windowtext;display:none;text-decoration:none'>22</span></a></span></span></p>
 
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509499">7<span lang=EN-US><span
-lang=EN-US>．</span></span><span lang=EN-US><span lang=EN-US> </span></span><span
-lang=EN-US><span lang=EN-US>取引銀行管理システム（サンプルアプリ）</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486577">5.1 <span lang=EN-US><span lang=EN-US>アプリケーションアーキテクチャ</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>22</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509500">7.1 <span
-lang=EN-US><span lang=EN-US>アプリケーションの要件</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509501">7.2 <span
-lang=EN-US><span lang=EN-US>ユースケ―ス</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509502">7.3 <span
-lang=EN-US><span lang=EN-US>プロジェクト作成時の手順</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>27</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509503">7.3.1 Initializr<span
-lang=EN-US><span lang=EN-US>で初期プロジェクトを作成</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>27</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509504">7.3.2 GitHub<span
-lang=EN-US><span lang=EN-US>でリポジトリ mainbank </span></span><span lang=EN-US><span
-lang=EN-US>を作成（任意：必要な方のみ）</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>27</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509505">7.4 <span
-lang=EN-US><span lang=EN-US>ドメインモデルと永続化（継承の永続化戦略）</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486578">5.2 MVC<span lang=EN-US><span lang=EN-US>（Model View
+Controller</span></span><span lang=EN-US><span lang=EN-US>）</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>32</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>23</span></a></span></span></p>
 
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509506">8<span lang=EN-US><span
-lang=EN-US>． Spring</span></span><span lang=EN-US><span lang=EN-US>依存性注入とは</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486579">5.3 <span lang=EN-US><span lang=EN-US>レイヤードアーキテクチャ</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>23</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509507">8.1 DI<span
-lang=EN-US><span lang=EN-US>の基本的な考え方</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509508">8.2 DI<span
-lang=EN-US><span lang=EN-US>の例</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509509">8.3 DI<span
-lang=EN-US><span lang=EN-US>の仕組み</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>38</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509510">8.4 DI<span
-lang=EN-US><span lang=EN-US>のメリット</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>39</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509511">8.5 <span
-lang=EN-US><span lang=EN-US>依存性とは</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>39</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509512">8.6 <span
-lang=EN-US><span lang=EN-US>注入とは</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>39</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509513"><span
-style='font-family:"ＭＳ Ｐゴシック"'>-</span><span style='color:windowtext;
-display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>39</span></a></span></p>
-
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509514">9<span lang=EN-US><span
-lang=EN-US>． Spring</span></span><span lang=EN-US><span lang=EN-US>アノテーション</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486580">5.4 <span lang=EN-US><span lang=EN-US>クリーンアーキテクチャ</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>40</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509515">9.1 <span
-lang=EN-US><span lang=EN-US>主要なアノテーション</span></span><span style='color:windowtext;
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486581">6<span lang=EN-US><span lang=EN-US>． Java</span></span><span
+lang=EN-US><span lang=EN-US>パッケージ構成の例</span></span><span style='color:windowtext;
 display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>41</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509516">9.2 <span
-lang=EN-US><span lang=EN-US>バリデーション関係</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>46</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509517">9.3 JPA<span
-lang=EN-US><span lang=EN-US>関係</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>50</span></a></span></p>
-
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509518">10<span lang=EN-US><span
-lang=EN-US>．</span></span><span lang=EN-US><span lang=EN-US> </span></span><span
-lang=EN-US><span lang=EN-US>コントローラとビューの間のデータの受け渡し</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486582">6.1 <span lang=EN-US><span lang=EN-US>層型アーキテクチャ</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>54</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509519"><span
-style='font-family:"ＭＳ Ｐゴシック"'>-</span><span style='font-size:10.5pt;
-font-family:"Century","serif";color:windowtext;text-decoration:none'>     </span>10.1
-View <span lang=EN-US><span lang=EN-US>→ Controller</span></span><span
-style='color:windowtext;display:none;text-decoration:none'> </span><span
-style='color:windowtext;display:none;text-decoration:none'>54</span></a></span></p>
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486583">6.2 <span lang=EN-US><span lang=EN-US>レイヤードアーキテクチャ的な例</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>25</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509520">10.1 <span
-lang=EN-US><span lang=EN-US>補足説明</span></span><span style='color:windowtext;
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486584">6.3 <span lang=EN-US><span lang=EN-US>クリーンアーキテクチャ的な例</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>25</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486585">7<span lang=EN-US><span lang=EN-US>．</span></span><span
+lang=EN-US><span lang=EN-US> </span></span><span lang=EN-US><span lang=EN-US>取引銀行管理システム（サンプルアプリ）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486586">7.1 <span lang=EN-US><span lang=EN-US>ドメインの概要</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486587">7.2 <span lang=EN-US><span lang=EN-US>用語の定義</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486588">7.2.1 <span lang=EN-US><span lang=EN-US>銀行の種類</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486589">7.2.2 <span lang=EN-US><span lang=EN-US>取引の種類</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486590">7.3 <span lang=EN-US><span lang=EN-US>ユースケ―ス</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486591">7.4 <span lang=EN-US><span lang=EN-US>プロジェクト作成時の手順</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>27</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486592">7.4.1 Initializr<span lang=EN-US><span lang=EN-US>で初期プロジェクトを作成</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>27</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486593">7.4.2 GitHub<span lang=EN-US><span lang=EN-US>でリポジトリ
+mainbank </span></span><span lang=EN-US><span lang=EN-US>を作成（任意：必要な方のみ）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>27</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486594">7.5 <span lang=EN-US><span lang=EN-US>ドメインモデルと永続化（継承の永続化戦略）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>32</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486595">8<span lang=EN-US><span lang=EN-US>． Spring</span></span><span
+lang=EN-US><span lang=EN-US>依存性注入とは</span></span><span style='color:windowtext;
 display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>55</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509521">10.2 Controller <span
-lang=EN-US><span lang=EN-US>→</span></span><span lang=EN-US><span lang=EN-US> View</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486596">8.1 DI<span lang=EN-US><span lang=EN-US>の基本的な考え方</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486597">8.2 DI<span lang=EN-US><span lang=EN-US>の例</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486598">8.3 DI<span lang=EN-US><span lang=EN-US>の仕組み</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486599">8.4 DI<span lang=EN-US><span lang=EN-US>のメリット</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>39</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486600">8.5 <span lang=EN-US><span lang=EN-US>依存性とは</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>39</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486601">8.6 <span lang=EN-US><span lang=EN-US>注入とは</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>39</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486602"><span style='font-family:"ＭＳ Ｐゴシック"'>-</span><span
 style='color:windowtext;display:none;text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>55</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>39</span></a></span></span></p>
 
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509522">11<span lang=EN-US><span
-lang=EN-US>． Spring</span></span><span lang=EN-US><span lang=EN-US>アスペクト指向プログラミング</span></span><span
-style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>56</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509523">11.1 <span
-lang=EN-US><span lang=EN-US>構成要素</span></span><span style='color:windowtext;
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486603">9<span lang=EN-US><span lang=EN-US>． Spring</span></span><span
+lang=EN-US><span lang=EN-US>アノテーション</span></span><span style='color:windowtext;
 display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>56</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>40</span></a></span></span></p>
 
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509524">11.1.1 <span
-lang=EN-US><span lang=EN-US>アスペクト（Aspect</span></span><span lang=EN-US><span
-lang=EN-US>）</span></span><span style='color:windowtext;display:none;
-text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509525">11.1.2 <span
-lang=EN-US><span lang=EN-US>アドバイス（Advice</span></span><span lang=EN-US><span
-lang=EN-US>）</span></span><span style='color:windowtext;display:none;
-text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509526">11.1.3 <span
-lang=EN-US><span lang=EN-US>ジョインポイント（Join Point</span></span><span lang=EN-US><span
-lang=EN-US>）</span></span><span style='color:windowtext;display:none;
-text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509527">11.1.4 <span
-lang=EN-US><span lang=EN-US>ポイントカット（Pointcut</span></span><span lang=EN-US><span
-lang=EN-US>）</span></span><span style='color:windowtext;display:none;
-text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509528">11.1.5 <span
-lang=EN-US><span lang=EN-US>ターゲット（Target</span></span><span lang=EN-US><span
-lang=EN-US>）</span></span><span style='color:windowtext;display:none;
-text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509529">11.2 <span
-lang=EN-US><span lang=EN-US>簡単な<span lang=EN-US>例</span></span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486604">9.1 <span lang=EN-US><span lang=EN-US>主要なアノテーション</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>41</span></a></span></span></p>
 
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509530">12<span lang=EN-US><span
-lang=EN-US>． Spring JPA </span></span><span lang=EN-US><span lang=EN-US>永続化</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486605">9.2 <span lang=EN-US><span lang=EN-US>バリデーション関係</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>59</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>46</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509531">12.1 <span
-lang=EN-US><span lang=EN-US>エンティティオブジェクトの状態遷移</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486606">9.3 JPA<span lang=EN-US><span lang=EN-US>関係</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>59</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>50</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509532">12.2 <span
-lang=EN-US><span lang=EN-US>エンティティオブジェクトの状態</span></span><span
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486607">10<span lang=EN-US><span lang=EN-US>．</span></span><span
+lang=EN-US><span lang=EN-US> </span></span><span lang=EN-US><span lang=EN-US>コントローラとビューの間のデータの受け渡し</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>59</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>54</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509533">12.3 <span
-lang=EN-US><span lang=EN-US>トランザクション境界での状態遷移の挙動</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486608"><span style='font-family:"ＭＳ Ｐゴシック"'>-</span><span
+style='font-size:10.5pt;font-family:"Century","serif";color:windowtext;
+text-decoration:none'>     </span>10.1 View <span lang=EN-US><span lang=EN-US>→
+Controller</span></span><span style='color:windowtext;display:none;text-decoration:
+none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>54</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486609">10.1 <span lang=EN-US><span lang=EN-US>補足説明</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>60</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>55</span></a></span></span></p>
 
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509534">13<span lang=EN-US><span
-lang=EN-US>． MySQL</span></span><span style='color:windowtext;display:none;
-text-decoration:none'>. </span><span
-style='color:windowtext;display:none;text-decoration:none'>60</span></a></span></p>
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486610">10.2 Controller <span lang=EN-US><span lang=EN-US>→ View</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>55</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509535">13.1 <span
-lang=EN-US><span lang=EN-US>データベースの作成</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>60</span></a></span></p>
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486611">11<span lang=EN-US><span lang=EN-US>． Spring</span></span><span
+lang=EN-US><span lang=EN-US>アスペクト指向プログラミング</span></span><span style='color:
+windowtext;display:none;text-decoration:none'>.. </span><span style='color:windowtext;display:none;text-decoration:none'>56</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509536">13.2 <span
-lang=EN-US><span lang=EN-US>ユーザとパスワードの作成</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>62</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509537">13.2.1 username<span
-lang=EN-US><span lang=EN-US>とpassword </span></span><span lang=EN-US><span
-lang=EN-US>の確認方法と設定方法</span></span><span style='color:windowtext;display:none;
-text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>62</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509538">13.3
-application.properties<span lang=EN-US><span lang=EN-US>の設定</span></span><span
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486612">11.1 <span lang=EN-US><span lang=EN-US>構成要素</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>62</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>56</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509539">13.4 <span
-lang=EN-US><span lang=EN-US>データベースとスキーマ</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>63</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509540">13.5 spring.jpa.hibernate.ddl-auto<span
-lang=EN-US><span lang=EN-US>の設定</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>63</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509541">13.5.1 <span
-lang=EN-US><span lang=EN-US>代表的なオプション</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>63</span></a></span></p>
-
-<p class=MsoToc3><span lang=EN-US><a href="#_Toc194509542">13.5.2 <span
-lang=EN-US><span lang=EN-US>オプションのまとめ</span></span><span style='color:windowtext;
-display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>64</span></a></span></p>
-
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509543">14<span lang=EN-US><span
-lang=EN-US>． Tips</span></span><span lang=EN-US><span lang=EN-US>レンダリング</span></span><span
-style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>64</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509544">14.1 <span
-lang=EN-US><span lang=EN-US>サーバサイドレンダ<span lang=EN-US>リング（Server-Side
-Rendering, SSR</span></span></span><span lang=EN-US><span lang=EN-US>）</span></span><span
-style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>64</span></a></span></p>
-
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509545">14.2 <span
-lang=EN-US><span lang=EN-US>クライアントサイドレンダリング（Client-Side Rendering, CSR</span></span><span
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486613">11.1.1 <span lang=EN-US><span lang=EN-US>アスペクト（Aspect</span></span><span
 lang=EN-US><span lang=EN-US>）</span></span><span style='color:windowtext;
 display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>65</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></span></p>
 
-<p class=MsoToc2><span lang=EN-US><a href="#_Toc194509546">14.3 <span
-lang=EN-US><span lang=EN-US>静的サイト生成（Static Site Generation, SSG</span></span><span
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486614">11.1.2 <span lang=EN-US><span lang=EN-US>アドバイス（Advice</span></span><span
 lang=EN-US><span lang=EN-US>）</span></span><span style='color:windowtext;
 display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>65</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></span></p>
 
-<p class=MsoToc1><span lang=EN-US><a href="#_Toc194509547">15<span lang=EN-US><span
-lang=EN-US>． Tips</span></span><span lang=EN-US><span lang=EN-US>：セレクトボックスの書き方</span></span><span
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486615">11.1.3 <span lang=EN-US><span lang=EN-US>ジョインポイント（Join
+Point</span></span><span lang=EN-US><span lang=EN-US>）</span></span><span
 style='color:windowtext;display:none;text-decoration:none'>.. </span><span
-style='color:windowtext;display:none;text-decoration:none'>65</span></a></span></p>
+style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486616">11.1.4 <span lang=EN-US><span lang=EN-US>ポイントカット（Pointcut</span></span><span
+lang=EN-US><span lang=EN-US>）</span></span><span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486617">11.1.5 <span lang=EN-US><span lang=EN-US>ターゲット（Target</span></span><span
+lang=EN-US><span lang=EN-US>）</span></span><span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486618">11.2 <span lang=EN-US><span lang=EN-US>簡単な例</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>57</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486619">12<span lang=EN-US><span lang=EN-US>． Spring JPA </span></span><span
+lang=EN-US><span lang=EN-US>永続化</span></span><span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>59</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486620">12.1 <span lang=EN-US><span lang=EN-US>エンティティオブジェクトの状態遷移</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>59</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486621">12.2 <span lang=EN-US><span lang=EN-US>エンティティオブジェクトの状態</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>59</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486622">12.3 <span lang=EN-US><span lang=EN-US>トランザクション境界での状態遷移の挙動</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>60</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486623">13<span lang=EN-US><span lang=EN-US>． MySQL</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>60</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486624">13.1 <span lang=EN-US><span lang=EN-US>データベースの作成</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>60</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486625">13.2 <span lang=EN-US><span lang=EN-US>ユーザとパスワードの作成</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>62</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486626">13.2.1 username<span lang=EN-US><span lang=EN-US>とpassword
+</span></span><span lang=EN-US><span lang=EN-US>の確認方法と設定方法</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>62</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486627">13.3 application.properties<span lang=EN-US><span
+lang=EN-US>の設定</span></span><span style='color:windowtext;display:none;
+text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>62</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486628">13.4 <span lang=EN-US><span lang=EN-US>データベースとスキーマ</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>63</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486629">13.5 spring.jpa.hibernate.ddl-auto<span lang=EN-US><span
+lang=EN-US>の設定</span></span><span style='color:windowtext;display:none;
+text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>63</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486630">13.5.1 <span lang=EN-US><span lang=EN-US>代表的なオプション</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>63</span></a></span></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486631">13.5.2 <span lang=EN-US><span lang=EN-US>オプションのまとめ</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>64</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486632">14<span lang=EN-US><span lang=EN-US>． Tips</span></span><span
+lang=EN-US><span lang=EN-US>レンダリング</span></span><span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>64</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486633">14.1 <span lang=EN-US><span lang=EN-US>サーバサイドレンダリング（Server-Side
+Rendering, SSR</span></span><span lang=EN-US><span lang=EN-US>）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>64</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486634">14.2 <span lang=EN-US><span lang=EN-US>クライアントサイドレンダリング（Client-Side
+Rendering, CSR</span></span><span lang=EN-US><span lang=EN-US>）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>65</span></a></span></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486635">14.3 <span lang=EN-US><span lang=EN-US>静的サイト生成（Static
+Site Generation, SSG</span></span><span lang=EN-US><span lang=EN-US>）</span></span><span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>65</span></a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span lang=EN-US><a
+href="#_Toc198486636">15<span lang=EN-US><span lang=EN-US>． Tips</span></span><span
+lang=EN-US><span lang=EN-US>：セレクトボックスの書き方</span></span><span style='color:windowtext;
+display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>65</span></a></span></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509462"></a><a name="_Toc184410411"><span lang=EN-US>1． </span><span
+<h1><a name="_Toc198486548"></a><a name="_Toc184410411"><span lang=EN-US>1． </span><span
 lang=EN-US>Web</span>アプリケーションとは</a></h1>
 
 <p class=MsoNormal><span lang=EN-US>Web</span>アプリケーション（<span lang=EN-US>Web
@@ -857,14 +982,14 @@ lang=EN-US>Web</span>ブラウザ上で動作するアプリケーションの�
 
 <p class=MsoNormal>例　マイナポータル（行政手続のオンライン窓口）</p>
 
-<p class=MsoNormal><span lang=EN-US><img width=414 height=301
+<p class=MsoNormal><span lang=EN-US><img width=518 height=376
 src="SpringWebAppDoc.files/image001.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509463"></a><a name="_Toc184410412"><span lang=EN-US>2． </span>フレームワーク</a></h1>
+<h1><a name="_Toc198486549"></a><a name="_Toc184410412"><span lang=EN-US>2． </span>フレームワーク</a></h1>
 
 <p class=MsoNormal>マイナポータルなど、さまざまな<span lang=EN-US>Web</span>アプリケーションが存在しますが、それらがゼロから全て開発されているわけではありません。通常、フレームワークと呼ばれるソフトウェアを基盤として開発が行われます。<span
 lang=EN-US>Web</span>アプリケーション用フレームワークとは、多くの<span lang=EN-US>Web</span>アプリケーションで共通して利用できる構造や基本的な機能を提供する枠組みです。</p>
@@ -876,7 +1001,7 @@ lang=EN-US>Java</span>用のものがあり、<span lang=EN-US>Java</span>では
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509464"></a><a name="_Toc184410413"><span lang=EN-US>2.1 </span>利点</a></h2>
+<h2><a name="_Toc198486550"></a><a name="_Toc184410413"><span lang=EN-US>2.1 </span>利点</a></h2>
 
 <p class=MsoNormal>フレームワークを使用すると次のような利点があります。</p>
 
@@ -899,7 +1024,7 @@ lang=EN-US>Web</span>アプリケーションを作ることができます。</
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509465"></a><a name="_Toc184410414"><span lang=EN-US>2.2 </span>フレームワークの選択</a></h2>
+<h2><a name="_Toc198486551"></a><a name="_Toc184410414"><span lang=EN-US>2.2 </span>フレームワークの選択</a></h2>
 
 <p class=MsoNormal><span lang=EN-US>Web</span>アプリケーションを作成する際には、何らかのフレームワークを使用することが一般的です。フレームワークは、使用するプログラミング言語によって選択肢が決まってきます。</p>
 
@@ -914,7 +1039,7 @@ lang=EN-US>ASP.NET Core Blazor </span>などがあります。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509466"></a><a name="_Toc184410415"><span lang=EN-US>3． </span><span
+<h1><a name="_Toc198486552"></a><a name="_Toc184410415"><span lang=EN-US>3． </span><span
 lang=EN-US>Spring Boot</span></a></h1>
 
 <p class=MsoNormal><span lang=EN-US>Spring Boot </span>は<span lang=EN-US>
@@ -923,7 +1048,7 @@ lang=EN-US>Spring</span>について説明します。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509467"></a><a name="_Toc184410416"><span lang=EN-US>3.1 </span><span
+<h2><a name="_Toc198486553"></a><a name="_Toc184410416"><span lang=EN-US>3.1 </span><span
 lang=EN-US>Spring framework</span></a></h2>
 
 <p class=MsoNormal><span lang=EN-US>Spring framework</span>（以降<span lang=EN-US>
@@ -936,7 +1061,7 @@ lang=EN-US> Spring Boot </span>です。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509468"></a><a name="_Toc184410417"><span lang=EN-US>3.2 </span><span
+<h2><a name="_Toc198486554"></a><a name="_Toc184410417"><span lang=EN-US>3.2 </span><span
 lang=EN-US>Spring Boot</span></a></h2>
 
 <p class=MsoNormal><span lang=EN-US>Spring Boot</span>は、<span lang=EN-US>Spring</span>をより簡単に使えるようにしたフレームワークです。自動設定機能や組み込み<span
@@ -945,7 +1070,7 @@ lang=EN-US>Spring</span>のプロジェクトを始められる点が<span lang=
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509469"></a><a name="_Toc184410418"><span lang=EN-US>3.3 </span>プログラミング言語</a>の選択「</h2>
+<h2><a name="_Toc198486555"></a><a name="_Toc184410418"><span lang=EN-US>3.3 </span>プログラミング言語</a>の選択「</h2>
 
 <p class=MsoNormal><span lang=EN-US>Spring </span>フレームワークは、主に<span lang=EN-US>
 Java </span>をサポートしていますが、他のプログラミング言語も利用可能です。</p>
@@ -953,19 +1078,19 @@ Java </span>をサポートしていますが、他のプログラミング言�
 <p class=MsoNormal>以下の言語が<span lang=EN-US> Spring </span>フレームワークおよび<span
 lang=EN-US> Spring Boot </span>でサポートされています：</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Java</span></h6>
 
 <p class=MsoNormal><span lang=EN-US>Spring </span>は元々<span lang=EN-US> Java </span>のために設計されたフレームワークであり、<span
 lang=EN-US>Java </span>が主な言語です。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Kotlin</span></h6>
 
 <p class=MsoNormal><span lang=EN-US>Spring </span>フレームワークおよび<span lang=EN-US>
 Spring Boot </span>では、<span lang=EN-US>Kotlin </span>も公式にサポートされています。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Groovy</span></h6>
 
 <p class=MsoNormal><span lang=EN-US>Groovy </span>は、動的言語でありながら<span lang=EN-US>
@@ -983,7 +1108,7 @@ Spring Boot </span>プロジェクトを作成することも可能です。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509470"></a><a name="_Toc183030637"></a><a
+<h2><a name="_Toc198486556"></a><a name="_Toc183030637"></a><a
 name="_Toc184410419"></a><span lang=EN-US>3.4 </span>開発環境</h2>
 
 <p class=MsoNormal>本書では、統合開発環境（<span lang=EN-US>IDE</span>）として「<span
@@ -1001,7 +1126,7 @@ href="http://www.fk-nextdesign.sakura.ne.jp/learn/Roadmap.html">http://www.fk-ne
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509471"></a><a name="_Toc184410420"><span lang=EN-US>3.5 </span><span
+<h2><a name="_Toc198486557"></a><a name="_Toc184410420"><span lang=EN-US>3.5 </span><span
 lang=EN-US>Spring Initializr</span></a></h2>
 
 <p class=MsoNormal>本書では<span lang=EN-US>Spring</span>の初期プロジェクト（<span
@@ -1015,12 +1140,12 @@ lang=EN-US>Eclipse</span>にインポートして、独自のプログラムを�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509472"></a><a name="_Toc184410421"><span lang=EN-US>3.6 </span><span
+<h2><a name="_Toc198486558"></a><a name="_Toc184410421"><span lang=EN-US>3.6 </span><span
 lang=EN-US>Spring Boot</span>のバージョンや依存性を更新する方法</a></h2>
 
 <p class=MsoNormal>アプリケーションの開発が進んだ後で<span lang=EN-US>Spring Boot</span>を最新バージョンにしたい場合があります。バージョンの変更方法を紹介します。</p>
 
-<h3><a name="_Toc194509473"></a><a name="_Toc184410422"><span lang=EN-US>3.6.1 </span>バージョンの変更手順</a></h3>
+<h3><a name="_Toc198486559"></a><a name="_Toc184410422"><span lang=EN-US>3.6.1 </span>バージョンの変更手順</a></h3>
 
 <h4><span lang=EN-US>（1） </span><span lang=EN-US>pom.xml</span>をエディタで開いて、バージョンを更新します。</h4>
 
@@ -1036,7 +1161,7 @@ lang=EN-US>Maven Central Repository </span>で最新のバージョンを調べ�
 →<span lang=EN-US> Maven </span>→ プロジェクトの更新 を選択します。これにより、<span lang=EN-US>Maven
 </span>が新しいバージョンをダウンロードして設定を更新します。</p>
 
-<h3><a name="_Toc194509474"></a><a name="_Toc184410423"><span lang=EN-US>3.6.2 </span>バージョンアップ時の注意点</a></h3>
+<h3><a name="_Toc198486560"></a><a name="_Toc184410423"><span lang=EN-US>3.6.2 </span>バージョンアップ時の注意点</a></h3>
 
 <h4><span lang=EN-US>（1） </span>互換性の確認</h4>
 
@@ -1054,7 +1179,7 @@ lang=EN-US> Java 17 </span>が必要です（現在の<span lang=EN-US> pom.xml 
 <p class=MsoNormal><span lang=EN-US>Spring Boot </span>のバージョンを上げた場合、使用している依存関係も更新が必要になる場合があります。<span
 lang=EN-US>spring-boot-starter-parent </span>が依存関係の管理をしてくれますが、場合によっては明示的にアップデートが必要です。</p>
 
-<h3><a name="_Toc194509475"></a><a name="_Toc184410424"><span lang=EN-US>3.6.3 </span>別の方法：</a></h3>
+<h3><a name="_Toc198486561"></a><a name="_Toc184410424"><span lang=EN-US>3.6.3 </span>別の方法：</a></h3>
 
 <p class=MsoNormal>方法<span lang=EN-US> 1: Spring Initializr </span>を利用して新規プロジェクトを作成</p>
 
@@ -1087,7 +1212,8 @@ lang=EN-US>pom.xml </span>の<span lang=EN-US> &lt;parent&gt; </span>部分を�
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;
 &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span></p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;</span></p>
+<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;
+&lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;
 &lt;version&gt;3.4.0&lt;/version&gt;</span></p>
@@ -1098,7 +1224,7 @@ lang=EN-US>pom.xml </span>の<span lang=EN-US> &lt;parent&gt; </span>部分を�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509476"><span lang=EN-US>3.6.4 </span>依存性を追加する方法</a></h3>
+<h3><a name="_Toc198486562"><span lang=EN-US>3.6.4 </span>依存性を追加する方法</a></h3>
 
 <p class=MsoNormal>以下は、セキュリティ依存性を追加する例です</p>
 
@@ -1106,7 +1232,7 @@ lang=EN-US>pom.xml </span>の<span lang=EN-US> &lt;parent&gt; </span>部分を�
 lang=EN-US style='font-family:"ＭＳ Ｐゴシック"'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span>（<span lang=EN-US>1</span>）<span lang=EN-US> SpringInitializr</span>を開きます。</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=646 height=466
+<p class=MsoNormal><span lang=EN-US><img border=0 width=808 height=583
 src="SpringWebAppDoc.files/image007.jpg"></span></p>
 
 <p class=MsoNormal>現在のプロジェクトの設定に合わせます。</p>
@@ -1126,7 +1252,7 @@ lang=EN-US>&lt;/dependency&gt;</span>を、現在の<span lang=EN-US>pom.xml</sp
 →<span lang=EN-US> Maven </span>→ プロジェクトの更新 を選択します。</p>
 
 <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
-border=0 width=657 height=639 src="SpringWebAppDoc.files/image008.jpg"></span></p>
+border=0 width=822 height=799 src="SpringWebAppDoc.files/image008.jpg"></span></p>
 
 <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
 
@@ -1216,7 +1342,7 @@ lang=EN-US style='font-family:"Century","serif"'>…</span><span lang=EN-US>&lt;
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509477"></a><a name="_Toc184410426"><span lang=EN-US>4． </span>簡単な<span
+<h1><a name="_Toc198486563"></a><a name="_Toc184410426"><span lang=EN-US>4． </span>簡単な<span
 lang=EN-US>Web</span>アプリケーション</a></h1>
 
 <p class=MsoNormal><span lang=EN-US>Eclipse</span>を使って<span lang=EN-US>Java
@@ -1224,7 +1350,7 @@ Spring Web</span>アプリケーションを作成するためには、まず<sp
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509478"></a><a name="_Toc184410427"><span lang=EN-US>4.1 </span>（手順１）初期プロジェクトを作成</a>します</h2>
+<h2><a name="_Toc198486564"></a><a name="_Toc184410427"><span lang=EN-US>4.1 </span>（手順１）初期プロジェクトを作成</a>します</h2>
 
 <h4><span lang=EN-US>（1） </span><span lang=EN-US>Spring initializr</span>にアクセスします</h4>
 
@@ -1240,13 +1366,13 @@ Spring Web</span>アプリケーションを作成するためには、まず<sp
 
 <p class=MsoNormal>右上の「<span lang=EN-US>ADD </span>…」ボタンを押下して<span lang=EN-US>Dependency</span>を選択し追加します。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Spring Web</span></h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Thymeleaf</span></h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Spring Boot DevTool</span></h6>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
@@ -1259,47 +1385,47 @@ Spring Web</span>アプリケーションを作成するためには、まず<sp
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Spring Web</span></h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Spring Data JPA</span></h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>PostgreSQL Driver</span></h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>H2 Database</span></h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Thymeleaf</span></h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Spring Boot DevTool</span></h6>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=696 height=592
+<p class=MsoNormal><span lang=EN-US><img border=0 width=870 height=740
 src="SpringWebAppDoc.files/image018.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509479"><span lang=EN-US>4.1.2 </span>推奨される命名ルール <span
+<h3><a name="_Toc198486565"><span lang=EN-US>4.1.2 </span>推奨される命名ルール <span
 lang=EN-US>Group, Artifact, Name</span></a></h3>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Group</span>：パッケージの命名規則に従い、小文字のみ、ドメインを逆順にする（例：<span
 lang=EN-US>com.example</span>）</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Artifact</span>：小文字＋<span lang=EN-US>-</span>（ハイフン）区切りが推奨（例：<span
 lang=EN-US>bank-management</span>）</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Name</span>：<span lang=EN-US>Artifact </span>と統一（ハイフン区切り<span
 lang=EN-US>(</span>ハイフンケース<span lang=EN-US>) or CamelCase</span>）</h6>
 
@@ -1335,7 +1461,7 @@ lang=EN-US>-</span>」で区切るのは<span lang=EN-US>NG</span>）</p>
 
 <h4><span lang=EN-US>（2） </span><span lang=EN-US>Artifact</span></h4>
 
-<p class=MsoNormal><span lang=EN-US>Maven </span>の<span lang=EN-US> artifactId </span>にそのまま使われるので、<span
+<p class=MsoNormal><span lang=EN-US>Maven </span>の <span lang=EN-US>artifactId </span>にそのまま使われるので、<span
 lang=EN-US>Maven </span>の命名規則に従うのがベスト。</p>
 
 <p class=MsoNormal>小文字のみ＋ハイフン（<span lang=EN-US>-</span>）区切りが推奨。</p>
@@ -1382,7 +1508,7 @@ lang=EN-US>NG</span>）</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509480"><span lang=EN-US>4.1.3 </span>命名案</a></h3>
+<h3><a name="_Toc198486566"><span lang=EN-US>4.1.3 </span>命名案</a></h3>
 
 <h4><span lang=EN-US>（1） </span><span lang=EN-US>Group</span>：<span lang=EN-US>com.example.mainbank</span></h4>
 
@@ -1423,19 +1549,19 @@ lang=EN-US>mainbank</span>」の部分がハイフンや<span lang=EN-US>CamelCa
 
 <p class=MsoNormal style='margin-left:19.85pt'><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509481"><span lang=EN-US>4.1.4 </span>命名案（推奨）</a></h3>
+<h3><a name="_Toc198486567"><span lang=EN-US>4.1.4 </span>命名案（推奨）</a></h3>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Group</span></h6>
 
 <p class=MsoNormal>単語のドット連結</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Artifact</span></h6>
 
 <p class=MsoNormal>単語１つ</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Name</span></h6>
 
 <p class=MsoNormal>単語１つ（＝<span lang=EN-US>Artifact</span>）</p>
@@ -1445,7 +1571,7 @@ lang=EN-US>mainbank</span>。この「<span lang=EN-US>mainbank</span>」はチ�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509482"></a><a name="_Toc184410428"><span lang=EN-US>4.2 </span>（手順２）初期プロジェクトをダウンロード</a>します</h2>
+<h2><a name="_Toc198486568"></a><a name="_Toc184410428"><span lang=EN-US>4.2 </span>（手順２）初期プロジェクトをダウンロード</a>します</h2>
 
 <p class=MsoNormal>適切なフォルダに保存し、展開します。</p>
 
@@ -1508,8 +1634,7 @@ lang=EN-US>&nbsp; </span>│</p>
 lang=EN-US>&nbsp; </span>└─<span lang=EN-US>resources</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span>│<span
-lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>│<span lang=EN-US>&nbsp;
-application.properties</span></p>
+lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>│<span lang=EN-US>&nbsp; application.properties</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp; </span>│<span
 lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>│</p>
@@ -1540,7 +1665,7 @@ HelloApplicationTests.java</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509483"></a><a name="_Toc184410429"><span lang=EN-US>4.3 </span>（手順３）初期プロジェクトを<span
+<h2><a name="_Toc198486569"></a><a name="_Toc184410429"><span lang=EN-US>4.3 </span>（手順３）初期プロジェクトを<span
 lang=EN-US>Eclipse</span>にインポート</a>します</h2>
 
 <p class=MsoNormal><span lang=EN-US>Eclipse</span>で、ファイル → インポート → 既存<span
@@ -1548,17 +1673,17 @@ lang=EN-US> Maven </span>プロジェクト →</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=511 height=443
+<p class=MsoNormal><span lang=EN-US><img border=0 width=639 height=554
 src="SpringWebAppDoc.files/image021.png"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=589 height=245
+<p class=MsoNormal><span lang=EN-US><img border=0 width=736 height=306
 src="SpringWebAppDoc.files/image023.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=589 height=392
+<p class=MsoNormal><span lang=EN-US><img border=0 width=736 height=490
 src="SpringWebAppDoc.files/image025.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
@@ -1567,12 +1692,12 @@ src="SpringWebAppDoc.files/image025.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=419 height=345
+<p class=MsoNormal><span lang=EN-US><img border=0 width=524 height=431
 src="SpringWebAppDoc.files/image027.png"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509484"></a><a name="_Toc184410430"><span lang=EN-US>4.4 </span>（手順４）初期プロジェクトをカスタマイス</a>します</h2>
+<h2><a name="_Toc198486570"></a><a name="_Toc184410430"><span lang=EN-US>4.4 </span>（手順４）初期プロジェクトをカスタマイス</a>します</h2>
 
 <p class=MsoNormal>初期プロジェクトのままでは<span lang=EN-US>HelloWorld</span>ページは表示されませんので、次の<span
 lang=EN-US>4</span>つのファイルを追加します。</p>
@@ -1591,14 +1716,14 @@ lang=EN-US>4</span>つのファイルを追加します。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509485"></a><a name="_Toc184410431"><span lang=EN-US>4.4.1 </span>カスタマイズの場所</a></h3>
+<h3><a name="_Toc198486571"></a><a name="_Toc184410431"><span lang=EN-US>4.4.1 </span>カスタマイズの場所</a></h3>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=399 height=508
+<p class=MsoNormal><span lang=EN-US><img border=0 width=499 height=635
 src="SpringWebAppDoc.files/image029.png"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509486"></a><a name="_Toc184410432"><span lang=EN-US>4.4.2 </span>カスタマイズの内容</a></h3>
+<h3><a name="_Toc198486572"></a><a name="_Toc184410432"><span lang=EN-US>4.4.2 </span>カスタマイズの内容</a></h3>
 
 <h4><span lang=EN-US>（1） </span><span lang=EN-US>HelloControllerjava</span></h4>
 
@@ -1610,7 +1735,8 @@ org.springframework.stereotype.Controller;</span></p>
 <p class=MsoNormal><span lang=EN-US>import
 org.springframework.web.bind.annotation.GetMapping;</span></p>
 
-<p class=MsoNormal><span lang=EN-US>import org.springframework.web.servlet.ModelAndView;</span></p>
+<p class=MsoNormal><span lang=EN-US>import
+org.springframework.web.servlet.ModelAndView;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>@Controller</span></p>
 
@@ -1713,7 +1839,7 @@ lang=EN-US>&lt;/h1&gt;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509487"></a><a name="_Toc184410433"><span lang=EN-US>4.5 </span><span
+<h2><a name="_Toc198486573"></a><a name="_Toc184410433"><span lang=EN-US>4.5 </span><span
 lang=EN-US>Web</span>アプリケーションを起動</a>します</h2>
 
 <p class=MsoNormal><span lang=EN-US>Eclipse</span>のパッケージエクスプローラまたはプロジェクトエクスプローラで<span
@@ -1721,7 +1847,7 @@ lang=EN-US> hello </span>を右クリックします。</p>
 
 <p class=MsoNormal>次図のように</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=557 height=750
+<p class=MsoNormal><span lang=EN-US><img border=0 width=696 height=938
 src="SpringWebAppDoc.files/image032.png"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
@@ -1729,43 +1855,43 @@ src="SpringWebAppDoc.files/image032.png"></span></p>
 <p class=MsoNormal><span lang=EN-US>Eclipse</span>のコンソールに次のようなログが表示され、<span
 lang=EN-US>Web</span>アプリケーションが起動したことを確認できます。</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=709 height=315
+<p class=MsoNormal><span lang=EN-US><img border=0 width=886 height=394
 src="SpringWebAppDoc.files/image034.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509488"></a><a name="_Toc184410434"><span lang=EN-US>4.6 </span>結果を確認</a>します</h2>
+<h2><a name="_Toc198486574"></a><a name="_Toc184410434"><span lang=EN-US>4.6 </span>結果を確認</a>します</h2>
 
 <p class=MsoNormal>ブラウザを開いて次の<span lang=EN-US>URL</span>にアクセスします。</p>
 
 <p class=MsoNormal><span lang=EN-US><a href="http://localhost:8080/">http://localhost:8080/</a></span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=312 height=41
+<p class=MsoNormal><span lang=EN-US><img border=0 width=390 height=51
 src="SpringWebAppDoc.files/image035.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US><a href="http://localhost:8080/hello">http://localhost:8080/hello</a></span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=219 height=38
+<p class=MsoNormal><span lang=EN-US><img border=0 width=274 height=48
 src="SpringWebAppDoc.files/image036.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US><a href="http://localhost:8080/hello999">http://localhost:8080/hello999</a></span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=158 height=32
+<p class=MsoNormal><span lang=EN-US><img border=0 width=198 height=40
 src="SpringWebAppDoc.files/image037.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509489"></a><a name="_Toc184410435"><span lang=EN-US>4.7 </span><span
+<h2><a name="_Toc198486575"></a><a name="_Toc184410435"><span lang=EN-US>4.7 </span><span
 lang=EN-US>Web</span>アプリケーションを停止</a></h2>
 
 <p class=MsoNormal>いくつか方法があります。一つは次図の赤いボタン押下で停止します。</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=726 height=177
+<p class=MsoNormal><span lang=EN-US><img border=0 width=908 height=221
 src="SpringWebAppDoc.files/image039.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=726 height=41
+<p class=MsoNormal><span lang=EN-US><img border=0 width=908 height=51
 src="SpringWebAppDoc.files/image041.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
@@ -1776,7 +1902,7 @@ style='page-break-before:always'>
 
 <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509490"></a><a name="_Toc184410436"><span lang=EN-US>5． </span><span
+<h1><a name="_Toc198486576"></a><a name="_Toc184410436"><span lang=EN-US>5． </span><span
 lang=EN-US>Web</span>アプリケーションの設計と構造</a></h1>
 
 <p class=MsoNormal>前章の「簡単な<span lang=EN-US>Web</span>アプリケーション」<span lang=EN-US>(Spring
@@ -1784,7 +1910,7 @@ lang=EN-US>Web</span>アプリケーションの設計と構造</a></h1>
 
 <p class=MsoNormal><span lang=EN-US style='font-size:9.0pt'>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=576 height=165
+<p class=MsoNormal><span lang=EN-US><img border=0 width=720 height=206
 src="SpringWebAppDoc.files/image042.png"></span></p>
 
 <p class=MsoNormal>次の一文は、エリックエヴァンスのドメイン駆動設計 日本語版第<span lang=EN-US>4</span>章から引用したものです。</p>
@@ -1812,7 +1938,7 @@ lang=EN-US>Web</span>アプリケーションになるでしょう。当然、�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509491"></a><a name="_Toc184410437"><span lang=EN-US>5.1 </span>アプリケーションアーキテクチャ</a></h2>
+<h2><a name="_Toc198486577"></a><a name="_Toc184410437"><span lang=EN-US>5.1 </span>アプリケーションアーキテクチャ</a></h2>
 
 <p class=MsoNormal>アプリケーションアーキテクチャとは、ソフトウェア全体の構造を定義し、どのように機能が分割されているか、各コンポーネントがどのように相互作用するかを示します。<span
 lang=EN-US>Web</span>アプリケーションでは、複雑な要件を効率よく満たすために、設計時に適切なアーキテクチャが選ばれます。以下に説明する<span
@@ -1820,77 +1946,77 @@ lang=EN-US>MVC</span>、レイヤードアーキテクチャ、クリーンア�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509492"></a><a name="_Toc184410438"><span lang=EN-US>5.2 </span><span
+<h2><a name="_Toc198486578"></a><a name="_Toc184410438"><span lang=EN-US>5.2 </span><span
 lang=EN-US>MVC</span>（<span lang=EN-US>Model View Controller</span>）</a></h2>
 
 <p class=MsoNormal><span lang=EN-US>MVC</span>は、<span lang=EN-US>Web</span>アプリケーションの構造を「<span
 lang=EN-US>Model</span>（データの管理）」「<span lang=EN-US>View</span>（ユーザーインターフェース）」「<span
 lang=EN-US>Controller</span>（ロジックと指令）」の<span lang=EN-US>3</span>つに分ける設計パターンです。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Model: </span>データやビジネスロジックを担当します。データベースの操作やデータの整形などを行います。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>View: </span>ユーザーに表示する部分です。<span lang=EN-US>HTML</span>やテンプレートエンジンなどで、ユーザーインターフェースを生成します。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Controller: </span>ユーザーの入力を受け取り、<span
 lang=EN-US>Model</span>と<span lang=EN-US>View</span>を制御します。ユーザーからのリクエストを処理し、適切なレスポンスを返す役割を担います。</h6>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509493"></a><a name="_Toc184410439"><span lang=EN-US>5.3 </span>レイヤードアーキテクチャ</a></h2>
+<h2><a name="_Toc198486579"></a><a name="_Toc184410439"><span lang=EN-US>5.3 </span>レイヤードアーキテクチャ</a></h2>
 
 <p class=MsoNormal>レイヤードアーキテクチャは、アプリケーションを層（レイヤー）ごとに分割する設計です。一般的には、以下のような層に分けられます<span
 lang=EN-US>:</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>プレゼンテーション層<span lang=EN-US>: </span>ユーザーインターフェースを扱います（<span
 lang=EN-US>HTML</span>、<span lang=EN-US>CSS</span>、<span lang=EN-US>JavaScript</span>など）。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>アプリケーション層<span lang=EN-US>: </span>ビジネスロジックを実行し、アプリケーションの操作を管理します。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>ドメイン層<span lang=EN-US>: </span>ビジネスルールやデータの処理を担当します。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>データアクセス層<span lang=EN-US>: </span>データベースとのやり取りを行います。</h6>
 
 <p class=MsoNormal>このように層を分けることで、責任の分離が明確になり、保守や拡張がしやすくなります。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=552 height=347 id="図 77"
+<p class=MsoNormal><span lang=EN-US><img border=0 width=690 height=434 id="図 77"
 src="SpringWebAppDoc.files/image001.png"></span></p>
 
-<h2><a name="_Toc194509494"></a><a name="_Toc184410440"><span lang=EN-US>5.4 </span>クリーンアーキテクチャ</a></h2>
+<h2><a name="_Toc198486580"></a><a name="_Toc184410440"><span lang=EN-US>5.4 </span>クリーンアーキテクチャ</a></h2>
 
 <p class=MsoNormal>クリーンアーキテクチャは、アプリケーションを柔軟かつ保守しやすくすることを目指した設計思想です。ヘキサゴナルアーキテクチャ、オニオンアーキテクチャなどの出現を受けてこれらの概念を統合しようとしたものです。ソフトウェアの依存関係が一方向（内側から外側）になるように設計します。</p>
 
 <p class=MsoNormal>基本的な構造は以下の通りです。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>エンティティ<span lang=EN-US>: </span>ビジネスルールやデータモデルを表現します。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>ユースケース<span lang=EN-US>: </span>システムがユーザーに提供するサービスや機能です。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>インターフェース（外側の層）<span lang=EN-US>: </span>プレゼンテーション層やデータベース層といった、システム外部とやり取りする部分です。</h6>
 
 <p class=MsoNormal>クリーンアーキテクチャの特徴は、外部依存（データベース、<span lang=EN-US>UI</span>、フレームワークなど）からビジネスロジックを分離することにより、変更に強い設計を実現する点です。</p>
 
 <p class=MsoNormal>重要な関連概念</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>SOLID</span>原則<span lang=EN-US>: </span>オブジェクト指向設計の基本的な<span
 lang=EN-US>5</span>つの原則で、保守性や拡張性を高めるためのガイドラインです。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>依存性の逆転<span lang=EN-US>: </span>クリーンアーキテクチャで重要な概念であり、具体的な実装がビジネスロジックに依存するのではなく、ビジネスロジックがインターフェースに依存するという考え方です。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>依存性注入（<span lang=EN-US>DI</span>）<span lang=EN-US>: </span>アプリケーションの依存関係を外部から注入することで、モジュール間の結合を緩める設計手法です。<span
 lang=EN-US>Spring</span>フレームワークなどでよく使われます。</h6>
 
@@ -1898,14 +2024,14 @@ lang=EN-US>Spring</span>フレームワークなどでよく使われます。</
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509495"></a><a name="_Toc184410441"><span lang=EN-US>6． </span><span
+<h1><a name="_Toc198486581"></a><a name="_Toc184410441"><span lang=EN-US>6． </span><span
 lang=EN-US>Java</span>パッケージ構成の例</a></h1>
 
 <p class=MsoNormal>本章の内容は例です。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509496"></a><a name="_Toc184410442"><span lang=EN-US>6.1 </span>層型アーキテクチャ</a></h2>
+<h2><a name="_Toc198486582"></a><a name="_Toc184410442"><span lang=EN-US>6.1 </span>層型アーキテクチャ</a></h2>
 
 <p class=MsoNormal>層毎に役割を明確に分けます。トランザクション・スクリプトと呼ばれるアンチパターンとならないように、そして、低品質で保守や拡張が困難な混沌としたソフトウェアとならないように、適切に役割を分けます。</p>
 
@@ -1914,56 +2040,56 @@ lang=EN-US>Java</span>パッケージ構成の例</a></h1>
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
  style='margin-left:5.4pt;border-collapse:collapse'>
  <tr>
-  <td width=208 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
+  <td width=260 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>名前</p>
   </td>
-  <td width=496 valign=top style='width:371.9pt;border:solid windowtext 1.0pt;
+  <td width=620 valign=top style='width:371.9pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>役割</p>
   </td>
  </tr>
  <tr style='height:34.6pt'>
-  <td width=208 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
+  <td width=260 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt;height:34.6pt'>
   <p class=MsoNormal>プレゼンテーション層</p>
   <p class=MsoNormal>（<span lang=EN-US>UI</span>層）</p>
   </td>
-  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
+  <td width=620 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt;height:34.6pt'>
   <p class=MsoNormal>アクター（人間や別のコンピュータ）と情報を相互通信します。</p>
   </td>
  </tr>
  <tr style='height:34.2pt'>
-  <td width=208 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
+  <td width=260 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt;height:34.2pt'>
   <p class=MsoNormal>アプリケーション層</p>
   <p class=MsoNormal>（ユースケ―ス層）</p>
   </td>
-  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
+  <td width=620 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt;height:34.2pt'>
   <p class=MsoNormal>ユースケ―ス、シナリオを実行します。</p>
   </td>
  </tr>
  <tr>
-  <td width=208 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
+  <td width=260 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>ドメイン層</p>
   </td>
-  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
+  <td width=620 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>ドメイン駆動設計などでモデリングしたクラス群によってドメインロジックを提供します。</p>
   </td>
  </tr>
  <tr>
-  <td width=208 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
+  <td width=260 valign=top style='width:155.95pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>インフラストラクチャ層</p>
   </td>
-  <td width=496 valign=top style='width:371.9pt;border-top:none;border-left:
+  <td width=620 valign=top style='width:371.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>上位のレイヤを支える一般的な技術機能（永続化機能やデータ送受信機能など）を提供します。</p>
@@ -1973,7 +2099,7 @@ lang=EN-US>Java</span>パッケージ構成の例</a></h1>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509497"></a><a name="_Toc184410443"><span lang=EN-US>6.2 </span>レイヤードアーキテクチャ的な例</a></h2>
+<h2><a name="_Toc198486583"></a><a name="_Toc184410443"><span lang=EN-US>6.2 </span>レイヤードアーキテクチャ的な例</a></h2>
 
 <p class=MsoNormal>├─<span lang=EN-US>java</span></p>
 
@@ -2014,7 +2140,7 @@ lang=EN-US>templates</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509498"></a><a name="_Toc184410444"><span lang=EN-US>6.3 </span>クリーンアーキテクチャ的な例</a></h2>
+<h2><a name="_Toc198486584"></a><a name="_Toc184410444"><span lang=EN-US>6.3 </span>クリーンアーキテクチャ的な例</a></h2>
 
 <p class=MsoNormal>クリーンアーキテクチャでは、依存関係の方向を意識し、ビジネスロジックを中心に据えるような構成が推奨されます。</p>
 
@@ -2092,109 +2218,134 @@ style='font-family:"Century","serif"'>└─</span><span lang=EN-US>templates</s
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>domain: </span>ビジネスルールに直接関係するクラス（エンティティ、バリューオブジェクト、リポジトリインターフェース）を配置します。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>application: </span>ユースケースやビジネスロジックを表現するクラスを配置します。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>infra: </span>外部システムやデータベースに依存する実装をここに置きますが、<span
 lang=EN-US>domain</span>に直接依存させない形にします。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>adapter: </span>プレゼンテーション層や外部インターフェースに関する処理をまとめます。</h6>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<h1><a name="_Toc198486585"></a><a name="_Toc184410445"><span lang=EN-US>7． </span>取引銀行管理システム（サンプルアプリ）</a></h1>
 
-<h1><a name="_Toc194509499"></a><a name="_Toc184410445"><span lang=EN-US>7． </span>取引銀行管理システム（サンプルアプリ）</a></h1>
+<h2><a name="_Toc198486586"><span lang=EN-US>7.1 </span>ドメインの概要</a></h2>
 
-<h2><a name="_Toc194509500"></a><a name="_Toc184410446"><span lang=EN-US>7.1 </span>アプリケーションの要件</a></h2>
+<p class=MsoNormal>本システムが対象とするのは、銀行内の業務ではなく、</p>
 
-<p class=MsoNormal>自社が取引する銀行の情報を管理する。</p>
+<p class=MsoNormal>法人や個人が使用する銀行口座の管理業務とする。</p>
 
-<p class=MsoNormal>【銀行の種類】</p>
+<p class=MsoNormal>銀行口座の使用例</p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; </span>・都市銀行</p>
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span>従業員に給与を振り込むために<span lang=EN-US>A</span>銀行<span lang=EN-US>B</span>支店の口座を使用する</h6>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; </span>・地方銀行</p>
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span>原材料の仕入れ費用の支払いに<span lang=EN-US>C</span>銀行<span lang=EN-US>D</span>支店の口座を使用する。</h6>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp; </span>・ネット銀行</p>
-
-<p class=MsoNormal>【取引の種類】</p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp; </span>・融資<span lang=EN-US> (Loan)</span></p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp; </span>・預金<span lang=EN-US>
-(Deposit)</span></p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp; </span>・送金</p>
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span>納品した製品の代金の受け取り口座として、<span lang=EN-US>E</span>銀行<span lang=EN-US>F</span>支店の口座を指定する。</h6>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509501"></a><a name="_Toc184410447"><span lang=EN-US>7.2 </span>ユースケ―ス</a></h2>
+<h2><a name="_Toc198486587"></a><a name="_Toc184410446"><span lang=EN-US>7.2 </span>用語の定義</a></h2>
+
+<h3><a name="_Toc198486588"><span lang=EN-US>7.2.1 </span>銀行の種類</a></h3>
+
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span>都市銀行</h6>
+
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span>地方銀行</h6>
+
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span>ネット銀行</h6>
+
+<h3><a name="_Toc198486589"><span lang=EN-US>7.2.2 </span>取引の種類</a></h3>
+
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>&nbsp;</span>融資<span lang=EN-US> (Loan)</span>：企業が銀行から資金を借り入れる</h6>
+
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>&nbsp;</span>預金<span lang=EN-US> (Deposit)</span>：企業が銀行に資金を預ける</h6>
+
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>&nbsp;</span>送金：企業が銀行を通じて、他の企業や個人にお金を送る</h6>
+
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span>支払：<span lang=EN-US>Amazon</span>やネットスーパーの支払い決済をする</h6>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h2><a name="_Toc198486590"></a><a name="_Toc184410447"><span lang=EN-US>7.3 </span>ユースケ―ス</a></h2>
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
  style='border-collapse:collapse'>
  <tr>
-  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
+  <td width=45 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
   </td>
-  <td width=123 valign=top style='width:92.1pt;border:solid windowtext 1.0pt;
+  <td width=154 valign=top style='width:92.1pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>ユースケース名</p>
   </td>
-  <td width=554 valign=top style='width:415.35pt;border:solid windowtext 1.0pt;
+  <td width=692 valign=top style='width:415.35pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>取引銀行を登録する。</p>
   </td>
  </tr>
  <tr>
-  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
+  <td width=45 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
   </td>
-  <td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+  <td width=154 valign=top style='width:92.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>アクター</p>
   </td>
-  <td width=554 valign=top style='width:415.35pt;border-top:none;border-left:
+  <td width=692 valign=top style='width:415.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>経理部員。</p>
   </td>
  </tr>
  <tr>
-  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
+  <td width=45 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
   </td>
-  <td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+  <td width=154 valign=top style='width:92.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>事前条件</p>
   </td>
-  <td width=554 valign=top style='width:415.35pt;border-top:none;border-left:
+  <td width=692 valign=top style='width:415.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>登録する取引銀行は未登録であること。</p>
   </td>
  </tr>
  <tr>
-  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
+  <td width=45 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
   </td>
-  <td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+  <td width=154 valign=top style='width:92.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>事後条件</p>
   </td>
-  <td width=554 valign=top style='width:415.35pt;border-top:none;border-left:
+  <td width=692 valign=top style='width:415.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>エラーなしの場合は、登録済みとなること。</p>
@@ -2202,16 +2353,16 @@ lang=EN-US>domain</span>に直接依存させない形にします。</h6>
   </td>
  </tr>
  <tr>
-  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
+  <td width=45 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
   </td>
-  <td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+  <td width=154 valign=top style='width:92.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>主シナリオ</p>
   </td>
-  <td width=554 valign=top style='width:415.35pt;border-top:none;border-left:
+  <td width=692 valign=top style='width:415.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>1. </span>ブラウザから所定の<span lang=EN-US>URL</span>にアクセスし、取引銀行一覧画面を開く。</p>
@@ -2221,32 +2372,32 @@ lang=EN-US>domain</span>に直接依存させない形にします。</h6>
   </td>
  </tr>
  <tr>
-  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
+  <td width=45 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
   </td>
-  <td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+  <td width=154 valign=top style='width:92.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>副シナリオ</p>
   </td>
-  <td width=554 valign=top style='width:415.35pt;border-top:none;border-left:
+  <td width=692 valign=top style='width:415.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>保存ボタン押下でエラーメッセージが表示された場合</p>
   </td>
  </tr>
  <tr>
-  <td width=36 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
+  <td width=45 valign=top style='width:26.7pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
   </td>
-  <td width=123 valign=top style='width:92.1pt;border-top:none;border-left:
+  <td width=154 valign=top style='width:92.1pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
   </td>
-  <td width=554 valign=top style='width:415.35pt;border-top:none;border-left:
+  <td width=692 valign=top style='width:415.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>エラーを修正し、再度保存ボタンを押下する。</p>
@@ -2257,22 +2408,22 @@ lang=EN-US>domain</span>に直接依存させない形にします。</h6>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509502"></a><a name="_Toc184410448"><span lang=EN-US>7.3 </span>プロジェクト作成時の手順</a></h2>
+<h2><a name="_Toc198486591"></a><a name="_Toc184410448"><span lang=EN-US>7.4 </span>プロジェクト作成時の手順</a></h2>
 
 <p class=MsoNormal>サンプルアプリ作成時の<span lang=EN-US>Initializr</span>の設定内容と<span
 lang=EN-US>GitHub</span>で管理する手順について説明します。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509503"></a><a name="_Toc184410449"><span lang=EN-US>7.3.1 </span><span
+<h3><a name="_Toc198486592"></a><a name="_Toc184410449"><span lang=EN-US>7.4.1 </span><span
 lang=EN-US>Initializr</span>で初期プロジェクトを作成</a></h3>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=699 height=467
+<p class=MsoNormal><span lang=EN-US><img border=0 width=874 height=584
 src="SpringWebAppDoc.files/image043.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509504"></a><a name="_Toc184410450"><span lang=EN-US>7.3.2 </span><span
+<h3><a name="_Toc198486593"></a><a name="_Toc184410450"><span lang=EN-US>7.4.2 </span><span
 lang=EN-US>GitHub</span>でリポジトリ<span lang=EN-US> mainbank </span>を作成（任意：必要な方のみ）</a></h3>
 
 <p class=MsoNormal>これは<span lang=EN-US>GitHub</span>でソースコードを管理したい場合のみ必要です。後から<span
@@ -2284,17 +2435,17 @@ lang=EN-US>GitHub Desktop</span>が起動するので、<span lang=EN-US>GitHub 
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=685 height=401
+<p class=MsoNormal><span lang=EN-US><img border=0 width=856 height=501
 src="SpringWebAppDoc.files/image046.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>GitHub Desktop</span>画面が開きます</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=164 height=31
+<p class=MsoNormal><span lang=EN-US><img border=0 width=205 height=39
 src="SpringWebAppDoc.files/image047.png"></span><span lang=EN-US><img border=0
-width=116 height=36 src="SpringWebAppDoc.files/image048.png"></span><span
-lang=EN-US><img border=0 width=708 height=406
+width=145 height=45 src="SpringWebAppDoc.files/image048.png"></span><span
+lang=EN-US><img border=0 width=885 height=508
 src="SpringWebAppDoc.files/image049.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>Clone </span>すると<span lang=EN-US> Local
@@ -2304,36 +2455,36 @@ Path </span>のフォルダが自動生成されます。（そのつもりで�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=263 height=146
+<p class=MsoNormal><span lang=EN-US><img border=0 width=329 height=183
 src="SpringWebAppDoc.files/image050.png"></span></p>
 
 <p class=MsoNormal>カレントブランチは、デフォルトの<span lang=EN-US>main</span>ブランチになっています。</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=103 height=24
+<p class=MsoNormal><span lang=EN-US><img border=0 width=129 height=30
 src="SpringWebAppDoc.files/image051.png"></span><span lang=EN-US><img border=0
-width=651 height=306 src="SpringWebAppDoc.files/image052.jpg"></span></p>
+width=814 height=383 src="SpringWebAppDoc.files/image052.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=53 height=24
+<p class=MsoNormal><span lang=EN-US><img border=0 width=66 height=30
 src="SpringWebAppDoc.files/image053.png"></span><span lang=EN-US><img border=0
-width=111 height=33 src="SpringWebAppDoc.files/image054.png"></span><span
-lang=EN-US><img border=0 width=331 height=447
+width=139 height=41 src="SpringWebAppDoc.files/image054.png"></span><span
+lang=EN-US><img border=0 width=414 height=559
 src="SpringWebAppDoc.files/image055.jpg"></span></p>
 
-<p class=MsoNormal>この例では、<span lang=EN-US>main </span>ブランチから<span lang=EN-US>
-develop </span>ブランチを作成し、<span lang=EN-US>develop </span>をカレントブランチにしました。</p>
+<p class=MsoNormal>この例では、<span lang=EN-US>main </span>ブランチから <span lang=EN-US>develop
+</span>ブランチを作成し、<span lang=EN-US>develop </span>をカレントブランチにしました。</p>
 
 <p class=MsoNormal>ローカルフォルダに初期プロジェクトを解凍した後の<span lang=EN-US> mainbank </span>を移動（コピー＆貼付け）します。</p>
 
 <p class=MsoNormal>この辺の手順は色々なやり方あると思います。</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=268 height=166
+<p class=MsoNormal><span lang=EN-US><img border=0 width=335 height=208
 src="SpringWebAppDoc.files/image057.png"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>GitHub Desktop</span>の状態</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=589 height=405
+<p class=MsoNormal><span lang=EN-US><img border=0 width=736 height=506
 src="SpringWebAppDoc.files/image059.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>Commit</span>コメントを入力 →<span lang=EN-US>
@@ -2342,29 +2493,29 @@ lang=EN-US> Create Pull Request</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span>→ ブラウザで<span lang=EN-US>Github</span>ページが開く</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=697 height=299
+<p class=MsoNormal><span lang=EN-US><img border=0 width=871 height=374
 src="SpringWebAppDoc.files/image060.jpg"></span></p>
 
 <p class=MsoNormal>下の方にスクロールして<span lang=EN-US> Create pull request </span>を押下します</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=589 height=141
+<p class=MsoNormal><span lang=EN-US><img border=0 width=736 height=176
 src="SpringWebAppDoc.files/image062.jpg"></span></p>
 
 <p class=MsoNormal>少し下にスクロール</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=613 height=443
+<p class=MsoNormal><span lang=EN-US><img border=0 width=766 height=554
 src="SpringWebAppDoc.files/image064.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>Merge pull request</span>を押下</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=590 height=279
+<p class=MsoNormal><span lang=EN-US><img border=0 width=738 height=349
 src="SpringWebAppDoc.files/image066.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>Confirm merge</span>を押下</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=589 height=199
+<p class=MsoNormal><span lang=EN-US><img border=0 width=736 height=249
 src="SpringWebAppDoc.files/image068.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>Merged</span>が表示されたらマージ成功です。</p>
@@ -2381,7 +2532,7 @@ lang=EN-US>Maven</span>プロジェクト → ルートディレクトリとし�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509505"></a><a name="_Toc184410451"><span lang=EN-US>7.4 </span>ドメインモデルと永続化（継承の永続化戦略）</a></h2>
+<h2><a name="_Toc198486594"></a><a name="_Toc184410451"><span lang=EN-US>7.5 </span>ドメインモデルと永続化（継承の永続化戦略）</a></h2>
 
 <p class=MsoNormal>本書では<span lang=EN-US>Spring Boot JPA + MySQL</span>を使用します。<span
 lang=EN-US>MySQL</span>については後述します。また、取引銀行管理に登場する一部のドメインモデル名を使いますが、本セクションの目的は、継承関連を持つエンティティ（クラス）の永続化戦略です。そのため、エンティティのプロパティや振舞いはほぼ省略しています。</p>
@@ -2390,7 +2541,7 @@ lang=EN-US>MySQL</span>については後述します。また、取引銀行管
 
 <p class=MsoNormal>（クラス図）</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=103 height=212
+<p class=MsoNormal><span lang=EN-US><img border=0 width=129 height=265
 src="SpringWebAppDoc.files/image069.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
@@ -2499,7 +2650,7 @@ style='page-break-before:always'>
 
 <p class=MsoNormal>（<span lang=EN-US>MySQL</span>データベーステーブルの状態）</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=231 height=555
+<p class=MsoNormal><span lang=EN-US><img border=0 width=289 height=694
 src="SpringWebAppDoc.files/image071.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
@@ -2733,8 +2884,8 @@ lang=EN-US> GenerationType.IDENTITY </span>の組み合わせにあります。<
 <p class=MsoNormal>正しい指定方法は、<span lang=EN-US>@GeneratedValue(strategy =
 GenerationType.TABLE)</span>です。</p>
 
-<p class=MsoNormal>このように指定することで、<span lang=EN-US>Hibernate </span>がテーブル <span
-lang=EN-US>(hibernate_sequences) </span>を作成し、そこから<span lang=EN-US> ID </span>を生成するので、<span
+<p class=MsoNormal>このように指定することで、<span lang=EN-US>Hibernate </span>がテーブル<span
+lang=EN-US> (hibernate_sequences) </span>を作成し、そこから<span lang=EN-US> ID </span>を生成するので、<span
 lang=EN-US>TABLE_PER_CLASS </span>と互換性があり、<span lang=EN-US>3</span>つのテーブルが正しく作成されます。</p>
 
 <p class=MsoNormal>この戦略は適切な解決策と言えます。ただし、<span lang=EN-US>ID </span>テーブルが追加で作成されることに注意が必要です。</p>
@@ -2750,9 +2901,9 @@ lang=EN-US> InheritanceType.SINGLE_TABLE </span>があります。この戦略�
 
 <p class=MsoNormal><span lang=EN-US>PostgreSQL </span>の場合は、</p>
 
-<p class=MsoNormal><span lang=EN-US>PostgreSQL </span>は<span lang=EN-US> IDENTITY
-</span>戦略と<span lang=EN-US> TABLE_PER_CLASS </span>の組み合わせが<span lang=EN-US>
-MySQL </span>と同様に問題を引き起こす可能性があります。</p>
+<p class=MsoNormal><span lang=EN-US>PostgreSQL </span>は<span lang=EN-US>
+IDENTITY </span>戦略と<span lang=EN-US> TABLE_PER_CLASS </span>の組み合わせが<span
+lang=EN-US> MySQL </span>と同様に問題を引き起こす可能性があります。</p>
 
 <p class=MsoNormal>しかし、<span lang=EN-US>PostgreSQL </span>のシーケンスは<span
 lang=EN-US> MySQL </span>より柔軟なので、次の戦略を推奨します。</p>
@@ -2764,8 +2915,8 @@ lang=EN-US>PostgreSQL </span>はシーケンスに適しており、<span lang=E
 
 <p class=MsoNormal>例：</p>
 
-<p class=MsoNormal><span lang=EN-US>@GeneratedValue(strategy = GenerationType.SEQUENCE,
-generator = &quot;your_sequence&quot;)</span></p>
+<p class=MsoNormal><span lang=EN-US>@GeneratedValue(strategy =
+GenerationType.SEQUENCE, generator = &quot;your_sequence&quot;)</span></p>
 
 <p class=MsoNormal><span lang=EN-US>@SequenceGenerator(name =
 &quot;your_sequence&quot;, sequenceName = &quot;your_sequence_name&quot;,
@@ -2785,7 +2936,7 @@ allocationSize = 1)</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509506"></a><a name="_Toc184410452"><span lang=EN-US>8． </span><span
+<h1><a name="_Toc198486595"></a><a name="_Toc184410452"><span lang=EN-US>8． </span><span
 lang=EN-US>Spring</span>依存性注入とは</a></h1>
 
 <p class=MsoNormal>依存性注入<span lang=EN-US> (DI : Dependency Injection</span>）は、<span
@@ -2793,7 +2944,7 @@ lang=EN-US>Spring</span>フレームワークの中心的な機能で、オブ�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509507"></a><a name="_Toc184410453"><span lang=EN-US>8.1 </span><span
+<h2><a name="_Toc198486596"></a><a name="_Toc184410453"><span lang=EN-US>8.1 </span><span
 lang=EN-US>DI</span>の基本的な考え方</a></h2>
 
 <p class=MsoNormal>通常、オブジェクトが別のオブジェクトを必要とする場合、そのオブジェクトを自分で作成します。しかし、これでは依存関係が強くなり、コードの再利用やテストが難しくなります。<span
@@ -2801,7 +2952,7 @@ lang=EN-US>DI</span>を使うと、必要な依存オブジェクトを外部（
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509508"></a><a name="_Toc184410454"><span lang=EN-US>8.2 </span><span
+<h2><a name="_Toc198486597"></a><a name="_Toc184410454"><span lang=EN-US>8.2 </span><span
 lang=EN-US>DI</span>の例</a></h2>
 
 <p class=MsoNormal>例えば、以下のようなクラスがあるとします。</p>
@@ -2843,18 +2994,18 @@ lang=EN-US>ConRepository</span>と強く結びついてしまいます。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509509"></a><a name="_Toc184410455"><span lang=EN-US>8.3 </span><span
+<h2><a name="_Toc198486598"></a><a name="_Toc184410455"><span lang=EN-US>8.3 </span><span
 lang=EN-US>DI</span>の仕組み</a></h2>
 
 <p class=MsoNormal><span lang=EN-US>Spring</span>では、<span lang=EN-US>DI</span>を使ってオブジェクトの依存関係を設定できます。主な注入方法は<span
 lang=EN-US>3</span>つあります。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>コンストラクタインジェクション</h6>
 
 <p class=MsoNormal>コンストラクタを通じて依存オブジェクトを注入する方法です。上記の例がこれに該当します。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>セッターインジェクション</h6>
 
 <p class=MsoNormal>セッターメソッドを使って依存オブジェクトを注入します。</p>
@@ -2874,7 +3025,7 @@ this.repository = repository;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>}</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>フィールドインジェクション</h6>
 
 <p class=MsoNormal>フィールドに直接注入する方法で、<span lang=EN-US>@Autowired</span>アノテーションを使います。</p>
@@ -2890,23 +3041,23 @@ repository;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509510"></a><a name="_Toc184410456"><span lang=EN-US>8.4 </span><span
+<h2><a name="_Toc198486599"></a><a name="_Toc184410456"><span lang=EN-US>8.4 </span><span
 lang=EN-US>DI</span>のメリット</a></h2>
 
 <p class=MsoNormal style='page-break-after:avoid'>テストがしやすい<span lang=EN-US>: </span>依存関係を外部から注入するため、テスト時にモックオブジェクトを簡単に差し替えることができます。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>コードの再利用性が高まる<span lang=EN-US>: </span>依存オブジェクトを外部から渡すことで、同じクラスを異なるシチュエーションで再利用できます。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>結合度が低くなる<span lang=EN-US>: </span>クラス間の依存関係を疎結合に保つことができ、コードが柔軟で変更に強くなります。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>依存性注入は、より柔軟で保守性の高いアプリケーションを作るための非常に重要な概念です。<span lang=EN-US>Spring</span>フレームワークはこの仕組みを自動的に管理してくれます。</h6>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509511"></a><a name="_Toc184410457"><span lang=EN-US>8.5 </span>依存性とは</a></h2>
+<h2><a name="_Toc198486600"></a><a name="_Toc184410457"><span lang=EN-US>8.5 </span>依存性とは</a></h2>
 
 <p class=MsoNormal>「依存性」とは、何かが他の何かに頼って動く関係のことです。例えば、車がガソリンに「依存」しているとしましょう。車はガソリンがないと動かないので、ガソリンに頼っている、つまり依存しているというわけです。</p>
 
@@ -2915,7 +3066,7 @@ lang=EN-US>2</span>つの間に「依存性」があるといいます。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509512"></a><a name="_Toc184410458"><span lang=EN-US>8.6 </span>注入とは</a></h2>
+<h2><a name="_Toc198486601"></a><a name="_Toc184410458"><span lang=EN-US>8.6 </span>注入とは</a></h2>
 
 <p class=MsoNormal>「注入」とは、必要なものを外から与えることです。車の例でいうと、車がガソリンスタンドで給油されるように、外からガソリンを「注入」されることです。つまり、車は自分でガソリンを作るのではなく、誰かがガソリンを入れてあげている状態です。</p>
 
@@ -2924,7 +3075,7 @@ lang=EN-US>2</span>つの間に「依存性」があるといいます。</p>
 <p class=MsoNormal style='margin-left:66.0pt;text-indent:-24.0pt;page-break-after:
 avoid'><span lang=EN-US style='font-size:12.0pt;font-family:"ＭＳ Ｐゴシック"'>-<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
-lang=EN-US style='font-size:12.0pt'>&nbsp;<a name="_Toc194509513"></a></span></p>
+lang=EN-US style='font-size:12.0pt'>&nbsp;<a name="_Toc198486602"></a></span></p>
 
 <p class=MsoNormal>依存性は、「あるものが他のものに頼っている関係」です。例えば、車がガソリンに頼って動いている状態。</p>
 
@@ -2940,32 +3091,33 @@ style='page-break-before:always'>
 
 <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509514"></a><a name="_Toc184410459"><span lang=EN-US>9． </span><span
+<h1><a name="_Toc198486603"></a><a name="_Toc184410459"><span lang=EN-US>9． </span><span
 lang=EN-US>Spring</span>アノテーション</a></h1>
 
-<table class=MsoNormalTable border=1 cellpadding=0 style='border:solid windowtext 1.0pt'>
+<table class=MsoNormalTable border=1 cellspacing=3 cellpadding=0
+ style='border:solid windowtext 1.0pt'>
  <thead>
   <tr>
-   <td width=171 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
+   <td width=214 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
    .75pt .75pt .75pt .75pt'>
    <p class=MsoNormal>分類</p>
    </td>
-   <td width=234 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
+   <td width=293 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
    .75pt .75pt .75pt .75pt'>
    <p class=MsoNormal>アノテーション</p>
    </td>
-   <td width=292 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
+   <td width=365 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
    padding:.75pt .75pt .75pt .75pt'>
    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
    </td>
   </tr>
  </thead>
  <tr>
-  <td width=171 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
+  <td width=214 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal>依存性注入<span lang=EN-US> (DI)</span></p>
   </td>
-  <td width=234 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
+  <td width=293 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>@Autowired</span></p>
   <p class=MsoNormal><span lang=EN-US>@Bean</span></p>
@@ -2978,17 +3130,17 @@ lang=EN-US>Spring</span>アノテーション</a></h1>
   <p class=MsoNormal><span lang=EN-US>@ManagedBean</span></p>
   <p class=MsoNormal><span lang=EN-US>@Named</span></p>
   </td>
-  <td width=292 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
+  <td width=365 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
   padding:.75pt .75pt .75pt .75pt'>
   <p class=MsoNormal>依存性の注入や<span lang=EN-US>Bean</span>の管理に使用するアノテーション。</p>
   </td>
  </tr>
  <tr>
-  <td width=171 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
+  <td width=214 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>Web MVC</span></p>
   </td>
-  <td width=234 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
+  <td width=293 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>@Controller</span></p>
   <p class=MsoNormal><span lang=EN-US>@RestController</span></p>
@@ -3000,17 +3152,17 @@ lang=EN-US>Spring</span>アノテーション</a></h1>
   <p class=MsoNormal><span lang=EN-US>@ResponseBody</span></p>
   <p class=MsoNormal><span lang=EN-US>@ControllerAdvice</span></p>
   </td>
-  <td width=292 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
+  <td width=365 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
   padding:.75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>Web</span>アプリケーションのコントローラやリクエストマッピングに使用。</p>
   </td>
  </tr>
  <tr>
-  <td width=171 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
+  <td width=214 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal>データアクセス<span lang=EN-US> (JPA)</span></p>
   </td>
-  <td width=234 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
+  <td width=293 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>@Entity</span></p>
   <p class=MsoNormal><span lang=EN-US>@Table</span></p>
@@ -3018,50 +3170,50 @@ lang=EN-US>Spring</span>アノテーション</a></h1>
   <p class=MsoNormal><span lang=EN-US>@Repository</span></p>
   <p class=MsoNormal><span lang=EN-US>@PersistenceContext</span></p>
   </td>
-  <td width=292 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
+  <td width=365 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
   padding:.75pt .75pt .75pt .75pt'>
   <p class=MsoNormal>データベースとやり取りするエンティティやリポジトリに関するアノテーション。</p>
   </td>
  </tr>
  <tr>
-  <td width=171 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
+  <td width=214 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal>トランザクション管理</p>
   </td>
-  <td width=234 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
+  <td width=293 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>@Transactional</span></p>
   </td>
-  <td width=292 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
+  <td width=365 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
   padding:.75pt .75pt .75pt .75pt'>
   <p class=MsoNormal>トランザクションの管理やロールバックに関するアノテーション。</p>
   </td>
  </tr>
  <tr>
-  <td width=171 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
+  <td width=214 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal>アプリケーション設定・ブート</p>
   </td>
-  <td width=234 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
+  <td width=293 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>@SpringBootApplication</span></p>
   <p class=MsoNormal><span lang=EN-US>@EnableScheduling</span></p>
   </td>
-  <td width=292 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
+  <td width=365 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
   padding:.75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>Spring Boot</span>アプリケーションの設定や機能有効化に関するアノテーション。</p>
   </td>
  </tr>
  <tr>
-  <td width=171 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
+  <td width=214 style='width:128.1pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>Lombok</span></p>
   </td>
-  <td width=234 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
+  <td width=293 style='width:175.7pt;border:solid windowtext 1.0pt;padding:
   .75pt .75pt .75pt .75pt'>
   <p class=MsoNormal><span lang=EN-US>@Data</span></p>
   </td>
-  <td width=292 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
+  <td width=365 valign=top style='width:219.05pt;border:solid windowtext 1.0pt;
   padding:.75pt .75pt .75pt .75pt'>
   <p class=MsoNormal>コードの簡略化を目的とした<span lang=EN-US>Lombok</span>ライブラリのアノテーション。</p>
   </td>
@@ -3070,7 +3222,7 @@ lang=EN-US>Spring</span>アノテーション</a></h1>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509515"></a><a name="_Toc184410460"><span lang=EN-US>9.1 </span>主要なアノテーション</a></h2>
+<h2><a name="_Toc198486604"></a><a name="_Toc184410460"><span lang=EN-US>9.1 </span>主要なアノテーション</a></h2>
 
 <h4><span lang=EN-US>（1） </span><span lang=EN-US>@Autowired</span></h4>
 
@@ -3310,7 +3462,7 @@ lang=EN-US>JPA</span>を使ったデータベース操作でのみ使います�
 <p class=MsoNormal><span lang=EN-US>@PersistenceContext</span>の代わりに<span
 lang=EN-US>@Autowired</span>を使うと、次のような問題が発生する可能性があります。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>トランザクションの管理</h6>
 
 <p class=MsoNormal><span lang=EN-US>@PersistenceContext</span>は、<span
@@ -3322,7 +3474,7 @@ lang=EN-US>Bean</span>を注入するためのものです。もし<span lang=EN
 lang=EN-US>EntityManager</span>を注入しようとすると、<span lang=EN-US>Spring</span>がトランザクションの境界を適切に管理できず、複数のトランザクション間で問題が発生する可能性があります。例えば、トランザクション内で<span
 lang=EN-US>EntityManager</span>が正しく解放されない、または使い回されるといった不具合が起きます。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>スレッドセーフ性</h6>
 
 <p class=MsoNormal><span lang=EN-US>@PersistenceContext</span>を使うと、トランザクションスコープで<span
@@ -3470,8 +3622,8 @@ lang=EN-US>@Controller</span>と<span lang=EN-US>@ResponseBody</span>を組み�
 
 <h4><span lang=EN-US>（35） </span><span lang=EN-US>@ManagedBean</span></h4>
 
-<p class=MsoNormal>説明<span lang=EN-US>: JSF</span>（<span lang=EN-US>JavaServer
-Faces</span>）のマネージド<span lang=EN-US>Bean</span>を定義します。</p>
+<p class=MsoNormal>説明<span lang=EN-US>: JSF</span>（<span lang=EN-US>JavaServer Faces</span>）のマネージド<span
+lang=EN-US>Bean</span>を定義します。</p>
 
 <p class=MsoNormal>付与場所<span lang=EN-US>: JSF</span>アプリケーションで使用される<span
 lang=EN-US>Bean</span>クラス。</p>
@@ -3487,7 +3639,7 @@ Dependency Injection</span>）で名前付き<span lang=EN-US>Bean</span>を定�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509516"></a><a name="_Toc184410461"><span lang=EN-US>9.2 </span>バリデーション関係</a></h2>
+<h2><a name="_Toc198486605"></a><a name="_Toc184410461"><span lang=EN-US>9.2 </span>バリデーション関係</a></h2>
 
 <h4><span lang=EN-US>（1） </span><span lang=EN-US>@Validated</span></h4>
 
@@ -3764,7 +3916,7 @@ inclusive = true)</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509517"></a><a name="_Toc184410462"><span lang=EN-US>9.3 </span><span
+<h2><a name="_Toc198486606"></a><a name="_Toc184410462"><span lang=EN-US>9.3 </span><span
 lang=EN-US>JPA</span>関係</a></h2>
 
 <p class=MsoNormal><span lang=EN-US>Spring Boot</span>（<span lang=EN-US>JPA</span>）でエンティティに関連を設定する際に使用する代表的なアノテーションについて、全体像とオプション、短い解説を以下にまとめます。これらのアノテーションは、データベース間のリレーション（関係）を表現するために用いられます。</p>
@@ -3993,8 +4145,8 @@ lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 GenerationType.IDENTITY: </span>自動インクリメント。</p>
 
 <p class=MsoNormal><span lang=EN-US style='font-family:"Century","serif"'></span><span
-lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-GenerationType.SEQUENCE: </span>シーケンスを使用。</p>
+lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GenerationType.SEQUENCE:
+</span>シーケンスを使用。</p>
 
 <p class=MsoNormal><span lang=EN-US style='font-family:"Century","serif"'></span><span
 lang=EN-US>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -4067,15 +4219,15 @@ lang=EN-US>Java 8</span>以降の<span lang=EN-US>LocalDateTime</span>を活用�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509518"></a><a name="_Toc184410463"><span lang=EN-US>10． </span>コントローラとビューの間のデータの受け渡し</a></h1>
+<h1><a name="_Toc198486607"></a><a name="_Toc184410463"><span lang=EN-US>10． </span>コントローラとビューの間のデータの受け渡し</a></h1>
 
 <p class=MsoNormal style='margin-left:66.0pt;text-indent:-24.0pt;page-break-after:
-avoid'><a name="_Toc194509519"></a><a name="_Toc184410464"><span lang=EN-US
+avoid'><a name="_Toc198486608"></a><a name="_Toc184410464"><span lang=EN-US
 style='font-size:12.0pt;font-family:"ＭＳ Ｐゴシック"'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US style='font-size:12.0pt'>10.1 View </span></a><span
 style='font-size:12.0pt'>→<span lang=EN-US> Controller</span></span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>@RequestParam</span></h6>
 
 <p class=MsoNormal>このアノテーションは、リクエストパラメータを引数として受け取る際に使用します。</p>
@@ -4089,8 +4241,8 @@ lang=EN-US>name</span>」というパラメータを受け取る場合、<span l
 
 <p class=MsoNormal><span lang=EN-US>@GetMapping(&quot;/greet&quot;)</span></p>
 
-<p class=MsoNormal><span lang=EN-US>public String
-greet(@RequestParam(&quot;name&quot;) String name, Model model) {</span></p>
+<p class=MsoNormal><span lang=EN-US>public String greet(@RequestParam(&quot;name&quot;)
+String name, Model model) {</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;&nbsp;&nbsp;
 model.addAttribute(&quot;name&quot;, name);</span></p>
@@ -4102,7 +4254,7 @@ model.addAttribute(&quot;name&quot;, name);</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>@ModelAttribute</span></h6>
 
 <p class=MsoNormal>このアノテーションは、フォームデータやリクエストボディのデータをオブジェクトにバインドするために使用します。主にフォームのデータを複数のフィールドにまとめて受け取る場合に使われます。例えば、ユーザーオブジェクト全体をフォームから取得する場合に便利です。</p>
@@ -4129,7 +4281,7 @@ lang=EN-US>@ModelAttribute</span>はオブジェクト全体を受け取ると�
 
 <p class=MsoNormal>他の方法</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>@RequestBody</span></h6>
 
 <p class=MsoNormal>このアノテーションは、リクエストボディ全体を直接<span lang=EN-US>Java</span>オブジェクトに変換して受け取るのに使用します。</p>
@@ -4151,7 +4303,7 @@ ResponseEntity.ok(&quot;Success&quot;);</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>PathVariable</span></h6>
 
 <p class=MsoNormal>パスの一部を引数として受け取る際に使います。</p>
@@ -4170,7 +4322,7 @@ model.addAttribute(&quot;userId&quot;, id);</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509520"></a><a name="_Toc184410465"><span lang=EN-US>10.1 </span>補足説明</a></h2>
+<h2><a name="_Toc198486609"></a><a name="_Toc184410465"><span lang=EN-US>10.1 </span>補足説明</a></h2>
 
 <p class=MsoNormal><span lang=EN-US>Spring Boot</span>では、フォームクラスに対応しない入力フィールドの値を受け取るためにさまざまな方法を提供しています。</p>
 
@@ -4182,10 +4334,10 @@ model.addAttribute(&quot;userId&quot;, id);</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509521"></a><a name="_Toc184410466"><span lang=EN-US>10.2 </span><span
+<h2><a name="_Toc198486610"></a><a name="_Toc184410466"><span lang=EN-US>10.2 </span><span
 lang=EN-US>Controller </span>→<span lang=EN-US> View</span></a></h2>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Model</span></h6>
 
 <p class=MsoNormal><span lang=EN-US>Controller</span>から<span lang=EN-US>View</span>にデータを渡す際に、<span
@@ -4206,7 +4358,7 @@ model.addAttribute(&quot;message&quot;, &quot;Hello World&quot;);</span></p>
 
 <p class=MsoNormal><span lang=EN-US>}</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>ModelAndView</span></h6>
 
 <p class=MsoNormal><span lang=EN-US>ModelAndView</span>は、モデルとビューを同時に返すことができるクラスです。</p>
@@ -4231,7 +4383,7 @@ mav.addObject(&quot;message&quot;, &quot;Hello World&quot;);</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>RedirectAttributes</span></h6>
 
 <p class=MsoNormal>リダイレクト時に一時的にデータを渡すために使用します。</p>
@@ -4260,7 +4412,7 @@ successfully&quot;);</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509522"></a><a name="_Toc184410467"><span lang=EN-US>11． </span><span
+<h1><a name="_Toc198486611"></a><a name="_Toc184410467"><span lang=EN-US>11． </span><span
 lang=EN-US>Spring</span>アスペクト指向プログラミング</a></h1>
 
 <p class=MsoNormal><span lang=EN-US>Spring AOP (Aspect-Oriented Programming) </span>は、横断的な関心事（<span
@@ -4270,46 +4422,46 @@ lang=EN-US>cross-cutting concerns</span>）をモジュール化するための�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509523"></a><a name="_Toc184410468"><span lang=EN-US>11.1 </span>構成要素</a></h2>
+<h2><a name="_Toc198486612"></a><a name="_Toc184410468"><span lang=EN-US>11.1 </span>構成要素</a></h2>
 
 <p class=MsoNormal><span lang=EN-US>Spring AOP </span>では、以下の<span lang=EN-US>5</span>つの要素が基本的な構成要素です：</p>
 
-<h3><a name="_Toc194509524"></a><a name="_Toc184410469"><span lang=EN-US>11.1.1
+<h3><a name="_Toc198486613"></a><a name="_Toc184410469"><span lang=EN-US>11.1.1
 </span>アスペクト（<span lang=EN-US>Aspect</span>）</a></h3>
 
 <p class=MsoNormal>横断的な機能そのものです。たとえば、ログ出力や例外処理をひとつのアスペクトとして実装します。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509525"></a><a name="_Toc184410470"><span lang=EN-US>11.1.2
+<h3><a name="_Toc198486614"></a><a name="_Toc184410470"><span lang=EN-US>11.1.2
 </span>アドバイス（<span lang=EN-US>Advice</span>）</a></h3>
 
 <p class=MsoNormal>アスペクトがいつ実行されるかを定義します。メソッドの実行前、実行後、例外発生時など、どのタイミングで横断的な処理を行うかを指定します。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509526"></a><a name="_Toc184410471"><span lang=EN-US>11.1.3
+<h3><a name="_Toc198486615"></a><a name="_Toc184410471"><span lang=EN-US>11.1.3
 </span>ジョインポイント（<span lang=EN-US>Join Point</span>）</a></h3>
 
 <p class=MsoNormal>アスペクトが適用される具体的なポイントです。<span lang=EN-US>Spring </span>では、主にメソッド呼び出しがジョインポイントとなります。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509527"></a><a name="_Toc184410472"><span lang=EN-US>11.1.4
+<h3><a name="_Toc198486616"></a><a name="_Toc184410472"><span lang=EN-US>11.1.4
 </span>ポイントカット（<span lang=EN-US>Pointcut</span>）</a></h3>
 
 <p class=MsoNormal>ジョインポイントをフィルタリングし、どのメソッドにアドバイスを適用するかを定義します。正規表現やアノテーションを使って、対象となるメソッドを柔軟に指定できます。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509528"></a><a name="_Toc184410473"><span lang=EN-US>11.1.5
+<h3><a name="_Toc198486617"></a><a name="_Toc184410473"><span lang=EN-US>11.1.5
 </span>ターゲット（<span lang=EN-US>Target</span>）</a></h3>
 
 <p class=MsoNormal>アスペクトを適用されるオブジェクト、つまりビジネスロジックを持つクラスです。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509529"></a><a name="_Toc184410474"><span lang=EN-US>11.2 </span>簡単な例</a></h2>
+<h2><a name="_Toc198486618"></a><a name="_Toc184410474"><span lang=EN-US>11.2 </span>簡単な例</a></h2>
 
 <p class=MsoNormal>たとえば、特定のメソッドが実行される前にログを出力するアスペクトを作成する場合、以下の流れとなります：</p>
 
@@ -4352,58 +4504,58 @@ style='page-break-before:always'>
 
 <p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509530"></a><a name="_Toc184410475"><span lang=EN-US>12． </span><span
+<h1><a name="_Toc198486619"></a><a name="_Toc184410475"><span lang=EN-US>12． </span><span
 lang=EN-US>Spring JPA </span>永続化</a></h1>
 
-<h2><a name="_Toc194509531"></a><a name="_Toc184410476"><span lang=EN-US>12.1 </span>エンティティオブジェクトの状態遷移</a></h2>
+<h2><a name="_Toc198486620"></a><a name="_Toc184410476"><span lang=EN-US>12.1 </span>エンティティオブジェクトの状態遷移</a></h2>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=589 height=392
+<p class=MsoNormal><span lang=EN-US><img border=0 width=736 height=490
 src="SpringWebAppDoc.files/image072.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509532"></a><a name="_Toc184410477"><span lang=EN-US>12.2 </span>エンティティオブジェクトの状態</a></h2>
+<h2><a name="_Toc198486621"></a><a name="_Toc184410477"><span lang=EN-US>12.2 </span>エンティティオブジェクトの状態</a></h2>
 
 <table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
  style='margin-left:5.4pt;border-collapse:collapse'>
  <tr>
-  <td width=161 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
+  <td width=201 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>状態名</p>
   </td>
-  <td width=543 valign=top style='width:407.35pt;border:solid windowtext 1.0pt;
+  <td width=679 valign=top style='width:407.35pt;border:solid windowtext 1.0pt;
   border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>概要</p>
   </td>
  </tr>
  <tr>
-  <td width=161 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
+  <td width=201 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>NEW</span>状態</p>
   </td>
-  <td width=543 valign=top style='width:407.35pt;border-top:none;border-left:
+  <td width=679 valign=top style='width:407.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>エンティティオブジェクトを生成（<span lang=EN-US>new</span>）しただけでの状態です。永続化コンテキストとは関連付けられていません。</p>
   </td>
  </tr>
  <tr>
-  <td width=161 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
+  <td width=201 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>MANAGED</span>状態</p>
   </td>
-  <td width=543 valign=top style='width:407.35pt;border-top:none;border-left:
+  <td width=679 valign=top style='width:407.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>エンティティオブジェクトは永続化コンテキストと関連付けられた状態です。<span lang=EN-US>EntityManager#find</span>で検索可能です。</p>
   </td>
  </tr>
  <tr>
-  <td width=161 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
+  <td width=201 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>DETACHED</span>状態</p>
   </td>
-  <td width=543 valign=top style='width:407.35pt;border-top:none;border-left:
+  <td width=679 valign=top style='width:407.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>エンティティオブジェクトは永続化コンテキストと関連付けられていません。</p>
@@ -4414,11 +4566,11 @@ src="SpringWebAppDoc.files/image072.jpg"></span></p>
   </td>
  </tr>
  <tr>
-  <td width=161 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
+  <td width=201 valign=top style='width:120.5pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal><span lang=EN-US>REMOVED</span>状態</p>
   </td>
-  <td width=543 valign=top style='width:407.35pt;border-top:none;border-left:
+  <td width=679 valign=top style='width:407.35pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   padding:0mm 5.4pt 0mm 5.4pt'>
   <p class=MsoNormal>削除された状態です。<span lang=EN-US>EntityManager#persist</span>　で再び<span
@@ -4429,14 +4581,14 @@ src="SpringWebAppDoc.files/image072.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509533"></a><a name="_Toc184410478"><span lang=EN-US>12.3 </span>トランザクション境界での状態遷移の挙動</a></h2>
+<h2><a name="_Toc198486622"></a><a name="_Toc184410478"><span lang=EN-US>12.3 </span>トランザクション境界での状態遷移の挙動</a></h2>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=713 height=430
+<p class=MsoNormal><span lang=EN-US><img border=0 width=891 height=538
 src="SpringWebAppDoc.files/image073.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>merge </span>メソッドの<span lang=EN-US>API doc</span></h6>
 
 <p class=MsoNormal><span lang=EN-US>&lt;T&gt; T merge(T entity)</span></p>
@@ -4464,7 +4616,7 @@ type PersistenceContextType.TRANSACTION</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509534"></a><a name="_Toc184410479"><span lang=EN-US>13． </span><span
+<h1><a name="_Toc198486623"></a><a name="_Toc184410479"><span lang=EN-US>13． </span><span
 lang=EN-US>MySQL</span></a></h1>
 
 <p class=MsoNormal><span lang=EN-US>MySQL80 </span>と<span lang=EN-US>MySQLWorkbench8.0
@@ -4474,11 +4626,11 @@ lang=EN-US>MySQL</span></a></h1>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509535"></a><a name="_Toc184410480"><span lang=EN-US>13.1 </span>データベースの作成</a></h2>
+<h2><a name="_Toc198486624"></a><a name="_Toc184410480"><span lang=EN-US>13.1 </span>データベースの作成</a></h2>
 
 <p class=MsoNormal>（作成例）</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=455 height=276
+<p class=MsoNormal><span lang=EN-US><img border=0 width=569 height=345
 src="SpringWebAppDoc.files/image075.jpg"></span></p>
 
 <h4><span lang=EN-US>（1） </span><span lang=EN-US> [create a new schema]</span>というボタンをクリック（赤枠内をクリック）</h4>
@@ -4491,26 +4643,26 @@ lang=EN-US>/collation</span>（デフォルトの照合順序）には、<span l
 
 <h4><span lang=EN-US>（4） </span><span lang=EN-US>Apply</span>で確定</h4>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=518 height=181
+<p class=MsoNormal><span lang=EN-US><img border=0 width=648 height=226
 src="SpringWebAppDoc.files/image076.jpg"></span></p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=571 height=355
+<p class=MsoNormal><span lang=EN-US><img border=0 width=714 height=444
 src="SpringWebAppDoc.files/image077.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509536"></a><a name="_Toc184410481"><span lang=EN-US>13.2 </span>ユーザとパスワードの作成</a></h2>
+<h2><a name="_Toc198486625"></a><a name="_Toc184410481"><span lang=EN-US>13.2 </span>ユーザとパスワードの作成</a></h2>
 
 <p class=MsoNormal>（作成例）</p>
 
-<p class=MsoNormal><span lang=EN-US><img border=0 width=724 height=404
+<p class=MsoNormal><span lang=EN-US><img border=0 width=905 height=505
 src="SpringWebAppDoc.files/image078.jpg"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509537"></a><a name="_Toc184410482"><span lang=EN-US>13.2.1
+<h3><a name="_Toc198486626"></a><a name="_Toc184410482"><span lang=EN-US>13.2.1
 </span><span lang=EN-US>username</span>と<span lang=EN-US>password </span>の確認方法と設定方法</a></h3>
 
 <p class=MsoNormal style='margin-left:63.0pt;text-indent:-21.0pt'><span
@@ -4539,7 +4691,7 @@ lang=EN-US>Login</span>（ログイン）」タブで<span lang=EN-US> password 
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509538"></a><a name="_Toc184410483"><span lang=EN-US>13.3 </span><span
+<h2><a name="_Toc198486627"></a><a name="_Toc184410483"><span lang=EN-US>13.3 </span><span
 lang=EN-US>application.properties</span>の設定</a></h2>
 
 <p class=MsoNormal>（設定例）</p>
@@ -4585,19 +4737,19 @@ create-drop / drop</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509539"></a><a name="_Toc184410484"><span lang=EN-US>13.4 </span>データベースとスキーマ</a></h2>
+<h2><a name="_Toc198486628"></a><a name="_Toc184410484"><span lang=EN-US>13.4 </span>データベースとスキーマ</a></h2>
 
 <p class=MsoNormal><span lang=EN-US>MySQL</span>の場合、データベースとスキーマはほぼ同じ意味で使われます。</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>データベース<span lang=EN-US>: MySQL</span>では「データベース」は、テーブルやビューなどのデータオブジェクトが保存される領域のことを指します。</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span>スキーマ<span lang=EN-US>: </span>一部のデータベースシステムでは、スキーマはデータベース内でテーブルや他のオブジェクトの構造を定義する「論理的なコレクション」です。</h6>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509540"></a><a name="_Toc184410485"><span lang=EN-US>13.5 </span><span
+<h2><a name="_Toc198486629"></a><a name="_Toc184410485"><span lang=EN-US>13.5 </span><span
 lang=EN-US>spring.jpa.hibernate.ddl-auto</span>の設定</a></h2>
 
 <p class=MsoNormal><span lang=EN-US>Spring Boot </span>アプリケーションにおける<span
@@ -4605,7 +4757,7 @@ lang=EN-US> Hibernate </span>のデータベーススキーマの自動生成や
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509541"></a><a name="_Toc184410486"><span lang=EN-US>13.5.1
+<h3><a name="_Toc198486630"></a><a name="_Toc184410486"><span lang=EN-US>13.5.1
 </span>代表的なオプション</a></h3>
 
 <h4><span lang=EN-US>（1） </span><span lang=EN-US>none</span></h4>
@@ -4647,7 +4799,7 @@ lang=EN-US> Hibernate </span>のデータベーススキーマの自動生成や
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h3><a name="_Toc194509542"></a><a name="_Toc184410487"><span lang=EN-US>13.5.2
+<h3><a name="_Toc198486631"></a><a name="_Toc184410487"><span lang=EN-US>13.5.2
 </span>オプションのまとめ</a></h3>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;none: </span>スキーマ操作をしない（手動管理）。</p>
@@ -4667,7 +4819,7 @@ lang=EN-US> validate </span>や<span lang=EN-US> none </span>を使って、ス�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509543"></a><a name="_Toc184410488"><span lang=EN-US>14． </span><span
+<h1><a name="_Toc198486632"></a><a name="_Toc184410488"><span lang=EN-US>14． </span><span
 lang=EN-US>Tips</span>レンダリング</a></h1>
 
 <p class=MsoNormal>レンダリングとは、<span lang=EN-US>Web</span>アプリ開発の文脈では、クライアントサイド・レンダリングやサーバサイド・レンダリングのように<span
@@ -4677,11 +4829,10 @@ lang=EN-US>HTML</span>データを生成する処理を指します。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509544"></a><a name="_Toc184410489"><span lang=EN-US>14.1 </span>サーバサイドレンダリング（<span
+<h2><a name="_Toc198486633"></a><a name="_Toc184410489"><span lang=EN-US>14.1 </span>サーバサイドレンダリング（<span
 lang=EN-US>Server-Side Rendering, SSR</span>）</a></h2>
 
-<p class=MsoNormal><span lang=EN-US>JSP</span>（<span lang=EN-US>JavaServer
-Pages</span>）はサーバーサイドレンダリングの一種です。</p>
+<p class=MsoNormal><span lang=EN-US>JSP</span>（<span lang=EN-US>JavaServer Pages</span>）はサーバーサイドレンダリングの一種です。</p>
 
 <p class=MsoNormal>サーバーサイドレンダリングとは、サーバー側で<span lang=EN-US>HTML</span>を生成してクライアント（ブラウザ）に送信する方法です。</p>
 
@@ -4704,7 +4855,7 @@ lang=EN-US>HTML</span>出力を生成する。</h4>
 
 <p class=MsoNormal>このように、<span lang=EN-US>JSP</span>はサーバーサイドで実行されるため、サーバーサイドレンダリングの一部とされています。</p>
 
-<h2><a name="_Toc194509545"></a><a name="_Toc184410490"><span lang=EN-US>14.2 </span>クライアントサイドレンダリング（<span
+<h2><a name="_Toc198486634"></a><a name="_Toc184410490"><span lang=EN-US>14.2 </span>クライアントサイドレンダリング（<span
 lang=EN-US>Client-Side Rendering, CSR</span>）</a></h2>
 
 <h4><span lang=EN-US>（1） </span><span lang=EN-US>JavaScript</span>フレームワーク</h4>
@@ -4723,7 +4874,7 @@ lang=EN-US>HTML</span>を取得するのではなく、必要なデータだけ�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h2><a name="_Toc194509546"></a><a name="_Toc184410491"><span lang=EN-US>14.3 </span>静的サイト生成（<span
+<h2><a name="_Toc198486635"></a><a name="_Toc184410491"><span lang=EN-US>14.3 </span>静的サイト生成（<span
 lang=EN-US>Static Site Generation, SSG</span>）</a></h2>
 
 <p class=MsoNormal>ウェブサイトのページを事前に生成し、それらを静的ファイル（通常は<span lang=EN-US>HTML</span>、<span
@@ -4732,12 +4883,12 @@ lang=EN-US>SSG</span>は、あらかじめ定義されたテンプレートと�
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><a name="_Toc194509547"></a><a name="_Toc184410492"><span lang=EN-US>15． </span><span
+<h1><a name="_Toc198486636"></a><a name="_Toc184410492"><span lang=EN-US>15． </span><span
 lang=EN-US>Tips</span>：セレクトボックスの書き方</a></h1>
 
 <p class=MsoNormal style='margin-left:17.0pt;text-indent:-11.35pt;page-break-after:
 avoid'><span lang=EN-US style='font-size:10.0pt;font-family:Symbol'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
 lang=EN-US style='font-family:Symbol'>·</span><span lang=EN-US
 style='font-size:7.0pt;font-family:"Times New Roman","serif"'>&nbsp;&nbsp;&nbsp;&nbsp;
 </span><span lang=EN-US>HTML</span>素のコード</p>
@@ -4757,7 +4908,7 @@ lang=EN-US>3&quot;&gt;</span>サンプル<span lang=EN-US>3&lt;/option&gt;</span
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>JSP JSTL</span>を使うとき</h6>
 
 <p class=MsoNormal><span lang=EN-US>&lt;c:forEach items=&quot;${itemAry}&quot;
@@ -4772,7 +4923,7 @@ ${item}&lt;/option&gt;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Spring (Spring MVC) </span>を利用したとき</h6>
 
 <p class=MsoNormal><span lang=EN-US>&lt;!--</span>職種<span lang=EN-US> --&gt;</span></p>
@@ -4782,9 +4933,8 @@ ${item}&lt;/option&gt;</span></p>
 <p class=MsoNormal><span lang=EN-US>&lt;form:select path=&quot;jobTypeId&quot;
 onchange=&quot;showHome()&quot;&gt;</span></p>
 
-<p class=MsoNormal><span lang=EN-US>&lt;form:options
-items=&quot;${jobTypeList}&quot; itemLabel=&quot;label&quot;
-itemValue=&quot;id&quot; /</span></p>
+<p class=MsoNormal><span lang=EN-US>&lt;form:options items=&quot;${jobTypeList}&quot;
+itemLabel=&quot;label&quot; itemValue=&quot;id&quot; /</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&lt;/form:select&gt;</span></p>
 
@@ -4792,7 +4942,7 @@ itemValue=&quot;id&quot; /</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
 </span></span><span lang=EN-US>Thymeleaf</span>を利用したとき</h6>
 
 <p class=MsoNormal><span lang=EN-US>&lt;select class=&quot;dropdown
