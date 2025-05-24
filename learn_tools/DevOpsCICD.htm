@@ -357,12 +357,10 @@ span.a1
 	{mso-style-name:"吹き出し \(文字\)";
 	mso-style-link:吹き出し;
 	font-family:"Arial","sans-serif";}
-.MsoChpDefault
-	{font-family:"Century","serif";}
  /* Page Definitions */
  @page WordSection1
 	{size:210.0mm 842.0pt;
-	margin:36.0pt 36.0pt 36.0pt 36.0pt;}
+	margin:72.0pt 54.0pt 72.0pt 54.0pt;}
 div.WordSection1
 	{page:WordSection1;}
  /* List Definitions */
@@ -379,106 +377,172 @@ ul
 
 <div class=WordSection1>
 
-<p class=MsoNormal><span lang=EN-US style='font-size:22.0pt'>Maven</span><span
-style='font-size:22.0pt'>、<span lang=EN-US>Gradle</span>、<span lang=EN-US>Eclipse</span>、<span
-lang=EN-US>IntelliJ</span>、<span lang=EN-US>Spring Initialzr </span>の役割と位置づけ</span></p>
+<h1><span lang=EN-US>1． </span><span lang=EN-US>DevOps</span>とは？</h1>
+
+<p class=MsoNormal><span lang=EN-US>Dev</span>：開発（<span lang=EN-US>Development</span>）</p>
+
+<p class=MsoNormal><span lang=EN-US>Ops</span>：運用（<span lang=EN-US>Operations</span>）</p>
+
+<p class=MsoNormal>を組み合わせた言葉で、</p>
+
+<p class=MsoNormal>「開発」と「運用」が連携して、よりスムーズかつ効率的にソフトウェアを提供し続けるための考え方・文化・手法を指します。</p>
+
+<p class=MsoNormal><span lang=EN-US>DevOps</span>の目的：</p>
+
+<p class=MsoNormal>リリースの頻度を上げる</p>
+
+<p class=MsoNormal>人的ミスを減らす（自動化）</p>
+
+<p class=MsoNormal>品質を保ちつつ迅速に機能を届ける</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><span lang=EN-US>1． </span><span lang=EN-US>Maven</span>と<span lang=EN-US>Gradle</span></h1>
+<h1><span lang=EN-US>2． </span><span lang=EN-US>CI/CD</span>とは？</h1>
 
-<p class=MsoNormal>共にビルドツールです。</p>
+<p class=MsoNormal><span lang=EN-US>CI/CD</span>は、<span lang=EN-US>DevOps</span>の実践に欠かせない概念です。</p>
 
-<h2><span lang=EN-US>1.1 </span>主な役割は</h2>
+<p class=MsoNormal><span lang=EN-US>CI</span>（継続的インテグレーション）とは？</p>
+
+<p class=MsoNormal>「コードをマージしたらすぐにテスト・ビルドして、問題がないか確認する仕組み」</p>
+
+<p class=MsoNormal>チームの誰かがコードを変更したら、すぐに自動でチェック（ユニットテストやビルド）される。</p>
+
+<p class=MsoNormal>目的：バグの早期発見と統合エラーの防止</p>
+
+<p class=MsoNormal><span lang=EN-US>CD</span>（継続的デリバリー<span lang=EN-US> / </span>デプロイメント）とは？</p>
+
+<p class=MsoNormal>継続的デリバリー（<span lang=EN-US>Continuous Delivery</span>）</p>
+
+<p class=MsoNormal>　→ 自動で「本番環境に出す一歩手前」まで進められる状態</p>
+
+<p class=MsoNormal>　（デプロイは人の判断で）</p>
+
+<p class=MsoNormal>継続的デプロイメント（<span lang=EN-US>Continuous Deployment</span>）</p>
+
+<p class=MsoNormal>　→ テストにパスしたら自動的に本番へリリースされる</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><span lang=EN-US>3． </span>代表的な<span lang=EN-US>CI/CD</span>ツール</h1>
 
 <h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-</span></span>依存ライブラリ（<span lang=EN-US>JAR</span>など）の管理</h6>
+</span></span><span lang=EN-US>Jenkins</span>（ジェンキンス）</h6>
+
+<p class=MsoNormal>老舗の<span lang=EN-US>CI/CD</span>自動化ツール（オープンソース）</p>
+
+<p class=MsoNormal>プラグインが豊富で柔軟性が高い</p>
+
+<p class=MsoNormal>自分でサーバーにインストールして構築する必要あり</p>
+
+<p class=MsoNormal>例：</p>
+
+<p class=MsoNormal><span lang=EN-US># Jenkins</span>でできること</p>
+
+<p class=MsoNormal><span lang=EN-US>- Git</span>からソースを取得</p>
+
+<p class=MsoNormal><span lang=EN-US>- Maven</span>でビルド</p>
+
+<p class=MsoNormal><span lang=EN-US>- JUnit</span>でテスト実行</p>
+
+<p class=MsoNormal><span lang=EN-US>- WAR</span>ファイルを<span lang=EN-US>Tomcat</span>に自動デプロイ</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>GitHub Actions</span>（ギットハブ・アクションズ）</p>
+
+<p class=MsoNormal><span lang=EN-US>GitHub</span>に統合された<span lang=EN-US>CI/CD</span>機能</p>
+
+<p class=MsoNormal><span lang=EN-US>GitHub</span>に<span lang=EN-US>Push</span>するだけで、自動でテストやデプロイが可能</p>
+
+<p class=MsoNormal>メリット：</p>
+
+<p class=MsoNormal><span lang=EN-US>GitHub</span>ユーザーなら簡単に導入できる</p>
+
+<p class=MsoNormal>他の<span lang=EN-US>GitHub</span>製品との連携がスムーズ</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-</span></span>ソースコードのコンパイル</h6>
+</span></span><span lang=EN-US>GitLab</span>（ギットラボ）<span lang=EN-US>CI/CD</span></h6>
+
+<p class=MsoNormal><span lang=EN-US>Git</span>リポジトリ＋<span lang=EN-US>CI/CD</span>＋<span
+lang=EN-US>Issue</span>管理＋<span lang=EN-US>Container Registry</span>などがオールインワン</p>
+
+<p class=MsoNormal><span lang=EN-US>.gitlab-ci.yml </span>というファイルにパイプラインを定義する</p>
+
+<p class=MsoNormal><span lang=EN-US>GitLab</span>サーバーを社内に構築してプライベートで使う企業も多い</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-</span></span>テストの実行</h6>
+</span></span><span lang=EN-US>Azure DevOps</span>（アズール・デブオプス）</h6>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-</span></span>パッケージング（<span lang=EN-US>jar/war</span>ファイルの生成）</h6>
+<p class=MsoNormal><span lang=EN-US>Microsoft</span>提供の<span lang=EN-US>DevOps</span>プラットフォーム</p>
 
-<h6><span lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
-</span></span>プロジェクト構成の標準化</h6>
+<p class=MsoNormal><span lang=EN-US>Azure</span>環境と親和性が高い</p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal>機能：</p>
 
-<h2><span lang=EN-US>1.2 </span><span lang=EN-US>Maven</span></h2>
+<p class=MsoNormal>リポジトリ（<span lang=EN-US>Azure Repos</span>）</p>
 
-<p class=MsoNormal><span lang=EN-US>XML</span>形式の設定ファイル（<span lang=EN-US>pom.xml</span>）でプロジェクトを定義。</p>
+<p class=MsoNormal>パイプライン（<span lang=EN-US>Azure Pipelines</span>）</p>
 
-<p class=MsoNormal>決まった構造や記述が多く、安定・標準的。</p>
+<p class=MsoNormal>チケット管理（<span lang=EN-US>Azure Boards</span>）</p>
 
-<p class=MsoNormal>学習コストは低めだが、柔軟性には欠ける。</p>
+<p class=MsoNormal>例：</p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal>コードを<span lang=EN-US>Push </span>→ 自動テスト →<span lang=EN-US>
+Azure App Service </span>にデプロイ</p>
 
-<h2><span lang=EN-US>1.3 </span><span lang=EN-US>Gradle</span></h2>
-
-<p class=MsoNormal><span lang=EN-US>Groovy</span>や<span lang=EN-US>Kotlin DSL</span>を使った設定（<span
-lang=EN-US>build.gradle</span>など）。</p>
-
-<p class=MsoNormal>柔軟で高速（インクリメンタルビルド、デーモンの活用）。</p>
-
-<p class=MsoNormal>記述がプログラミング的なので、柔軟性は高いが、学習コストがやや高い。</p>
+<p class=MsoNormal>がワンストップで実行できる</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<h1><span lang=EN-US>2． </span><span lang=EN-US>Eclipse </span>や<span
-lang=EN-US> IntelliJ</span></h1>
+<h1><span lang=EN-US>4． </span><span lang=EN-US>DevOps/CI/CD </span>導入のメリット（新人向けに）</h1>
 
-<p class=MsoNormal><span lang=EN-US>Eclipse </span>や<span lang=EN-US> IntelliJ </span>は統合開発環境です。</p>
+<p class=MsoNormal>自動化<span lang=EN-US>   </span>テストやデプロイを自動で実行できる</p>
 
-<p class=MsoNormal>プログラミングを支援するツールです。</p>
+<p class=MsoNormal>品質向上<span lang=EN-US>           </span>人手によるミスを減らし、再現性のあるプロセスを実現</p>
 
-<p class=MsoNormal>エディタ、補完、デバッグ、実行、ビルド管理、<span lang=EN-US>UI</span>など。</p>
+<p class=MsoNormal>迅速な開発<span lang=EN-US>        </span>小さな変更でもすぐにリリースできる</p>
 
-<p class=MsoNormal><span lang=EN-US>Eclipse</span>自体には<span lang=EN-US>Maven</span>や<span
-lang=EN-US>Gradle</span>は内蔵されておらず、連携プラグインを通じて使います（例：<span lang=EN-US>M2Eclipse</span>、<span
-lang=EN-US>Buildship</span>）。</p>
+<p class=MsoNormal>チーム連携<span lang=EN-US>        </span>「動くコードをすぐ共有できる」ことで無駄が減る</p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<h1><span lang=EN-US>5． </span>まとめ（図解イメージ）</h1>
 
-<h1><span lang=EN-US>3． </span><span lang=EN-US>Spring Initializr</span></h1>
+<p class=MsoNormal><span lang=EN-US>[Git Push]</span></p>
 
-<p class=MsoNormal><span lang=EN-US>Spring Initializr </span>で、<span
-lang=EN-US>Maven/Gradle</span>などを選び、雛形プロジェクトを生成する<span lang=EN-US>Web</span>サービス<span
-lang=EN-US>         Maven</span>を選んで雛形を生成</p>
+<p class=MsoNormal><span lang=EN-US>   </span>↓</p>
 
-<p class=MsoNormal><span lang=EN-US>Maven  </span>依存関係やビルド処理の管理<span
-lang=EN-US>        pom.xml</span>に記述された通りにライブラリをダウンロード・ビルド</p>
+<p class=MsoNormal><span lang=EN-US>[CI: </span>自動テスト<span lang=EN-US> &amp; </span>ビルド<span
+lang=EN-US> (Jenkins / GitHub Actions </span>など<span lang=EN-US>)]</span></p>
 
-<p class=MsoNormal><span lang=EN-US>Eclipse  </span>開発作業を行う<span lang=EN-US>IDE        </span>ソースコードを編集、ビルド、実行、デバッグを実施</p>
+<p class=MsoNormal><span lang=EN-US>   </span>↓</p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>[CD: </span>自動リリース<span lang=EN-US> or </span>手動承認<span
+lang=EN-US> (GitLab / Azure DevOps </span>など<span lang=EN-US>)]</span></p>
 
-<h1><span lang=EN-US>4． </span>例えるなら</h1>
+<p class=MsoNormal><span lang=EN-US>   </span>↓</p>
 
-<p class=MsoNormal><span lang=EN-US>Maven/Gradle</span>：料理のレシピと食材管理担当（プロジェクトの作り方や必要な材料を管理）</p>
+<p class=MsoNormal><span lang=EN-US>[</span>本番環境へデプロイ<span lang=EN-US>]</span></p>
 
-<p class=MsoNormal><span lang=EN-US>Eclipse</span>：料理人が使うキッチン（作業環境）</p>
+<p class=MsoNormal>新人エンジニアがまずやるべきこと</p>
 
-<p class=MsoNormal><span lang=EN-US>Spring Initializr</span>：料理キットを一式まとめて提供してくれる業者（雛形プロジェクト生成）</p>
+<p class=MsoNormal><span lang=EN-US>GitHub</span>でリポジトリを作り、<span lang=EN-US>GitHub
+Actions</span>を試してみる</p>
 
-<p class=MsoNormal>必要に応じて、<span lang=EN-US>Maven</span>から<span lang=EN-US>Gradle</span>への切り替えも可能ですが、初心者にはまず<span
-lang=EN-US>Maven</span>で慣れるのが安心です。</p>
+<p class=MsoNormal>簡単な<span lang=EN-US>Java</span>や<span lang=EN-US>HTML</span>アプリを<span
+lang=EN-US>CI</span>でテスト・ビルドする</p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal>ツールごとの「<span lang=EN-US>YAML</span>ファイルの書き方」に慣れる</p>
 
-<p class=MsoNormal><span lang=EN-US>by ChatGPT 2025/5/21</span></p>
+<p class=MsoNormal><span lang=EN-US>Slack</span>通知などの自動連携も体験してみる</p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>CI/CD </span>や<span lang=EN-US> DevOps </span>は最初は少し抽象的に感じるかもしれませんが、実際に手を動かしてみると理解がグッと深まります。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
-
-<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<p class=MsoNormal><span lang=EN-US>by ChatGPT 2025/5/24</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
