@@ -5,12 +5,12 @@
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/</loc>
   <priority>1.0</priority>
-  <lastmod>2025-05-17T21:14:00+09:00</lastmod>
+  <lastmod>2025-07-23T21:17:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2025-05-17T21:14:00+09:00</lastmod>
+  <lastmod>2025-07-23T21:17:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/ndmail/toiawasePage.html</loc>
@@ -20,7 +20,7 @@
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2025-05-17T21:14:00+09:00</lastmod>
+  <lastmod>2025-08-03T14:06:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/ddd/ddbuilder.html</loc>
@@ -120,17 +120,42 @@
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/JavaRoadmap.html</loc>
   <priority>0.7</priority>
-  <lastmod>2025-05-18T12:57:00+09:00</lastmod>
+  <lastmod>2025-07-23T14:11:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/oot/OOT.htm</loc>
   <priority>0.7</priority>
-  <lastmod>2024-08-05T14:46:00+09:00</lastmod>
+  <lastmod>2025-07-22T21:09:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/oot/samples/BicycleSampleModel(1).pdf</loc>
+  <priority>0.7</priority>
+  <lastmod>2025-08-03T11:37:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/oot/samples/BicycleSampleModel(2).pdf</loc>
+  <priority>0.7</priority>
+  <lastmod>2025-08-03T14:10:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/oot/samples/BicycleSampleModel(3).pdf</loc>
+  <priority>0.7</priority>
+  <lastmod>2025-08-03T14:13:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/java_spring/SpringWebAppDoc.htm</loc>
   <priority>0.7</priority>
-  <lastmod>2025-05-18T18:49:00+09:00</lastmod>
+  <lastmod>2025-07-22T21:04:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn_tools/Maven_Gradle.htm</loc>
+  <priority>0.7</priority>
+  <lastmod>2025-05-24T16:34:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/learn_tools/DevOpsCICD.htm</loc>
+  <priority>0.7</priority>
+  <lastmod>2025-05-24T16:30:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/ddd/ddbuilder_dev_flow.html</loc>
