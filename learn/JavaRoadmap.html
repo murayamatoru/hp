@@ -150,9 +150,145 @@ VSCodeの .vscode<br>
     <li>日付 操作
 <br>
     <br></ul>
-  <li>データベース アクセス
-<br>Java で RDB（MySQL, PostgreSQL など）を扱う際には、抽象化レベルや開発効率に応じていくつかの選択肢があります。
+  <li>データベース アクセス方法 主な選択肢 <br>Java で RDB（MySQL, PostgreSQL など）を扱う際には、抽象化レベルや開発効率に応じていくつかの選択肢があります。
 大きく分けると「生の SQL を使う」か「抽象化レイヤーを使う」か、になります。<br><br>
+  <ul>
+<li>SQL 直利用
+	<ul>
+	<li>Java標準 JDBC (Java Database Connectivity)
+		<ul>
+		<li>抽象化レベル：低
+		<li>概要
+		<br>Java 標準の API。RDB と接続して SQL を直接発行する。
+		<li>特徴
+			<ul>
+			<li>すべての操作を自分で SQL で書く。
+			<li>接続管理（Connection）、SQL 実行（Statement / PreparedStatement）、結果取得（ResultSet）をハンドリング。
+			</ul>
+		<li>メリット
+			<ul>
+			<li>軽量で依存が少ない
+。			<li>SQL を完全に制御できる。
+			</ul>
+		<li>デメリット
+			<ul>
+			<li>冗長なコード（例: try-catch-finally の多用）。
+			<li>オブジェクトとテーブルのマッピングを自分で実装する必要がある。
+			</ul>
+		</ul>
+	</ul>
+</ul>
+<br>
+<!--  ########################## -->
+<ul>
+<li>SQL マッピング系
+	<ul>
+	<li>抽象化レベル：中
+	<li>Spring JDBC
+      <ul>
+        <li>概要
+	<br>JDBC をラップして便利にしたもの（Spring Framework）。 
+		<li>特徴
+			<ul>
+			<li>JdbcTemplate で接続・リソース解放処理を簡略化。
+			<li>依然として SQL を自分で書くが、例外処理やマッピングがシンプルになる。
+			</ul>
+		</ul>
+	</ul>
+	<ul>
+	<li>MyBatisC
+		<ul>
+		<li>概要
+		<br>SQL マッピングフレームワーク。 
+		<li>特徴
+		<ul>
+			<li>SQL は XML やアノテーションに定義。
+        			<li>SQL とオブジェクトのマッピングを自動化。
+     		</ul>
+		<li>メリット
+			<ul>
+			<li>SQL の自由度が高い（チューニングしやすい）。
+			 </ul>
+		<li>デメリット
+			<ul>
+			<li>大規模開発では SQL 管理が煩雑になる場合あり。
+       		 </ul>
+		</ul>
+	</ul>
+</ul>
+<br>
+<!--  ########################## -->
+<ul>
+<li>O/R マッピング (ORM)
+	<ul>
+	<li>Java標準ORM JPA (Java Persistence API)
+      	<ul>
+		<li>抽象化レベル：高
+		<li>概要
+			<ul>
+			<li>Java 標準の ORM API（インタフェース仕様）。
+        			<li>実装として Hibernate や EclipseLink が有名。				
+        			</ul>
+		<li>特徴
+			<ul>
+			<li>@Entity を付けたクラスをテーブルにマッピング。
+			<li>EntityManager を使って永続化、検索、更新、削除を行う。
+			<li>SQL ではなく JPQL (Java Persistence Query Language) を使用可能。
+			</ul>
+		<li>メリット
+			<ul>
+			<li>ドメインモデルとデータベースの整合性を保ちやすい。
+			<li>生 SQL を書かなくても CRUD ができる。
+			</ul>
+		<li>デメリット
+			<ul>
+			<li>学習コストが高い。
+          			<li>複雑な SQL チューニングには不向き。
+        			</ul>
+		</ul>
+	</ul>
+<li>補助的な選択肢
+    <ul>
+	<li>jOOQ
+      	<ul>
+		<li>概要
+			<ul>
+			<li>タイプセーフな SQL DSL を提供するフレームワーク
+        			</ul>
+		<li>特徴
+			<ul>
+			<li>SQL をコードで書ける（Java の型チェックが効く）
+			<li>DB の方言(Dialect)毎の SQL を自動生成。
+			</ul>
+		<li>メリット
+			<ul>
+			<li>SQL 主体だが型安全性が高い。
+			</ul>
+		<li>デメリット
+			<ul>
+			<li>JPA 程の ORM ではない。
+        			</ul>
+		</ul>
+	</ul>
+
+<li>まとめ
+	<ul>
+	<li>SQL を完全に書きたい → JDBC, Spring JDBC, MyBatis, jOOQ
+	<li>SQL をなるべく書きたくない／ドメインモデル重視 → JPA
+	<li>両立したい → MyBatis + Spring Boot, あるいは jOOQ
+	</ul>
+<li>よく使われる選択肢
+	<ul>
+	<li>小規模／SQL 主体 → Spring JDBC or MyBatis
+	<li>中～大規模／ドメイン駆動 → JPA
+	<li>SQL の制御を強めつつ型安全に → jOOQ
+	</ul>
+
+</ul>
+<!--  ########################## -->
+<br>
+<li>JPA 
+<br>内容は未作成<br>
   <ul>
 <li>SQL 直利用
 	<ul>
@@ -250,6 +386,8 @@ VSCodeの .vscode<br>
 	</ul>
 </ul>
 <!--  ########################## -->
+
+
 <br>
     
   <li>開発プロセス
