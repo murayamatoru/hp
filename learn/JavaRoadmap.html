@@ -68,7 +68,8 @@ VSCodeの .vscode<br>
     <li>パターン
     </ul>
 
-<li>Java
+
+  <li>Java
 <ul>
     <li><a href="docs/FeaturesOfOOPAndJava.pdf" target="">Javaの特徴</a>
     <li><a href="JDK.html" target="_new2">Javaのバージョン</a>
@@ -147,13 +148,111 @@ VSCodeの .vscode<br>
     <li>正規表現
     <li>ファイル操作
     <li>日付 操作
+<br>
+    <br></ul>
+  <li>データベース アクセス
+<br>Java で RDB（MySQL, PostgreSQL など）を扱う際には、抽象化レベルや開発効率に応じていくつかの選択肢があります。
+大きく分けると「生の SQL を使う」か「抽象化レイヤーを使う」か、になります。<br><br>
+  <ul>
+<li>SQL 直利用
+	<ul>
+	<li>Java標準 JDBC (Java Database Connectivity)
+		<ul>
+		<li>抽象化レベル：低
+		<li>概要
+		<br>Java 標準の API。RDB と接続して SQL を直接発行する。
+		<li>特徴
+			<ul>
+			<li>すべての操作を自分で SQL で書く。
+			<li>接続管理（Connection）、SQL 実行（Statement / PreparedStatement）、結果取得（ResultSet）をハンドリング。
+			</ul>
+		<li>メリット
+			<ul>
+			<li>軽量で依存が少ない
+。			<li>SQL を完全に制御できる。
+			</ul>
+		<li>デメリット
+			<ul>
+			<li>冗長なコード（例: try-catch-finally の多用）。
+			<li>オブジェクトとテーブルのマッピングを自分で実装する必要がある。
+			</ul>
+		</ul>
+	</ul>
 </ul>
-
-<!-- kokokara -->
 <br>
-    <li><a href="JavaRoadmap_Database.html" target="dataaccess">データベース アクセス</a>
+<!--  ########################## -->
+<ul>
+<li>SQL マッピング系
+	<ul>
+	<li>抽象化レベル：中
+	<li>Spring JDBC
+      <ul>
+        <li>概要
+	<br>JDBC をラップして便利にしたもの（Spring Framework）。 
+		<li>特徴
+			<ul>
+			<li>JdbcTemplate で接続・リソース解放処理を簡略化。
+			<li>依然として SQL を自分で書くが、例外処理やマッピングがシンプルになる。
+			</ul>
+		</ul>
+	</ul>
+	<ul>
+	<li>MyBatisC
+		<ul>
+		<li>概要
+		<br>SQL マッピングフレームワーク。 
+		<li>特徴
+		<ul>
+			<li>SQL は XML やアノテーションに定義。
+        			<li>SQL とオブジェクトのマッピングを自動化。
+     		</ul>
+		<li>メリット
+			<ul>
+			<li>SQL の自由度が高い（チューニングしやすい）。
+			 </ul>
+		<li>デメリット
+			<ul>
+			<li>大規模開発では SQL 管理が煩雑になる場合あり。
+       		 </ul>
+		</ul>
+	</ul>
+</ul>
 <br>
-    <li>開発プロセス
+<!--  ########################## -->
+<ul>
+<li>O/R マッピング (ORM)
+	<ul>
+	<li>Java標準ORM JPA (Java Persistence API)
+      <ul>
+		<li>抽象化レベル：高
+		<li>概要
+			<ul>
+			<li>Java 標準の ORM API（インタフェース仕様）。
+          <li>実装として Hibernate や EclipseLink が有名。
+			
+        </ul>
+		<li>特徴
+			<ul>
+			<li>@Entity を付けたクラスをテーブルにマッピング。
+			<li>EntityManager を使って永続化、検索、更新、削除を行う。
+			<li>SQL ではなく JPQL (Java Persistence Query Language) を使用可能。</ul>
+		<li>メリット
+			<ul>
+			<li>ドメインモデルとデータベースの整合性を保ちやすい。
+			<li>生 SQL を書かなくても CRUD ができる。
+			</ul>
+		<li>デメリット
+			<ul>
+			<li>学習コストが高い。
+          <li>複雑な SQL チューニングには不向き。
+        </ul>
+		</ul>
+	</ul>
+</ul>
+<!--  ########################## -->
+<br>
+    
+  <li>開発プロセス
   <ul>
     <li>設計（調査・分析・基本設計・プログラム設計）    
       <ul>
@@ -181,6 +280,7 @@ VSCodeの .vscode<br>
     <li><a href="index.html#course3">ドメイン駆動設計</a>
     </ul>
 -->
+
 </ol>
 
 <br>
