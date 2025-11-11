@@ -5,12 +5,12 @@
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/</loc>
   <priority>1.0</priority>
-  <lastmod>2025-09-23T21:14:00+09:00</lastmod>
+  <lastmod>2025-11-03T11:25:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2025-09-23T21:14:00+09:00</lastmod>
+  <lastmod>2025-11-03T11:25:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/ndmail/toiawasePage.html</loc>
@@ -20,7 +20,7 @@
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2025-09-29T21:15:00+09:00</lastmod>
+  <lastmod>2025-10-17T14:56:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/ddd/ddbuilder.html</loc>
@@ -61,6 +61,11 @@
   <loc>http://www.fk-nextdesign.sakura.ne.jp/pdf/FISA20040220.pdf</loc>
   <priority>0.8</priority>
   <lastmod>2022-07-02T19:38:00+09:00</lastmod>
+</url>
+<url>
+  <loc>http://www.fk-nextdesign.sakura.ne.jp/tips/tips_Windows10_Disk100Percent.html</loc>
+  <priority>0.8</priority>
+  <lastmod>2025-11-03T16:31:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/tips/tips_CanNotAccessPage_Chrome_Edge.html</loc>
@@ -120,7 +125,7 @@
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/learn/JavaRoadmap.html</loc>
   <priority>0.7</priority>
-  <lastmod>2025-10-05T11:38:00+09:00</lastmod>
+  <lastmod>2025-10-08T13:21:00+09:00</lastmod>
 </url>
 <url>
   <loc>http://www.fk-nextdesign.sakura.ne.jp/java_spring/SpringWebAppDoc.htm</loc>
