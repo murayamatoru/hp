@@ -128,13 +128,14 @@ li  li  li {
 		<li>アノテーション</li>
 		</ul>
     <li>命名</li>
-    <li>型</li>
+    <li>型
 	      <ul>
 	      <li>プリミティブ型</li>
 	      <li>参照型</li>
 	      <li>ラッパークラス</li>
 	      <li>オートボクシング・アンボクシング</li>
 	      </ul>
+    </li>
     <li>クラス定義
 	      <ul>
 	      <li>パッケージ</li>
@@ -177,10 +178,8 @@ li  li  li {
   </div>
 
 
-
-
   <li>データベース アクセス <br>Java で RDB（MySQL, PostgreSQL など）を扱う際には、抽象化レベルや開発効率に応じていくつかの選択肢があります。
-大きく分けると「生の SQL を使う」か「抽象化レイヤーを使う」か、になります。<br><br>
+大きく分けると「生の SQL を使う」か「抽象化レイヤーを使う」か、になります。
   <ul>
 <li>選択肢① SQL 直利用
     <ul>
@@ -207,8 +206,7 @@ li  li  li {
 		</ul>
 	</ul>
 </ul>
-<br>
-<!--  ########################## -->
+
 <ul>
 <li>選択肢②  SQL マッピング系
     <ul>
@@ -240,13 +238,12 @@ li  li  li {
 			 </ul>
 		<li>デメリット
 			<ul>
-			<li>大規模開発では SQL 管理が煩雑になる場合あり。
+			<li>大規模開発では SQL 管理が煩雑になる場合がある。
        		 </ul>
 		</ul>
 	</ul>
 </ul>
-<br>
-<!--  ########################## -->
+
 <ul>
 <li>選択肢③ O/R マッピング (ORM)
     <ul>
@@ -276,6 +273,7 @@ li  li  li {
         			</ul>
 		</ul>
 	</ul>
+</ul>
 <li>補助的な選択肢
     <ul>
 	<li>jOOQ
@@ -295,33 +293,32 @@ li  li  li {
 			</ul>
 		<li>デメリット
 			<ul>
-			<li>JPA 程の ORM ではない。
+			<li>JPA ほどの ORM ではない。
         			</ul>
 		</ul>
 	</ul>
 
 <li>まとめ
 	<ul>
-	<li>SQL を完全に書きたい → JDBC, Spring JDBC, MyBatis, jOOQ
-	<li>SQL をなるべく書きたくない／ドメインモデル重視 → JPA
-	<li>両立したい → MyBatis + Spring Boot, あるいは jOOQ
+	<li>SQL を完全に書きたい → JDBC, Spring JDBC, MyBatis, jOOQ</li>
+	<li>SQL をなるべく書きたくない／ドメインモデル重視 → JPA</li>
+	<li>両立したい → MyBatis + Spring Boot, あるいは jOOQ</li>
 	</ul>
+</li>
+
 <li>よく使われる選択肢
 	<ul>
-	<li>小規模／SQL 主体 → Spring JDBC or MyBatis
-	<li>中～大規模／ドメイン駆動 → JPA
-	<li>SQL の制御を強めつつ型安全に → jOOQ
+	<li>小規模／SQL 主体 → Spring JDBC or MyBatis</li>
+	<li>中～大規模／ドメイン駆動 → JPA</li>
+	<li>SQL の制御を強めつつ型安全に → jOOQ</li>
 	</ul>
+</li>
 
-</ul>
-<!--  ########################## -->
-<br>
-
-  <li>JPA 
-<p>
+<li>JPA 
+<div>
 JPA（Java Persistence API）は、Javaアプリケーションでデータベースとの連携を簡単に行うための標準仕様です。
 Javaオブジェクトとリレーショナルデータベース（RDB）の間のデータのやり取りをスムーズにするための仕組み（O/Rマッピング）を提供します。 
-</p>
+</div>
 <p>
 JPAの目的とメリット<br>
 JPAの主な目的は、開発者が煩雑なSQL文を直接書く手間を減らし、Javaの「オブジェクト」を中心とした開発に集中できるようにすることです。 
@@ -345,183 +342,21 @@ JPAはあくまで「仕様」であり、実際に動作させるにはその�
 </p>
 
 <!-- 
-JPAの概要説明は省いた
-入門レベルではあまり使用しない内容だったので
-<p>
-2025-12-28 kokokara
-<br>
+======================================================
+JPAの概要説明は省いた。入門レベルではあまり使用しない内容だったので。
+以下に見出し項目を残したので、必要な場合はこの辺のキーワードをもとに再調査すると良い。
+======================================================
 Spring Data JPA を使ったクエリー実装方法
 JPAでは EntityManage を使用してクエリーを構築／実行する。
-主な実装方法は以下の通り。
-<br>
-ネイティブSQLを使用する方法
-JPQLを使用する方法
-CriteriaAPIを使用する方法
-名前付きクエリーを使用する方法
-JPAプロバイダの機能を直接使用する方法
-
-
-ネイティブSQLを使用する例
-EntityManager#createNativeQuery(String)を使用する。
-<pre><code>
-        List&lt;User&gt; results = entityManager
-            .createNativeQuery("select * from user where name = :name", User.class)
-            .setParameter("name", "きい太")
-            .getResultList();
-</code></pre>
-
-JPQLを使用する例
-EntityManager#createQuery(String)を使用する。
-
-<pre><code>
-        List&lt;User&gt; results = entityManager
-                .createQuery("from User where name = :name", User.class)
-                .setParameter("name", "きい太")
-                .getResultList();
-</code></pre>
-
-CriteriaAPIを使用する例
-EntityManager#createQuery(CriteriaQuery)を使用する。
-
-<pre><code>
-        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
-        CriteriaQuery&lt;User&gt; query = cb.createQuery(User.class);
-        Root&lt;User&gt; root = query.from(User.class);
-        query.where(cb.equal(root.get("name"), "きい太"));
-        List&lt;User&gt; results = entityManager
-                .createQuery(query)
-                .getResultList();
-</code></pre>
-
-名前付きクエリーを使用する例
-@NamedQuery 又は @NamedNativeQuery を使用してEntityクラスに名前付きクエリーを定義しておく事ができる。
-定義した名前付きクエリーはEntityManager#createNamedQuery(String)で使用する。
-User.java
-@Entity
-@NamedQuery(name = "findByName", query = "from User where name = :name")
-public class User {
-}
-...
-        List&lt;User&gt; results = entityManager
-                .createNamedQuery("findByName", User.class)
-                .setParameter("name", "きい太")
-                .getResultList();
-
-
-
-
-
-
-JPAプロバイダの機能を使用する例
-EntityManager#unwrap()でJPAプロバイダ(Hibernate,EclipseLinkeなど)のオブジェクトを取得して実装する。
-
-Hibernateの場合
-        Session session = entityManager.unwrap(Session.class);
-        :
-Spring Data JPA のクエリー実装方法
-Spring Data JPA では Repositoryインターフェイスにメソッドを定義することでクエリーが作成される。
-
-UserRepository.java
-public interface UserRepository extends JpaRepository&lt;User, Long&gt;, JpaSpecificationExecutor&lt;User&gt; {
-    public User findByName(String name);
-    public User findByEmail(String email);
-    :
-Repositoryのスーパーインターフェイスには以下が用意されている。
-
-org.springframework.data.repository.CrudRepository
-org.springframework.data.repository.PagingAndSortingRepository
-org.springframework.data.jpa.repository.JpaRepository
-org.springframework.data.jpa.repository.JpaSpecificationExecutor
-JpaRepositoryには標準的なCRUD操作を行うメソッドが用意されている。
-通常はJpaRepositoryだけ使用すれば良いが、後述のSpecificationを使用する場合はJpaSpecificationExecutorも併用する。
-
-標準のメソッド以外のクエリーを作るには、Repositoryインターフェイスにクエリーメソッドを追加する。
-クエリーメソッドの実装方法は以下の通り。
-
-命名規約に従ったメソッド名での自動実装
-@Queryアノテーションでのクエリー指定
-リポジトリ実装クラスでクエリーを実装する
-Specificationでの実装
-命名規約に従ったメソッド名での自動実装
-決められたパターンでメソッド名を定義すると、クエリーを指定しなくても自動実装される。
-
-UserRepository.java
-    public List&lt;User&gt; findByNameContainsOrderByIdAsc(String name);
-実行されるJPQL
-select u
-from User u
-where u.name like %:name%
-order by u.id asc
-@Queryアノテーションでのクエリー指定
-複雑なクエリーや、命名規約ではメソッド名が長くなってしまう場合などには、@QueryアノテーションでJPQL又はネイティブSQLを指定して任意のメソッド名でクエリーを定義する事ができる。
-
-UserRepository.java
-    @Query("select u from User u where u.name like %:name% order by u.id asc")
-    public List&lt;User&gt; findUsers(@Param("name") String name);
-名前付きクエリーの指定
-@Queryのname属性でEntityクラスに定義した名前付きクエリーと結び付ける事ができる。
-
-User.java
-@Entity
-@NamedQuery(name = "findUsers", query = "select u from User u where u.name like %:name% order by u.id asc")
-public class User {
-UserRepository.java
-    @Query(name = "findUsers")
-    public List&lt;User&gt; findByNamedQuery(@Param("name") String name);
-が、せっかくRepositoryにクエリーをまとめてるのにEntityクラスにクエリーを書くという事はないので、Spring Data JPA で名前付きクエリーを使う際はプロパティファイルを使用する。
-
-プロパティファイルに名前付きクエリーを定義する
-クエリー名はデフォルトではEntity名.メソッド名となるが、@Queryのname属性で変更可能。
-
-resources/META-INF/jpa-named-queries.properties
-User.findAllOrderByName=select u from User u order by u.name
-User.findAllOrderByEmailDesc=select u from User u order by u.email desc
-UserRepository.java
-    public List&lt;User&gt; findAllOrderByName();
-    @Query(name = "User.findAllOrderByEmailDesc")
-    public List&lt;User&gt; findAllOrderByEmail();
-リポジトリ実装クラスでクエリーを実装する
-動的クエリーの組み立てやJPAプロバイダの機能を使用する場合など、特殊なクエリーが必要な場合等には自分でクエリーメソッドを実装する事ができる。
-
-UserRepository.java
-public interface UserRepository extends 
-        JpaRepository&lt;User, Long&gt;,
-        JpaSpecificationExecutor&lt;User&gt;,
-        UserRepositoryCustom {
-UserRepositoryCustom.java
-public interface UserRepositoryCustom {
-    public List&lt;User&gt; findUsers(String name, String email);
-}
-UserRepositoryImpl.java
-public class UserRepositoryImpl implements UserRepositoryCustom {
-    @Autowired
-    EntityManager entityManager;
-    public List&lt;User&gt; findUsers(String name, String email) {
-        //ここにクエリーを実装する
-    }
-}
-Specification
-Specificationは何らかの検索条件を表すインターフェイスで、CriteriaAPIを使用して検索条件を実装する。
-
-UserSpecifications.java
-    public Specification&lt;User&gt; nameContains(String name) {
-        return StringUtils.isEmpty(name) ? null : (root, query, cb) -> {
-            return cb.like(root.get("name"), "%" + name + "%");
-        };
-    }
-    public Specification&lt;User&gt; emailContains(String email) {
-        return StringUtils.isEmpty(email) ? null : (root, query, cb) -> {
-            return cb.like(root.get("email"), "%" + email + "%");
-        };
-    }
-呼び出す箇所
-    List&lt;User&gt; results = userRepository.findAll(Specifications
-        .where(nameContains(name))
-        .and(emailContains(email))
-    );
-
-2025-12-28  kokomade
- -->
+■JPAプロバイダの機能を直接使用する方法
+■ネイティブSQLを使用する例
+■JPQLを使用する例
+■CriteriaAPIを使用する例
+■名前付きクエリーを使用する例
+■JPAプロバイダの機能を使用する例
+■命名規約に従ったメソッド名での自動実装
+■プロパティファイルに名前付きクエリーを定義する
+-->
 
   <li>開発プロセス
   <ul>
@@ -539,18 +374,17 @@ UserSpecifications.java
       <li>UML
       <li>プロジェクト独自
       </ul>
-    <li><a href="docs/SampleOfSystemDesignDocument.pdf" target="_blank">1>ドキュメントの例</a>
+    <li><a href="docs/SampleOfSystemDesignDocument.pdf" target="_blank">ドキュメントの例</a>
 </ul>
 
 
 
-<!-- 
 <li>分析・設計・モデリング ～ さらなるステップアップ 
     <ul>
     <li><a href="index.html#course2">オブジェクト指向技術</a>
     <li><a href="index.html#course3">ドメイン駆動設計</a>
     </ul>
--->
+</li>
 
 
 </ol>
