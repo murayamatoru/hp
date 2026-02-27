@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Hello World 手順書（Windows向け・IDEなし）</title>
+    <style>
+        body { font-family: "Meiryo", sans-serif; line-height: 1.6; }
+        h1, h2 { color: #2c3e50; }
+        code { background-color: #f4f4f4; padding: 2px 6px; }
+        pre { background-color: #f4f4f4; padding: 10px; }
+        .step { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+
+<h1>Java Hello World 作成手順（Windows / IDEなし）</h1>
+
+<p>本手順書では、<strong>IDEを使わずに</strong>Javaプログラムを作成し、コンパイルして実行する方法を説明します。</p>
+
+<hr>
+
+<div class="step">
+<h2>① Java（JDK）をインストールする</h2>
+
+<p>Javaの開発には <strong>JDK（Java Development Kit）</strong> が必要です。</p>
+
+<ol>
+<li>ブラウザで以下の公式サイトにアクセスします。<br>
+<a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">
+Oracle JDK ダウンロードページ
+</a></li>
+
+<li>Windows用の最新版（x64 Installer）をダウンロードします。</li>
+
+<li>ダウンロードしたファイル（.exe）を実行します。</li>
+
+<li>画面の指示に従ってインストールします（基本は「次へ」でOK）。</li>
+</ol>
+
+<h3>■ インストール確認</h3>
+
+<ol>
+<li>スタートメニュー → 「cmd」と入力 → 「コマンドプロンプト」を起動</li>
+<li>次のコマンドを入力します。</li>
+</ol>
+
+<pre>
+java -version
+javac -version
+</pre>
+
+<p>バージョン番号が表示されれば、インストール成功です。</p>
+
+</div>
+
+<hr>
+
+<div class="step">
+<h2>② メモ帳でJavaファイルを作成する</h2>
+
+<ol>
+<li>デスクトップに新しいフォルダを作成します（例：<code>JavaPractice</code>）</li>
+<li>そのフォルダを開きます。</li>
+<li>右クリック → 新規作成 → テキスト ドキュメント</li>
+<li>ファイル名を <strong>HelloWorld.java</strong> に変更します。<br>
+（※ 拡張子が .txt にならないよう注意）</li>
+<li>そのファイルを右クリック → 「プログラムから開く」→「メモ帳」</li>
+</ol>
+
+<h3>■ 以下のプログラムを入力してください</h3>
+
+<pre>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+</pre>
+
+<p>入力後、保存してメモ帳を閉じます。</p>
+
+</div>
+
+<hr>
+
+<div class="step">
+<h2>③ コマンドプロンプトでコンパイルする</h2>
+
+<ol>
+<li>スタート → 「cmd」→ コマンドプロンプトを開く</li>
+<li>作成したフォルダへ移動します。</li>
+</ol>
+
+<p>例（デスクトップに作った場合）:</p>
+
+<pre>
+cd Desktop\JavaPractice
+</pre>
+
+<p>フォルダ内に <code>HelloWorld.java</code> があることを確認：</p>
+
+<pre>
+dir
+</pre>
+
+<p>コンパイルします：</p>
+
+<pre>
+javac HelloWorld.java
+</pre>
+
+<p>エラーが表示されなければ成功です。<br>
+同じフォルダ内に <code>HelloWorld.class</code> が生成されます。</p>
+
+</div>
+
+<hr>
+
+<div class="step">
+<h2>④ Javaプログラムを実行する</h2>
+
+<p>次のコマンドを入力します：</p>
+
+<pre>
+java HelloWorld
+</pre>
+
+<h3>■ 実行結果</h3>
+
+<pre>
+Hello World
+</pre>
+
+<p>この表示が出れば成功です！</p>
+
+</div>
+
+<hr>
+
+<h2>よくあるエラー</h2>
+
+<ul>
+<li><strong>'javac' は内部コマンドまたは外部コマンド〜</strong><br>
+→ JDKが正しくインストールされていない、または環境変数PATHが設定されていない可能性があります。</li>
+
+<li><strong>class not found</strong><br>
+→ フォルダの場所が間違っている可能性があります。</li>
+</ul>
+
+<hr>
+
+<h2>まとめ</h2>
+
+<ol>
+<li>JDKをインストールする</li>
+<li>メモ帳で HelloWorld.java を作る</li>
+<li>javac でコンパイルする</li>
+<li>java で実行する</li>
+</ol>
+
+<p>以上で、IDEを使わないJava Hello Worldの実行が完了です。</p>
+
+</body>
+</html>
