@@ -5,47 +5,47 @@
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/</loc>
   <priority>1.0</priority>
-  <lastmod>2026-01-05T10:29:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:23:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2026-01-05T10:29:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:23:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/ndmail/toiawasePage.html</loc>
   <priority>0.8</priority>
-  <lastmod>2024-08-05T14:58:00+09:00</lastmod>
+  <lastmod>2026-03-05T17:16:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/learn/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2026-01-02T18:22:00+09:00</lastmod>
+  <lastmod>2026-03-18T15:41:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/ddd/ddbuilder.html</loc>
   <priority>0.8</priority>
-  <lastmod>2025-12-11T16:14:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:23:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/uml_java_tools/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2023-08-31T21:09:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:23:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/question_product/question_product.html</loc>
   <priority>0.8</priority>
-  <lastmod>2023-08-31T21:09:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:23:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/dotnet/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2025-12-11T16:23:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:23:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/ddd/index.html</loc>
   <priority>0.8</priority>
-  <lastmod>2025-12-11T16:11:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:23:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/pdf/MTA2004Kyoto.pdf</loc>
@@ -115,12 +115,17 @@
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/tips2/jupyter_notebook1.html</loc>
   <priority>0.8</priority>
-  <lastmod>2023-09-02T15:58:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:29:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/privacy/privacy.html</loc>
   <priority>0.8</priority>
-  <lastmod>2023-09-02T15:52:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:29:00+09:00</lastmod>
+</url>
+<url>
+  <loc>https://fk-nextdesign.sakura.ne.jp/learn/JumpStartHelloWorld.html</loc>
+  <priority>0.7</priority>
+  <lastmod>2026-03-18T15:56:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/learn/JavaRoadmap.html</loc>
@@ -130,7 +135,7 @@
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/java_spring/SpringWebAppDoc.htm</loc>
   <priority>0.7</priority>
-  <lastmod>2025-12-11T18:06:00+09:00</lastmod>
+  <lastmod>2026-01-05T16:14:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/oot/OOT.htm</loc>
@@ -165,7 +170,7 @@
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/ddd/ddbuilder_dev_flow.html</loc>
   <priority>0.7</priority>
-  <lastmod>2023-08-31T21:09:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:23:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/ddd/useconsentPage4DDBuilder.php?softwareName=DDBuilder</loc>
@@ -263,7 +268,7 @@
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/ddd/pojo_iteration.html</loc>
   <priority>0.7</priority>
-  <lastmod>2025-12-11T16:16:00+09:00</lastmod>
+  <lastmod>2026-03-31T17:23:00+09:00</lastmod>
 </url>
 <url>
   <loc>https://fk-nextdesign.sakura.ne.jp/learn/docs/IDE.pdf</loc>
