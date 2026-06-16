@@ -1,4 +1,7 @@
+User-agent: Googlebot
+Disallow: /muraya/
+
 User-Agent:*
-Allow:*
+Allow: /
 
 Sitemap: http://fk-nextdesign.sakura.ne.jp/sitemap.xml
