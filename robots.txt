@@ -1,5 +1,5 @@
-User-agent: Googlebot
-Disallow: /muraya/
+# User-agent: Googlebot
+# Disallow: /muraya/
 
 User-Agent:*
 Allow: /
