@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.page-name-list {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* 写真リスト（中央寄せを指定） */
+.photo-list {
+    text-align: center; /* これにより中の画像（インライン要素）が中央に寄ります */
+    margin: 0 auto;
+    width: 100%; /* 必要に応じて調整してください */
+}
+
+/* 写真ごとの余白を開けたい場合はここで調整します */
+.photo-list div {
+    margin-bottom: 20px; 
+}
+
+/* 写真 */
+.photo {
+    width: 400px;
+    max-width: 100%; /* スマホなどの画面幅より画像が大きい場合枠内に収める設定 */
+    height: auto;
+}
+
+/*
+画像を囲む親要素（.photo-list）に text-align: center; を指定すると、中にある画像がインライン要素として扱われて中央に配置されます。
+レスポンシブ（スマホ対応）を考慮して、画像の最大幅を max-width: 100%; にしておくと画面サイズに合わせて縮むようになります
+*/
